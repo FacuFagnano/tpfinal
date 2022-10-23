@@ -27,7 +27,7 @@ class RegistryController
 
         $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
 
-        Redirect::doIt("login");
+        Redirect::doIt("/login");
     }
 }
 

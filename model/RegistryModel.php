@@ -17,8 +17,8 @@ class RegistryModel
 
     public function alta($name, $lastname, $password, $email, $geoposition)
     {
-        $sql = "INSERT INTO `user` ('NOMBRE', 'APELLIDO', 'PASSWORD', 'EMAIL', 'GEOPOSITION', 'ROL', 'ESTADO') 
-                VALUES ('$name','$lastname','$password','$email','$geoposition',1,1)";
+        $sql = "INSERT INTO user(`NOMBRE`, `APELLIDO`, `PASSWORD`, `EMAIL`, `GEOPOSITION`, `ROL`, `ESTADO`) 
+                VALUES ('$name','$lastname','$password','$email','$geoposition','1','1')";
         $this->database->execute($sql);
     }
 }
