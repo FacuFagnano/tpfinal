@@ -5,16 +5,26 @@ class LoginController {
     private $loginModel;
     private $renderer;
 
-    public function __construct($view, $loginModel) {
-        $this->renderer = $view;
+    public function __construct($loginModel,$view) {
         $this->loginModel = $loginModel;
+        $this->renderer = $view;
+        
     }
 
     public function list() {
+        
         $this->renderer->render('loginView.mustache');
+
 
     }
 
+    public function activarLogin(){
+
+        echo "Usuario Activado";
+        echo "<br>";
+        echo "PRESIONAR VOLER";//Redirect::doIt("/");
+    }
+	/*
     public function procesarlogin()
     {
         $email = $_POST['email'] ?? '';
@@ -24,7 +34,7 @@ class LoginController {
 
         Redirect::doIt("login");
     }
-    /*private $renderer;
+    private $renderer;
     private $model;
 
     public function __construct($render, $model) {

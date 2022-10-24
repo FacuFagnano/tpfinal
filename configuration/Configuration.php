@@ -9,11 +9,13 @@ include_once('helpers/Router.php');
 include_once('model/ContentModel.php');
 include_once('model/RegistryModel.php');
 include_once("model/LoginModel.php");
+include_once("model/ValidarModel.php"); // LR Validacion Usuarios
 
 include_once('controller/RegistryController.php');
 include_once('controller/ContentController.php');
 include_once('controller/RevistaController.php');
 include_once('controller/LoginController.php');
+include_once('controller/ValidarController.php');// LR Validacion Usuarios
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -42,7 +44,15 @@ class Configuration {
     }
 
     public function getLoginController(){
-        return new LoginController($this->view, $this->getLogInModel());
+        return new LoginController($this->getLogInModel(),$this->view);
+    }
+
+    public function getValidarController(){
+        return new ValidarController($this->getValidarModel(),$this->view,new Logger());
+    }
+
+    private function createValidarModel(): ValidarModel {
+        return new ValidarModel($this->database);
     }
 
     private function createContentModel(): ContentModel {
@@ -53,11 +63,19 @@ class Configuration {
         return new RegistryModel($this->database);
     }
 
+    private function createLoginModel(): LoginModel {
+        return new LoginModel($this->database);
+    }
+
     public function getRouter() {
         return new Router($this, "revista", "list");
     }
 
     private function getLogInModel() {
         return new LoginModel($this->database);
+    }
+
+    public function getValidarModel() {
+        return new ValidarModel($this->database);
     }
 }

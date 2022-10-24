@@ -20,14 +20,14 @@ class RegistryController
     {
         $name = $_POST['name'] ?? '';
         $lastname = $_POST['lastname'] ?? '';
-        $password = $_POST['password'] ?? '';
+        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //Hash Password
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
 
 
         $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
 
-        Redirect::doIt("/login");
+        echo $this->renderer->render('usuarioRegistrado.mustache');
     }
 }
 
