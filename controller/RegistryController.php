@@ -25,9 +25,13 @@ class RegistryController
         $geoposition = $_POST['geoposition'] ?? '';
 
 
-        $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
+        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
+        if ($correctAlta){
+            Redirect::doIt("/registry");
+        }
+        Redirect::doIt("/login");
 
-        echo $this->renderer->render('usuarioRegistrado.mustache');
+        //echo $this->renderer->render('usuarioRegistrado.mustache');
     }
 }
 

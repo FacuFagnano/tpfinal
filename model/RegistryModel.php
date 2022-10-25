@@ -19,7 +19,22 @@ class RegistryModel
     {
         $sql = "INSERT INTO user(`NOMBRE`, `APELLIDO`, `PASSWORD`, `EMAIL`, `GEOPOSITION`, `ROL`, `ESTADO`) 
                 VALUES ('$name','$lastname','$password','$email','$geoposition','1','1')";
-        $this->database->execute($sql);
+        $sql2 = "INSERT INTO password (`ID`, `EMAIL`, `PASSWORD`) VALUES (LAST_INSERT_ID(), '$email', '$password')";
+
+        if($this->verificarCuenta($email)){
+            $this->database->execute($sql);
+            $this->database->execute($sql2);
+            return true;
+        }
+        return false;
+
+    }
+
+    public function verificarCuenta($email){
+        $sql = "SELECT * FROM USER WHERE EMAIL like '%$email%'";
+        $resultado = $this->database->query($sql);
+
+        return sizeof($resultado) != 0;
     }
 }
     /*public function getPresentaciones() {

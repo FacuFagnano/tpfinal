@@ -20,7 +20,7 @@ class ValidarController
     }
 
     
-function controlarSesion()
+    function controlarSesion()
     {
         $mail  = $_POST['mail'] ?? '';
         $pass = $_POST['pass'] ?? '';
@@ -28,6 +28,7 @@ function controlarSesion()
         echo $mail;
         echo '<br>';
         echo $pass;
+
         
         //CLAVE OK: rasmuslerdorf
         $validacion = $this->ValidarModel->getUsuario($mail);
