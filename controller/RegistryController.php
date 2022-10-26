@@ -23,15 +23,15 @@ class RegistryController
         $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //Hash Password
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
-
+        $hash_validate = 100;
 
         $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
         if ($correctAlta){
-            Redirect::doIt("/registry");
+            Redirect::doIt("/validateUser");
         }
-        Redirect::doIt("/login");
+        Redirect::doIt("/registry");
 
-        //echo $this->renderer->render('usuarioRegistrado.mustache');
+        //echo $this->renderer->render('validateUserView.mustache');
     }
 }
 

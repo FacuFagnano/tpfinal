@@ -12,13 +12,22 @@ class ValidarModel{
     
     }
 
-    public function getLogin1(){
-        return $this->database->query("SELECT * FROM user");
+    public function validateUser(){
+
+        $data = $this->getLogin();
+
+        foreach ($data as $result) {
+
+            if ($result["HASH_VALIDATE"] ==     100) {
+                echo 'usuario validado';
+                exit();
+            }
+        }
     
     }
 
     public function getUsuario($email){
-        $SQL = "SELECT * FROM user WHERE email = '$email'";
+        $SQL = "SELECT * FROM password WHERE email = '$email'";
         return $this->database->query($SQL);
     }
 }    

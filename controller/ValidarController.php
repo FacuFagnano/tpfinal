@@ -14,7 +14,7 @@ class ValidarController
 
     public function list() {
 
-        $data['user'] = $this->ValidarModel->getLogin1();
+        $data['user'] = $this->ValidarModel->validateUser();
         $this->logger->info("Se valido usuario OKss");
         $this->renderer->render('tourView.mustache',$data);
     }
@@ -33,10 +33,10 @@ class ValidarController
         //CLAVE OK: rasmuslerdorf
         $validacion = $this->ValidarModel->getUsuario($mail);
         foreach ($validacion as $buscarArray) {
-            $_SESSION['usuario_id'] = $buscarArray["ID"];
-            $_SESSION['tipoUsuario'] = $buscarArray["ROL"];
+            $_SESSION['logueado'] = $buscarArray["ID_PASS"];
+
             
-            if (password_verify($_POST["pass"], $buscarArray["PASSWORD"])) {
+            if (password_verify($pass, $buscarArray["PASS"])) {
                 echo '<br>';
                 echo $this->logger->info("USUARIO LOGUEADO");
                 echo 'Contraseña Valida';

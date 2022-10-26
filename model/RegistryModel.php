@@ -17,11 +17,12 @@ class RegistryModel
 
     public function alta($name, $lastname, $password, $email, $geoposition)
     {
-        $sql = "INSERT INTO user(`NOMBRE`, `APELLIDO`, `PASSWORD`, `EMAIL`, `GEOPOSITION`, `ROL`, `ESTADO`) 
-                VALUES ('$name','$lastname','$password','$email','$geoposition','1','1')";
-        $sql2 = "INSERT INTO password (`ID`, `EMAIL`, `PASSWORD`) VALUES (LAST_INSERT_ID(), '$email', '$password')";
+        $sql = "INSERT INTO user(`NAME`, `LASTNAME`, `GEOPOSITION`, `ROL`, `ESTATE`) 
+                VALUES ('$name','$lastname','$geoposition','1','1')";
+        $sql2 = "INSERT INTO password (`ID_PASS`, `PASS`, `HASH_VALIDATOR`, `EMAIL`)
+                VALUES (LAST_INSERT_ID(), '$password', 100,  '$email')";
 
-        if($this->verificarCuenta($email)){
+        if(!$this->verificarCuenta($email)){
             $this->database->execute($sql);
             $this->database->execute($sql2);
             return true;
@@ -31,10 +32,10 @@ class RegistryModel
     }
 
     public function verificarCuenta($email){
-        $sql = "SELECT * FROM USER WHERE EMAIL like '%$email%'";
+        $sql = "SELECT * FROM PASSWORD WHERE EMAIL like '%$email%'";
         $resultado = $this->database->query($sql);
 
-        return sizeof($resultado) != 0;
+        return $resultado;
     }
 }
     /*public function getPresentaciones() {
