@@ -1,0 +1,1 @@
+[22-10-29 10:08:20][INFO] El usuario: franco@franco.com ha sido registrado exitosamente.

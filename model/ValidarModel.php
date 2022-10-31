@@ -9,16 +9,12 @@ class ValidarModel{
 
     public function getLogin($email){
         return $this->database->query("SELECT email FROM sesion WHERE `email` = '$email'");
-    
     }
 
     public function validateUser(){
-
         $data = $this->getLogin();
-
         foreach ($data as $result) {
-
-            if ($result["HASH_VALIDATE"] ==     100) {
+            if ($result["HASH_VALIDATE"] == 100) {
                 echo 'usuario validado';
                 exit();
             }
@@ -26,8 +22,9 @@ class ValidarModel{
     
     }
 
+    #! VER EL TEMA VALIDACION. QUE PASA SI NO ENCUENTRA UN USUARIO EN LA TABLA PASSWORD? DEVOLVERIA UN DATO VACIO.
     public function getUsuario($email){
-        $SQL = "SELECT * FROM password WHERE email = '$email'";
-        return $this->database->query($SQL);
+        $user = "SELECT * FROM password WHERE email = '$email'"; #* retorna un usuario que esta en la tabla password ya registrado.
+        return $this->database->query($user);
     }
 }    

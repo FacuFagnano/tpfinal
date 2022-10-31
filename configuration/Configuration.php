@@ -29,10 +29,7 @@ class Configuration {
     }
 
     public function getRegistryController() {
-        return new RegistryController(
-            $this->getRegistryModel(),
-            $this->view,
-            new Logger());
+        return new RegistryController($this->getRegistryModel(), $this->view, new Logger());
     }
 
     public function getContentController() {
@@ -60,7 +57,7 @@ class Configuration {
     }
 
     private function getRegistryModel(): RegistryModel {
-        return new RegistryModel($this->database);
+        return new RegistryModel($this->database, new Logger());
     }
 
     private function createLoginModel(): LoginModel {

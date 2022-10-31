@@ -1,29 +1,31 @@
 <?php
-
+#* --------------------------------------------------- ↓↓ CONTROLADOR DEL REGISTRO DE USUARIOS ↓↓ ---------------------------------------------------
 class RegistryController
 {
     private $registryModel;
     private $renderer;
+    private $logger;
 
-    public function __construct($registryModel, $view)
-    {
+    public function __construct($registryModel, $view, $logger){
         $this->registryModel = $registryModel;
         $this->renderer = $view;
+        $this->logger = $logger;
     }
 
-    public function list()
-    {
+    public function list(){
         $this->renderer->render('registryView.mustache');
     }
 
-    public function procesarAlta()
-    {
+    public function procesarAlta(){
+        #! ------------------------------------------ VARIABLES --------------------------------------------
         $name = $_POST['name'] ?? '';
         $lastname = $_POST['lastname'] ?? '';
-        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //Hash Password
+        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //? Hash Password. Convierte la password en un hash para que no sea hackeada.
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
         $hash_validate = 100;
+
+        #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
         $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
         if ($correctAlta){

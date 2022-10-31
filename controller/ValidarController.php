@@ -7,50 +7,33 @@ class ValidarController
     private $logger;
 
     public function __construct($ValidarModel, $view, $logger) {
-        $this->ValidarModel = $ValidarModel;
-        $this->renderer = $view;
-        $this->logger = $logger;
+        $this->ValidarModel = $ValidarModel; #* parametro
+        $this->renderer = $view; #* parametro
+        $this->logger = $logger; #* parametro
     }
 
     public function list() {
-
-        $data['user'] = $this->ValidarModel->validateUser();
-        $this->logger->info("Se valido usuario OKss");
-        $this->renderer->render('tourView.mustache',$data);
+        $data['user'] = $this->ValidarModel->validateUser(); #* me guardo el usuario que esta logueado.
+        $this->logger->info("Se valido usuario OKss"); #* imprimo que el usuario de valido correctamente.
+        $this->renderer->render('tourView.mustache',$data); #* muestra en pantalla, por medio del view, la interfaz de tour.
     }
 
-    
-    function controlarSesion()
-    {
-        $mail  = $_POST['mail'] ?? '';
+    function controlarSesion(){
+        $mail  = $_POST['mail'] ?? ''; #* si recibe un dato por el metodo post, entonces lo toma. Sino es un string vacio.
         $pass = $_POST['pass'] ?? '';
-
-        echo $mail;
-        echo '<br>';
-        echo $pass;
-
         
         //CLAVE OK: rasmuslerdorf
-        $validacion = $this->ValidarModel->getUsuario($mail);
-        foreach ($validacion as $buscarArray) {
-            $_SESSION['logueado'] = $buscarArray["ID_PASS"];
-
-            
+        $userInPasswordTable = $this->ValidarModel->getUsuario($mail);#? verifica que el usuario este en la tabla password y devuelve todos los datos del mismo.
+        var_dump($userInPasswordTable);
+        $this->logger->info(implode($userInPasswordTable));
+        foreach ($userInPasswordTable as $buscarArray) { #? por que un foreach si es un solo resultado? Es por los datos de ese usuario encontrado?
+            $_SESSION['logueado'] = $buscarArray["ID_PASS"];#? no entiendo que hace esto. Le asigna en el session el id del usuario logueado.
             if (password_verify($pass, $buscarArray["PASS"])) {
-                echo '<br>';
-                echo $this->logger->info("USUARIO LOGUEADO");
-                echo 'Contraseña Valida';
-                
+                $this->logger->info("USUARIO LOGUEADO");
             } else {
-                echo '<br>';
-                echo $this->logger->info("USUARIO INTENTO LOGUEARSE");
-                echo 'contraseña Erronea';
+                $this->logger->info("USUARIO INTENTO LOGUEARSE");
             }
         }
-        
-
-       
-        
     }
 
 
