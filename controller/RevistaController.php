@@ -4,7 +4,7 @@ class RevistaController {
 
     private $view;
 
-    public function __construct($view) {
+    public function __construct($view, $logger) {
         $this->view = $view;
     }
 
