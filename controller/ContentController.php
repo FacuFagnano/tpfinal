@@ -10,7 +10,7 @@ class ContentController {
     }
 
     public function list() {
-       // $data['content'] = $this->contentModel->getContent();
+        #$data['logueado'] = $_SESSION["logueado"];
         $this->view->render('contentView.mustache'/*, $data*/);
     }
 }

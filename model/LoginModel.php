@@ -3,25 +3,30 @@
 class LoginModel {
 
     private $database;
-    private $results;
+    private $logger;
 
-    public function __construct($database) {
+    public function __construct($database, $logger) {
         $this->database = $database;
-        $this->results = $this->getUsers();
+        $this->logger = $logger;
     }
 
-    public function getUsers() {
-        $sql = "SELECT * FROM user";
-        $this->database->query($sql);
+    public function getUsers($email) {
+        $sql = "SELECT * FROM password WHERE email = '$email'";
+        return $this->database->query($sql);
     }
 
-    public function login($email, $pass) {
-        foreach ($this->results as $result) {
-            if ($result["EMAIL"] == $email && $result["PASSWORD"] == $pass){
-                $_SESSION["log"]=1;
-                Redirect::doIt("/");
+    public function passwordValidation($userInPasswordTable, $password){
+        foreach ($userInPasswordTable as $buscarArray) {
+            #? Le asigna en el session el id del usuario logueado.
+            $data['prueba'] = $buscarArray["ID_PASS"];
+
+            $this->logger->info($buscarArray["PASS"]);
+            if (password_verify($password, $buscarArray["PASS"])) {
+                return true;
+            } else {
+                return false;
             }
+
         }
     }
-
 }

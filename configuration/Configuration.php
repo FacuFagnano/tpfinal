@@ -41,7 +41,7 @@ class Configuration {
     }
 
     public function getLoginController(){
-        return new LoginController($this->getLogInModel(),$this->view);
+        return new LoginController($this->getLogInModel(),$this->view,new Logger());
     }
 
     public function getValidarController(){
@@ -61,7 +61,7 @@ class Configuration {
     }
 
     private function createLoginModel(): LoginModel {
-        return new LoginModel($this->database);
+        return new LoginModel($this->database,new Logger());
     }
 
     public function getRouter() {
@@ -69,7 +69,7 @@ class Configuration {
     }
 
     private function getLogInModel() {
-        return new LoginModel($this->database);
+        return new LoginModel($this->database, new Logger());
     }
 
     public function getValidarModel() {

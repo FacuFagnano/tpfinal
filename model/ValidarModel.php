@@ -19,12 +19,5 @@ class ValidarModel{
                 exit();
             }
         }
-    
-    }
-
-    #! VER EL TEMA VALIDACION. QUE PASA SI NO ENCUENTRA UN USUARIO EN LA TABLA PASSWORD? DEVOLVERIA UN DATO VACIO.
-    public function getUsuario($email){
-        $user = "SELECT * FROM password WHERE email = '$email'"; #* retorna un usuario que esta en la tabla password ya registrado.
-        return $this->database->query($user);
     }
 }    
