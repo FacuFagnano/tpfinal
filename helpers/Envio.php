@@ -24,13 +24,13 @@ $mail->SMTPSecure = 'tls';
 //Tenemos que usar gmail autenticados, así que esto a TRUE
 $mail->SMTPAuth   = true;
 //Definimos la cuenta que vamos a usar. Dirección completa de la misma
-$mail->Username   = "infonetegrupo9noreply@gmail.com";
+$mail->Username   = "binsertest.f.14.2@gmail.com";
 //Introducimos nuestra contraseña de gmail
-$mail->Password   = "fagnanoreta";
+$mail->Password   = "PQ2206BnS";
 //Definimos el remitente (dirección y, opcionalmente, nombre)
-$mail->SetFrom('tucuenta@gmail.com', 'Mi nombre');
+$mail->SetFrom('binsertest.f.14.2@gmail.com', 'GauchoRocket');
 //Y, ahora sí, definimos el destinatario (dirección y, opcionalmente, nombre)
-$mail->AddAddress('correodedestino@dominio.com', 'El Destinatario');
+$mail->AddAddress('lucasmotog92@gmail.com', 'Lucas Reta');
 //Definimos el tema del email
 $mail->isHTML(true);                                  // Set email format to HTML
 $mail->Subject = 'Esto es un correo de prueba';

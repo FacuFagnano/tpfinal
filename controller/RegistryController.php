@@ -5,10 +5,12 @@ class RegistryController
     private $registryModel;
     private $renderer;
     private $logger;
+    private $mail;
 
-    public function __construct($registryModel, $view, $logger){
+    public function __construct($mail,$registryModel, $view, $logger){
         $this->registryModel = $registryModel;
         $this->renderer = $view;
+        $this->mail = $mail;
         $this->logger = $logger;
     }
 
@@ -24,16 +26,17 @@ class RegistryController
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
         $hash_validate = 100;
-
+        $this->mail->enviarMail($email, $name, $hash_validate);
         #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
         $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
         if ($correctAlta){
             Redirect::doIt("/validateUser");
+            //echo $this->renderer->render('validateUserView.mustache');
         }
         Redirect::doIt("/registry");
 
-        //echo $this->renderer->render('validateUserView.mustache');
+        //
     }
 }
 

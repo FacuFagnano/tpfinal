@@ -29,4 +29,9 @@ class LoginModel {
 
         }
     }
+
+    public function borrar($valor){
+        $query = "DELETE FROM `sesion` WHERE `sesion`.`valor` = '$valor'"; // revisar tabla y valor
+        return $this->database->execute($query);
+    }
 }

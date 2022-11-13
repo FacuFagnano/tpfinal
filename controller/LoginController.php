@@ -9,6 +9,7 @@ class LoginController
 
     public function __construct($loginModel, $view, $logger)
     {
+        
         $this->loginModel = $loginModel;
         $this->renderer = $view;
         $this->logger = $logger;
@@ -43,4 +44,10 @@ class LoginController
             }
         }
     }
+    public function activarLogin()
+  {
+    $valor = $_GET["codigo"];
+    $this->loginModel->borrar($valor);
+    Redirect::doIt("/login");
+  }
 }
