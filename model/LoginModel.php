@@ -34,4 +34,11 @@ class LoginModel {
         $query = "DELETE FROM `sesion` WHERE `sesion`.`valor` = '$valor'"; // revisar tabla y valor
         return $this->database->execute($query);
     }
+
+    public function hash($valor){
+        $query = "SELECT `HASH_VALIDATOR` FROM `password` WHERE `HASH_VALIDATOR` = 100"; // revisar tabla y valor
+        return $this->database->execute($query);
+    }
+
+    
 }

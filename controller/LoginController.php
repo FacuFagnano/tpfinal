@@ -28,7 +28,7 @@ class LoginController
         $userInPasswordTable = $this->loginModel->getUsers($email);
         $user = json_encode($userInPasswordTable);
         $this->logger->info($user);
-
+        $busqueda = 100;
         if ($userInPasswordTable == []) {
             $this->logger->info("El usuario no se encuentra en la base de datos.");
             Redirect::doIt("/login"); #! ESTO ES VIEW?

@@ -9,7 +9,8 @@ include_once('model/ContentModel.php');
 include_once('model/RegistryModel.php');
 include_once("model/LoginModel.php");
 include_once("model/ValidarModel.php"); // LR Validacion Usuarios
-include_once("model/suscripcionModel.php");
+include_once("model/SuscripcionModel.php");
+include_once("model/DeportesModel.php");
 
 
 include_once('controller/RegistryController.php');
@@ -17,7 +18,8 @@ include_once('controller/ContentController.php');
 include_once('controller/RevistaController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ValidarController.php');// LR Validacion Usuarios
-include_once("controller/suscripcionController.php");
+include_once("controller/SuscripcionController.php");
+include_once("controller/DeportesController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -53,6 +55,9 @@ class Configuration {
     public function getSuscripcionController(){
         return new SuscripcionController($this->getSuscripcionModel(),$this->view);
     }
+    public function getDeportesController(){
+        return new DeportesController($this->getDeportesModel(),$this->view,new Logger());
+    }
     private function getMailController()
     {
         require_once("controller/MailController.php");
@@ -61,6 +66,10 @@ class Configuration {
         require_once("helpers/SMTP.php");
 
         return new MailController();
+    }
+
+    private function getDeportesModel(): DeportesModel {
+        return new DeportesModel($this->database);
     }
 
     private function getSuscripcionModel(): SuscripcionModel {

@@ -1,7 +1,7 @@
 <?php
 
 class SuscripcionController {
-    private $subcripcionModel;
+    private $suscripcionModel;
     private $view;
 
     public function __construct($suscripcionModel, $view) {
@@ -10,7 +10,17 @@ class SuscripcionController {
     }
 
     public function list() {
-        #$data['logueado'] = $_SESSION["logueado"];
-        $this->view->render('suscripcionView.mustache'/*, $data*/);
+        $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
+        $this->view->render('suscripcionView.mustache', $data);
+    }
+
+    public function listarSuscripcion(){
+        $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();     
+    }
+    public function desuscribirse()
+    {
+      $valor = $_GET["2"];
+      $this->suscripcionModel->borrar($valor);
+      Redirect::doIt("/content");
     }
 }
