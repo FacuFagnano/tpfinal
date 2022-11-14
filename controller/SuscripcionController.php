@@ -17,14 +17,15 @@ class SuscripcionController {
     public function listarSuscripcion(){
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();     
     }
-    public function desuscribirse()
+    public function baja()
     {
-      $valor = $_GET["2"];
+      $valor = $_POST["codigo"];
       $this->suscripcionModel->borrar($valor);
       Redirect::doIt("/content");
     }
     public function altaSuscripcion(){
-        $data['suscripcion'] = $this->suscripcionModel->insertarSuscripcion();     
+        $this->suscripcionModel->insertarSuscripcion();
+        Redirect::doIt("/content");
     }
     public function verListaDeSuscripciones() {
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
