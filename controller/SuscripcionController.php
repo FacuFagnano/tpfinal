@@ -23,4 +23,11 @@ class SuscripcionController {
       $this->suscripcionModel->borrar($valor);
       Redirect::doIt("/content");
     }
+    public function altaSuscripcion(){
+        $data['suscripcion'] = $this->suscripcionModel->insertarSuscripcion();     
+    }
+    public function verListaDeSuscripciones() {
+        $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
+        $this->view->render('altaSuscripcionView.mustache', $data);
+    }
 }

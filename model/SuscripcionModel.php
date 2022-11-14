@@ -17,4 +17,9 @@ class SuscripcionModel {
         $query = "DELETE FROM `section` WHERE `section`.`id` = '$valor'"; // revisar tabla y valor
         $this->database->execute($query);
     }
+
+    public function insertarSuscripcion(){
+        $query = "INSERT INTO `content` (`id_con`, `id_con_user`, `id_con_publications`, `id_con_section`) VALUES ('3', '5', '1', '3')"; // revisar tabla y valor
+        $this->database->execute($query);
+    }
 }

@@ -50,4 +50,20 @@ class LoginController
     $this->loginModel->borrar($valor);
     Redirect::doIt("/login");
   }
+
+  public function cerrarSesion()
+    {   
+        if(isset($_SESSION['logueado'])){
+            
+            session_unset();
+            session_destroy();
+            $this->logger->info("USUARIO CIERRA SESION");
+            Redirect::doIt("/login");
+
+            
+        }else{
+            Redirect::doIt("/login");
+            
+        }
+    }
 }
