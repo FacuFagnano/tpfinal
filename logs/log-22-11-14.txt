@@ -62,3 +62,11 @@ El usuario: lucasjorgereta@gmail.com ya se encuentra en la base de datos.
 [22-11-14 09:21:30][INFO] [{"ID_PASS":"1","PASS":"$2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG","DATE_CADUCATE":null,"VALIDATED_STATUS":"0","HASH_VALIDATOR":"1001","EMAIL":"santiago.opera@gmail.com"}]
 [22-11-14 09:21:30][INFO] $2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG
 [22-11-14 09:21:30][INFO] USUARIO LOGUEADO
+[22-11-14 10:47:16][INFO] USUARIO CIERRA SESION
+[22-11-14 10:48:00][INFO] Este es el hashaca4f26591970529d17e565122df3271
+[22-11-14 10:49:15][INFO] El usuario: pablooantunez@hotmail.com ha sido registrado exitosamente.
+[22-11-14 10:49:25][INFO] [{"ID_PASS":"5","PASS":"$2y$10$NXjeOeA\/PwAsoGjhF5ho0OhdLm52\/f\/ZUaDnRUPSLB5JsWP1FDsQC","DATE_CADUCATE":null,"VALIDATED_STATUS":"0","HASH_VALIDATOR":"100","EMAIL":"pablooantunez@hotmail.com"}]
+[22-11-14 10:49:25][INFO] $2y$10$NXjeOeA/PwAsoGjhF5ho0OhdLm52/f/ZUaDnRUPSLB5JsWP1FDsQC
+[22-11-14 10:49:25][INFO] USUARIO LOGUEADO
+[22-11-14 10:51:14][INFO] Este es el hash b8b35e61ab2001f5f9a418b572c38ee8
+[22-11-14 10:52:29][INFO] El usuario: pablooantunez@gmail.com ha sido registrado exitosamente.

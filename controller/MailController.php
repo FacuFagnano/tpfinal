@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 class MailController
 {
   private $mail;
+  private $logger;
 
   public function __construct()
   {
@@ -11,7 +12,7 @@ class MailController
 
   public function enviarMail($destinatario, $user, $validar)
   {
-    $url = "http://localhost:81/login/activarLogin/?codigo=".urlencode($validar);
+    $url = "http://localhost:8888/validar/confirmAccount/?codigo=".urlencode($validar)."&&?email=".$destinatario;
     //Crear una instancia de PHPMailer
     $mail = new PHPMailer();
     //Definir que vamos a usar SMTP
@@ -32,7 +33,7 @@ class MailController
     //Definimos la cuenta que vamos a usar. Dirección completa de la misma
     $mail->Username   = "infonetegrupo9noreply@gmail.com";
     //Introducimos nuestra contraseña de gmail
-    $mail->Password   = "pemjrkgzerknlbrx";
+    $mail->Password   = "contraseniapablo";
     //Definimos el remitente (dirección y, opcionalmente, nombre)
     $mail->SetFrom('infonetegrupo9noreply@gmail.com', 'INFONETE');
     //Y, ahora sí, definimos el destinatario (dirección y, opcionalmente, nombre)

@@ -25,7 +25,8 @@ class RegistryController
         $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //? Hash Password. Convierte la password en un hash para que no sea hackeada.
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
-        $hash_validate = 100;
+        $hash_validate = md5(time());
+        $this->logger->info("Este es el hash ".$hash_validate);
         $this->mail->enviarMail($email, $name, $hash_validate);
         #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
