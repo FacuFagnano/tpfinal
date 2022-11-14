@@ -19,7 +19,7 @@ class SuscripcionModel {
     }
 
     public function insertarSuscripcion(){
-        $query = "INSERT INTO `content` (`id_con`, `id_con_user`, `id_con_publications`, `id_con_section`) VALUES ('3', '5', '1', '3')"; // revisar tabla y valor
+        $query = "INSERT INTO `publications` (`id_publications`, `titulo_pub`, `descripcion`, `id_section`) VALUES ('3', 'Notebook 2 X1', 'des', '1')"; // revisar tabla y valor
         $this->database->execute($query);
     }
 }

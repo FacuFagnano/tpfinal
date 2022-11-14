@@ -24,7 +24,8 @@ class SuscripcionController {
       Redirect::doIt("/content");
     }
     public function altaSuscripcion(){
-        $data['suscripcion'] = $this->suscripcionModel->insertarSuscripcion();     
+        $this->suscripcionModel->insertarSuscripcion();
+        Redirect::doIt("/content");
     }
     public function verListaDeSuscripciones() {
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
