@@ -22,15 +22,15 @@
     {{/suscripcion}}
       <hr>
     <span class="w3-tag w3-red w3-round">DESUSCRIBIRSE</span>
-    <form action="/suscripcion/desuscribirse">
+    <form action="/suscripcion/baja" method="POST">
       
       <label for="subject">Motivo</label>
     <textarea class="w3-input w3-padding-16 w3-border placeholder="Write something.." style="height:200px"></textarea><br>
       <label for="paquete">Elegir</label>
       
-      <select class="w3-input w3-padding-16 w3-border">
+      <select class="w3-input w3-padding-16 w3-border" id="codigo" name="codigo">
       {{#suscripcion}}
-      <option value="2">{{titulo}}</option>
+      <option value="3">{{titulo}}</option>
        {{/suscripcion}}
     </select>
    

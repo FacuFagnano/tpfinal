@@ -10,11 +10,11 @@ class SuscripcionModel {
     // Hay que definir los paquete por cada usuario y reflejarlo en la vista.
 
     public function getSuscripcion() {
-        $sql = 'SELECT * FROM section';
+        $sql = 'SELECT * from publications p INNER JOIN section s on s.id=p.id_section';
         return $this->database->query($sql);
     }
     public function borrar($valor){
-        $query = "DELETE FROM `section` WHERE `section`.`id` = '$valor'"; // revisar tabla y valor
+        $query = "DELETE FROM publications WHERE id_publications = $valor";//ELETE FROM `section` WHERE `section`.`id` = '$valor'"; // DELETE FROM publications WHERE id_section = (SELECT id from section where id = 1)revisar tabla y valor
         $this->database->execute($query);
     }
 

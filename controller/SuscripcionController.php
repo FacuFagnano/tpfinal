@@ -17,9 +17,9 @@ class SuscripcionController {
     public function listarSuscripcion(){
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();     
     }
-    public function desuscribirse()
+    public function baja()
     {
-      $valor = $_GET["2"];
+      $valor = $_POST["codigo"];
       $this->suscripcionModel->borrar($valor);
       Redirect::doIt("/content");
     }
