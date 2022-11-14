@@ -44,12 +44,6 @@ class LoginController
             }
         }
     }
-    public function activarLogin()
-  {
-    $valor = $_GET["codigo"];
-    $this->loginModel->borrar($valor);
-    Redirect::doIt("/login");
-  }
 
   public function cerrarSesion()
     {   

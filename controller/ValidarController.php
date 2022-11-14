@@ -21,5 +21,12 @@ class ValidarController
 
     #! --------------------------- LOGIN DEL USUARIO ---------------------------
 
-
+    public function confirmAccount(){
+        $code = $_GET["codigo"];
+        $email = $_GET["email"];
+        if($this->ValidarModel->activateAccount($code,$email)){
+            $this->logger->info("La cuenta fue validada exitosamente");
+            $this->renderer->render('validateUserView.mustache');
+        }
+    }
 }
