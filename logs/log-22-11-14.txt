@@ -55,3 +55,10 @@
 [22-11-14 05:42:11][INFO] USUARIO LOGUEADO
 [22-11-14 06:14:06][ERROR] El usuario no se pudo registrar exitosamente.
 El usuario: lucasjorgereta@gmail.com ya se encuentra en la base de datos.
+[22-11-14 09:09:52][INFO] [{"ID_PASS":"1","PASS":"$2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG","DATE_CADUCATE":null,"VALIDATED_STATUS":"0","HASH_VALIDATOR":"1001","EMAIL":"santiago.opera@gmail.com"}]
+[22-11-14 09:09:52][INFO] $2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG
+[22-11-14 09:09:53][INFO] USUARIO LOGUEADO
+[22-11-14 09:13:55][INFO] USUARIO CIERRA SESION
+[22-11-14 09:21:30][INFO] [{"ID_PASS":"1","PASS":"$2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG","DATE_CADUCATE":null,"VALIDATED_STATUS":"0","HASH_VALIDATOR":"1001","EMAIL":"santiago.opera@gmail.com"}]
+[22-11-14 09:21:30][INFO] $2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG
+[22-11-14 09:21:30][INFO] USUARIO LOGUEADO
