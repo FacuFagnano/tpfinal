@@ -30,12 +30,17 @@ class RegistryController
         $this->mail->enviarMail($email, $name, $hash_validate);
         #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
-        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
+        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition,$hash_validate);
         if ($correctAlta){
-            Redirect::doIt("/validateUser");
-            //echo $this->renderer->render('validateUserView.mustache');
+            //Redirect::doIt("/validateUser");
+            $this->logger->info('ESTOY EN EL TRUE');
+            $this->renderer->render('validateUserView.mustache');
+        }else{
+            $this->logger->info('ESTOY EN EL FALSE');
+            Redirect::doIt("/registry");
         }
-        Redirect::doIt("/registry");
+
+
 
         //
     }

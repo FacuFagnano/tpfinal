@@ -10,12 +10,15 @@ class ValidarModel{
     }
 
     public function getValidar($email){
-        return $this->database->query("SELECT email FROM sesion WHERE `email` = '$email'");
+        $sql = "SELECT * FROM password WHERE email = '$email'";
+        return $this->database->query($sql);
     }
 
     public function hashCleaner($email){
         $sql = "UPDATE PASSWORD SET HASH_VALIDATOR='0' WHERE `email` = '$email'";
+        $sql2 = "UPDATE PASSWORD SET VALIDATED_STATUS=1 WHERE `email` = '$email'";
         $this->database->execute($sql);
+        $this->database->execute($sql2);
     }
 
     public function activateAccount($code, $email){
@@ -26,5 +29,6 @@ class ValidarModel{
                 return true;
             }
         }
+        return false;
     }
 }    

@@ -15,8 +15,7 @@ class LoginController
         $this->logger = $logger;
     }
 
-    public function list()
-    {
+    public function list(){
         $this->renderer->render('loginView.mustache');
     }
 
@@ -26,20 +25,14 @@ class LoginController
 
         #? verifica que el usuario este en la tabla password y devuelve todos los datos del mismo.
         $userInPasswordTable = $this->loginModel->getUsers($email);
-        $user = json_encode($userInPasswordTable);
-        $this->logger->info($user);
-        $busqueda = 100;
         if ($userInPasswordTable == []) {
-            $this->logger->info("El usuario no se encuentra en la base de datos.");
             Redirect::doIt("/login"); #! ESTO ES VIEW?
         } else {
             #? guardamos los datos del usuario para obtener el numero de sesion.
             if($this->loginModel->passwordValidation($userInPasswordTable, $password)){
                 $_SESSION["logueado"]=1;
-                $this->logger->info("USUARIO LOGUEADO");
                 Redirect::doIt("/content");
             }else {
-                $this->logger->info("USUARIO INCORRECTO");
                 Redirect::doIt("/login");
             }
         }

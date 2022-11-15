@@ -32,14 +32,16 @@ include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 class Configuration {
     private $database;
     private $view;
+    private $logger;
 
     public function __construct() {
         $this->database = new MySQlDatabase();
         $this->view = new MustacheRenderer("view/", 'view/partial/');
+        $this->logger = new Logger();
     }
 
     public function getRegistryController() {
-        return new RegistryController($this->getMailController(),$this->getRegistryModel(), $this->view, new Logger());
+        return new RegistryController($this->getMailController(),$this->getRegistryModel(), $this->view, $this->logger);
     }
 
     public function getContentController() {
@@ -51,27 +53,27 @@ class Configuration {
     }
 
     public function getLoginController(){
-        return new LoginController($this->getLogInModel(),$this->view,new Logger());
+        return new LoginController($this->getLogInModel(),$this->view,$this->logger);
     }
 
     public function getValidarController(){
-        return new ValidarController($this->getValidarModel(),$this->view,new Logger());
+        return new ValidarController($this->getValidarModel(),$this->view,$this->logger);
     }
 
     public function getSuscripcionController(){
         return new SuscripcionController($this->getSuscripcionModel(),$this->view);
     }
     public function getDeportesController(){
-        return new DeportesController($this->getDeportesModel(),$this->view,new Logger());
+        return new DeportesController($this->getDeportesModel(),$this->view,$this->logger);
     }
     public function getEconomiaController(){
-        return new EconomiaController($this->getEconomiaModel(),$this->view,new Logger());
+        return new EconomiaController($this->getEconomiaModel(),$this->view,$this->logger);
     }
     public function getTecnologiaController(){
-        return new TecnologiaController($this->getTecnologiaModel(),$this->view,new Logger());
+        return new TecnologiaController($this->getTecnologiaModel(),$this->view,$this->logger);
     }
     public function getAdminController(){
-        return new AdminController($this->getAdminModel(),$this->view,new Logger());
+        return new AdminController($this->getAdminModel(),$this->view,$this->logger);
     }
     private function getMailController()
     {
@@ -112,11 +114,11 @@ class Configuration {
     }
 
     private function getRegistryModel(): RegistryModel {
-        return new RegistryModel($this->database, new Logger());
+        return new RegistryModel($this->database, $this->logger);
     }
 
     private function createLoginModel(): LoginModel {
-        return new LoginModel($this->database,new Logger());
+        return new LoginModel($this->database,$this->logger);
     }
 
     public function getRouter($defaultController, $defaultMethod) {
@@ -126,10 +128,10 @@ class Configuration {
 
 
     private function getLogInModel() {
-        return new LoginModel($this->database, new Logger());
+        return new LoginModel($this->database, $this->logger);
     }
 
     public function getValidarModel() {
-        return new ValidarModel($this->database);
+        return new ValidarModel($this->database, $this->logger);
     }
 }

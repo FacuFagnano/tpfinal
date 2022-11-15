@@ -16,12 +16,10 @@ class LoginModel {
     }
 
     public function passwordValidation($userInPasswordTable, $password){
-        foreach ($userInPasswordTable as $buscarArray) {
+        foreach ($userInPasswordTable as $result) {
             #? Le asigna en el session el id del usuario logueado.
-            $data['prueba'] = $buscarArray["ID_PASS"];
-
-            $this->logger->info($buscarArray["PASS"]);
-            if (password_verify($password, $buscarArray["PASS"])) {
+            $this->logger->info("Estoy en el Login model: ". json_encode($result));
+            if (password_verify($password, $result["PASS"]) && $result["VALIDATED_STATUS"] == 1) {
                 return true;
             } else {
                 return false;

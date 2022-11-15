@@ -14,12 +14,12 @@ class RegistryModel{
         $this->database->query($sql);
     }
 #! ---------------------------------------------------------- ↓↓ ALTA DE USUARIO ↓↓ -----------------------------------------------------------
-    public function alta($name, $lastname, $password, $email, $geoposition){
+    public function alta($name, $lastname, $password, $email, $geoposition, $hash_validate){
         $sql = "INSERT INTO user(`NAME`, `LASTNAME`, `GEOPOSITION`, `ROL`, `ESTATE`) 
                 VALUES ('$name','$lastname','$geoposition','1','1')";
 
         $sql2 = "INSERT INTO password (`ID_PASS`, `PASS`, `HASH_VALIDATOR`, `EMAIL`)
-                VALUES (LAST_INSERT_ID(), '$password', 100,  '$email')";
+                VALUES (LAST_INSERT_ID(), '$password', '$hash_validate',  '$email')";
 
         if(!$this->verificarCuenta($email)){ #? si es un 1 (quiere decir que no esta en la base de datos), ejecuta las querys. Si es un null (esta en la base de datos), no las ejecuta.
             $this->database->execute($sql);
