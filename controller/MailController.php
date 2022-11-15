@@ -12,7 +12,7 @@ class MailController
 
   public function enviarMail($destinatario, $user, $validar)
   {
-    $url = "http://localhost:8888/validar/confirmAccount/?codigo=".urlencode($validar)."&&?email=".$destinatario;
+    $url = "http://localhost:8888/validar/confirmAccount/?code=".urlencode($validar)."&email=".$destinatario;
     //Crear una instancia de PHPMailer
     $mail = new PHPMailer();
     //Definir que vamos a usar SMTP
@@ -33,7 +33,7 @@ class MailController
     //Definimos la cuenta que vamos a usar. Dirección completa de la misma
     $mail->Username   = "infonetegrupo9noreply@gmail.com";
     //Introducimos nuestra contraseña de gmail
-    $mail->Password   = "contraseniapablo";
+    $mail->Password   = "pemjrkgzerknlbrx";
     //Definimos el remitente (dirección y, opcionalmente, nombre)
     $mail->SetFrom('infonetegrupo9noreply@gmail.com', 'INFONETE');
     //Y, ahora sí, definimos el destinatario (dirección y, opcionalmente, nombre)
@@ -53,7 +53,6 @@ class MailController
     <p>Ya casi acompletas tu registro, solo falta validar tu cuenta. <br>
     Para ello solo sigue el siguiente enlace: <a href="'.$url.'">Validar cuenta</a></p>
     <br>
-    <p> En caso de no funcionar el link, ingrese el siguiente codigo para poder verificar su cuenta:<b>'.$validar.'</b> </p>
     </body>
     </html>';
     $mail->Body = $cuerpo;

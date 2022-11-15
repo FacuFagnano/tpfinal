@@ -2,31 +2,31 @@
 
 class ValidarController
 {
-    private $ValidarModel;
+    private $validarModel;
     private $renderer;
     private $logger;
 
-    public function __construct($ValidarModel, $view, $logger) {
-        $this->ValidarModel = $ValidarModel; #* parametro
+    public function __construct($validarModel, $view, $logger) {
+        $this->validarModel = $validarModel; #* parametro
         $this->renderer = $view; #* parametro
         $this->logger = $logger; #* parametro
     }
 
     public function list() {
-        $data['user'] = $this->ValidarModel->validateUser(); #* me guardo el usuario que esta logueado.
-        $this->logger->info("Se valido usuario OKss"); #* imprimo que el usuario se valido correctamente.
+        $data['user'] = $this->validarModel->validateUser(); #* me guardo el usuario que esta logueado.
         $this->renderer->render('tourView.mustache',$data); #* muestra en pantalla, por medio del view, la interfaz de tour.
     }
 
 
-    #! --------------------------- LOGIN DEL USUARIO ---------------------------
+    #! --------------------------- CONFIRMACION DE CUENTA DEL USUARIO ---------------------------
 
     public function confirmAccount(){
-        $code = $_GET["codigo"];
+        $code = $_GET["code"];
         $email = $_GET["email"];
-        if($this->ValidarModel->activateAccount($code,$email)){
-            $this->logger->info("La cuenta fue validada exitosamente");
+        if($this->validarModel->activateAccount($code,$email)){
             $this->renderer->render('validateUserView.mustache');
+        }else{
+            $this->renderer->render('userNotValidate.mustache');
         }
     }
 }
