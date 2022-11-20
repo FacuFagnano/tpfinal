@@ -1,0 +1,107 @@
+
+{{#logueado}}
+  {{> headerLogueado}}
+
+<!-- Menu Container -->
+<div class="w3-container w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center" style="margin-bottom:64px">Mis Suscripciones</h1>
+    
+    {{#suscripcion}}
+    <div class="w3-container menu w3-padding-32 w3-white">
+      
+      
+
+      <h1><b>{{titulo}}</b> <span class="w3-right w3-tag w3-dark-grey w3-round">${{precio}}</span></h1>
+      <p >Datos sobre la suscripcion de {{titulo}}</p>
+      <hr>
+
+      
+    </div>
+    {{/suscripcion}}
+      <hr>
+    <span class="w3-tag w3-red w3-round">DESUSCRIBIRSE</span>
+    <form action="/suscripcion/baja" method="POST">
+      
+      <label for="subject">Motivo</label>
+    <textarea class="w3-input w3-padding-16 w3-border placeholder="Write something.." style="height:200px"></textarea><br>
+      <label for="paquete">Elegir</label>
+      
+      <select class="w3-input w3-padding-16 w3-border" id="codigo" name="codigo">
+      {{#suscripcion}}
+      <option value="3">{{titulo}}</option>
+       {{/suscripcion}}
+    </select>
+   
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">DESUSCRIBIRSE</button></p>
+    </form>
+
+  </div>
+</div>
+  
+{{/logueado}}
+
+{{^logueado}}
+  {{> header}}
+
+
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>Precios de Paquetes</h3>
+  <p class="w3-large">Elegi la opcion a tu medida.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Deportes</li>
+        <li class="w3-padding-16"><b>10</b> Articulos</li>
+        <li class="w3-padding-16"><b>10</b> Descargas</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 20.00</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large"><a href="/registry">Suscribirse</a></button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Economia</li>
+        <li class="w3-padding-16"><b>25</b> Articulos</li>
+        <li class="w3-padding-16"><b>25</b> Descargas</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 21.50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Suscribirse</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Tecnologia</li>
+        <li class="w3-padding-16"><b>50</b> Articulos</li>
+        <li class="w3-padding-16"><b>50</b> Descargas</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 16.50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large"><a href="/registry">Suscribirse</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+{{/logueado}}
+{{> footer}}

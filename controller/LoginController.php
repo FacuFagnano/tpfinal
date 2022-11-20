@@ -1,64 +1,56 @@
 <?php
-
-class LoginController {
+#* --------------------------------------------------- ↓↓ CONTROLADOR DEL LOGIN DE USUARIOS ↓↓ ---------------------------------------------------
+class LoginController
+{
 
     private $loginModel;
     private $renderer;
+    private $logger;
 
-    public function __construct($loginModel,$view) {
+    public function __construct($loginModel, $view, $logger)
+    {
+        
         $this->loginModel = $loginModel;
         $this->renderer = $view;
-        
+        $this->logger = $logger;
     }
 
-    public function list() {
-        
+    public function list(){
         $this->renderer->render('loginView.mustache');
-
-
     }
 
-    public function activarLogin(){
-
-        echo "Usuario Activado";
-        echo "<br>";
-        echo "PRESIONAR VOLER";//Redirect::doIt("/");
-    }
-	/*
-    public function procesarlogin()
-    {
+    public function userlogin(){
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
 
-        $this->registryModel->login($email,$password);
-
-        Redirect::doIt("login");
-    }
-    private $renderer;
-    private $model;
-
-    public function __construct($render, $model) {
-        $this->renderer = $render;
-        $this->model = $model;
-    }
-
-    public function list() {
-        $this->renderer->render();
-    }
-
-    public function alta(){
-        $this->renderer->render("loginView.mustache");
+        #? verifica que el usuario este en la tabla password y devuelve todos los datos del mismo.
+        $userInPasswordTable = $this->loginModel->getUsers($email);
+        if ($userInPasswordTable == []) {
+            Redirect::doIt("/login"); #! ESTO ES VIEW?
+        } else {
+            #? guardamos los datos del usuario para obtener el numero de sesion.
+            if($this->loginModel->passwordValidation($userInPasswordTable, $password)){
+                $_SESSION["logueado"]=1;
+                Redirect::doIt("/content");
+            }else {
+                Redirect::doIt("/login");
+            }
+        }
     }
 
-    public function procesarAlta(){
-        $nombre = $_POST["nombre"];
-        $apellido = $_POST["apellido"];
-        $geoposition = $_POST["geoposition"];
+  public function cerrarSesion()
+    {   
+        if(isset($_SESSION['logueado'])){
+            
+            session_unset();
+            session_destroy();
+            $this->logger->info("USUARIO CIERRA SESION");
+            Redirect::doIt("/login");
 
-
-        $this->model->alta($nombre,$apellido, $geoposition);
-
-        Redirect::doIt('/');
+            
+        }else{
+            Redirect::doIt("/login");
+            
+        }
     }
-*/
 }

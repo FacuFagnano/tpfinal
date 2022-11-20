@@ -1,37 +1,48 @@
 <?php
-
+#* --------------------------------------------------- ↓↓ CONTROLADOR DEL REGISTRO DE USUARIOS ↓↓ ---------------------------------------------------
 class RegistryController
 {
     private $registryModel;
     private $renderer;
+    private $logger;
+    private $mail;
 
-    public function __construct($registryModel, $view)
-    {
+    public function __construct($mail,$registryModel, $view, $logger){
         $this->registryModel = $registryModel;
         $this->renderer = $view;
+        $this->mail = $mail;
+        $this->logger = $logger;
     }
 
-    public function list()
-    {
+    public function list(){
         $this->renderer->render('registryView.mustache');
     }
 
-    public function procesarAlta()
-    {
+    public function procesarAlta(){
+        #! ------------------------------------------ VARIABLES --------------------------------------------
         $name = $_POST['name'] ?? '';
         $lastname = $_POST['lastname'] ?? '';
-        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //Hash Password
+        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //? Hash Password. Convierte la password en un hash para que no sea hackeada.
         $email = $_POST['email'] ?? '';
         $geoposition = $_POST['geoposition'] ?? '';
+        $hash_validate = md5(time());
+        $this->logger->info("Este es el hash ".$hash_validate);
+        $this->mail->enviarMail($email, $name, $hash_validate);
+        #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
-
-        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition);
+        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition,$hash_validate);
         if ($correctAlta){
+            //Redirect::doIt("/validateUser");
+            $this->logger->info('ESTOY EN EL TRUE');
+            $this->renderer->render('validateUserView.mustache');
+        }else{
+            $this->logger->info('ESTOY EN EL FALSE');
             Redirect::doIt("/registry");
         }
-        Redirect::doIt("/login");
 
-        //echo $this->renderer->render('usuarioRegistrado.mustache');
+
+
+        //
     }
 }
 

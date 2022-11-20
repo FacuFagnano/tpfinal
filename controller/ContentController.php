@@ -10,7 +10,12 @@ class ContentController {
     }
 
     public function list() {
-       // $data['content'] = $this->contentModel->getContent();
-        $this->view->render('contentView.mustache'/*, $data*/);
+        $data['publicaciones'] = $this->contentModel->getContent();
+        $data['logueado'] = $_SESSION["logueado"];
+        $this->view->render('contentView.mustache', $data);
+    }
+
+    public function listarPublicaciones(){
+        $data['publicaciones'] = $this->contentModel->getContent();     
     }
 }

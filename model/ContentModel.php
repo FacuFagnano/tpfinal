@@ -8,7 +8,7 @@ class ContentModel {
     }
 
     public function getContent() {
-        $sql = 'SELECT * FROM content';
+        $sql = 'SELECT * FROM publications p INNER JOIN section s on s.id = p.id_section';
         return $this->database->query($sql);
     }
 }

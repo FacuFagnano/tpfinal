@@ -2,56 +2,31 @@
 
 class ValidarController
 {
-    private $ValidarModel;
+    private $validarModel;
     private $renderer;
     private $logger;
 
-    public function __construct($ValidarModel, $view, $logger) {
-        $this->ValidarModel = $ValidarModel;
-        $this->renderer = $view;
-        $this->logger = $logger;
+    public function __construct($validarModel, $view, $logger) {
+        $this->validarModel = $validarModel; #* parametro
+        $this->renderer = $view; #* parametro
+        $this->logger = $logger; #* parametro
     }
 
     public function list() {
-
-        $data['user'] = $this->ValidarModel->getLogin1();
-        $this->logger->info("Se valido usuario OKss");
-        $this->renderer->render('tourView.mustache',$data);
+        $data['user'] = $this->validarModel->validateUser(); #* me guardo el usuario que esta logueado.
+        $this->renderer->render('tourView.mustache',$data); #* muestra en pantalla, por medio del view, la interfaz de tour.
     }
 
-    
-    function controlarSesion()
-    {
-        $mail  = $_POST['mail'] ?? '';
-        $pass = $_POST['pass'] ?? '';
 
-        echo $mail;
-        echo '<br>';
-        echo $pass;
+    #! --------------------------- CONFIRMACION DE CUENTA DEL USUARIO ---------------------------
 
-        
-        //CLAVE OK: rasmuslerdorf
-        $validacion = $this->ValidarModel->getUsuario($mail);
-        foreach ($validacion as $buscarArray) {
-            $_SESSION['usuario_id'] = $buscarArray["ID"];
-            $_SESSION['tipoUsuario'] = $buscarArray["ROL"];
-            
-            if (password_verify($_POST["pass"], $buscarArray["PASSWORD"])) {
-                echo '<br>';
-                echo $this->logger->info("USUARIO LOGUEADO");
-                echo 'Contraseña Valida';
-                
-            } else {
-                echo '<br>';
-                echo $this->logger->info("USUARIO INTENTO LOGUEARSE");
-                echo 'contraseña Erronea';
-            }
+    public function confirmAccount(){
+        $code = $_GET["code"];
+        $email = $_GET["email"];
+        if($this->validarModel->activateAccount($code,$email)){
+            $this->renderer->render('validateUserView.mustache');
+        }else{
+            $this->renderer->render('userNotValidate.mustache');
         }
-        
-
-       
-        
     }
-
-
 }

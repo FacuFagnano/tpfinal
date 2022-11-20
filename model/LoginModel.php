@@ -3,25 +3,40 @@
 class LoginModel {
 
     private $database;
-    private $results;
+    private $logger;
 
-    public function __construct($database) {
+    public function __construct($database, $logger) {
         $this->database = $database;
-        $this->results = $this->getUsers();
+        $this->logger = $logger;
     }
 
-    public function getUsers() {
-        $sql = "SELECT * FROM user";
-        $this->database->query($sql);
+    public function getUsers($email) {
+        $sql = "SELECT * FROM password WHERE email = '$email'";
+        return $this->database->query($sql);
     }
 
-    public function login($email, $pass) {
-        foreach ($this->results as $result) {
-            if ($result["EMAIL"] == $email && $result["PASSWORD"] == $pass){
-                $_SESSION["log"]=1;
-                Redirect::doIt("/");
+    public function passwordValidation($userInPasswordTable, $password){
+        foreach ($userInPasswordTable as $result) {
+            #? Le asigna en el session el id del usuario logueado.
+            $this->logger->info("Estoy en el Login model: ". json_encode($result));
+            if (password_verify($password, $result["PASS"]) && $result["VALIDATED_STATUS"] == 1) {
+                return true;
+            } else {
+                return false;
             }
+
         }
     }
 
+    public function borrar($valor){
+        $query = "DELETE FROM `sesion` WHERE `sesion`.`valor` = '$valor'"; // revisar tabla y valor
+        return $this->database->execute($query);
+    }
+
+    public function hash($valor){
+        $query = "SELECT `HASH_VALIDATOR` FROM `password` WHERE `HASH_VALIDATOR` = 100"; // revisar tabla y valor
+        return $this->database->execute($query);
+    }
+
+    
 }
