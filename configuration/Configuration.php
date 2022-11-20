@@ -15,6 +15,7 @@ include_once("model/EconomiaModel.php");
 include_once("model/TecnologiaModel.php");
 include_once("model/adminModel.php");
 include_once("model/UserListModel.php");
+include_once("model/NewNoteModel.php");
 
 
 include_once('controller/RegistryController.php');
@@ -28,6 +29,7 @@ include_once("controller/EconomiaController.php");
 include_once("controller/TecnologiaController.php");
 include_once("controller/adminController.php");
 include_once("controller/UserListController.php");
+include_once("controller/NewNoteController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -79,6 +81,9 @@ class Configuration {
     }
     public function getUserListController(){
         return new UserListController($this->getUserListModel(),$this->view,$this->logger);
+    }
+    public function getNewNoteController(){
+        return new NewNoteController($this->getNewNoteModel(),$this->view,$this->logger);
     }
     private function getMailController()
     {
@@ -142,5 +147,9 @@ class Configuration {
 
     public function getValidarModel() {
         return new ValidarModel($this->database, $this->logger);
+    }
+
+    public function getNewNoteModel() {
+        return new NewNoteModel($this->database, $this->logger);
     }
 }
