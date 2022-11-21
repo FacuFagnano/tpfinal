@@ -1,117 +1,48 @@
 {{#logueado}}
   {{> headerLogueado}}
 
+  <br><br>
+<h2 class="w3-center">Secciones</h2>
+</div>
+
+
+
+  <div class="w3-card-8">
+  {{#editionsItem}}
+ <a href="/Edicion"><img src="{{editionImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
+  
+      
+  {{/editionsItem}}
+  <hr>
+    
+
 {{/logueado}}
 {{^logueado}}
   {{> header}}
+
+  
+<!-- The App Section -->
+<div class="w3-padding-64 w3-white">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+     <h1 class="w3-xxxlarge w3-text-green"><b>No puedes visualizar las revistas o diarios sin suscribirse..</b></h1>
+      <p><span class="w3-xlarge">Utiliza nuestra app.</span> <br>Podes visualizar 1 revista gratis.</p>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+        <i class="fa fa-download"></i> Download Application
+      </button>
+      <p>Available for <i class="fa fa-android w3-xlarge w3-text-green"></i> <i class="fa fa-apple w3-xlarge"></i> <i class="fa fa-windows w3-xlarge w3-text-blue"></i></p>
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="/public/w3images/bloqueo.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <div class="w3-center w3-hide-large w3-hide-medium">
+        <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
+          <i class="fa fa-download"></i> Download Application
+        </button>
+        <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
+      </div>
+    </div>
+  </div>
+</div>
 {{/logueado}}
-<br>
-<br>
 
-
-  <div class="w3-container w3-text-grey" id="jeans">
-    <p>8 items</p>
-  </div>
-
-  <!-- Product grid -->
-  <div class="w3-row w3-grayscale">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Diciembre<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Noviembre<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Octubre<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-        
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Agosto<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-         
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Julio<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-      <div class="w3-container">
-        <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Oferta</span>
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Febrero<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-    
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-
-          <span class="w3-tag w3-display-topleft">Sold</span>
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion enero<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-        
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-         <img src="/public/diarios/Tapa/ambito.jpeg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Oferta</span>
-          <div class="w3-display-middle w3-display-hover">
-            <a href="/Edicion/seccion"><button class="w3-button w3-black">Edicion Mayo<i class="fa fa-shopping-cart"></i></button></a>
-          </div>
-        </div>
-     
-      </div>
-    </div>
-  </div>
 {{> footer}}

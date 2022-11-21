@@ -1,16 +1,28 @@
 {{#logueado}}
   {{> headerLogueado}}
 <br>
+
+
 <div class="w3-container w3-white w3-margin w3-padding-large w3-center">
           <div class=>
             <h3>ADMIN</h3>
-            <a href="/userList"><button class="w3-button w3-block w3-padding-large" style="width:40%">Listar usuarios</a>
-                      
-          </div>
-
             
-          </div>
-          </div>
+          </div> 
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    
+    <div class="w3-quarter">
+      <a href="/userList"><img src="/public/admin/documentos.png" alt="documentos" style="width:100%"></a>
+      <h3>Listar Articulos y Secciones</h3>
+      <p>Dar alta de seccion, articulo y ediciones.</p>
+    </div>
+    <div class="w3-quarter">
+      <a href="/userList"><img src="/public/admin/usuario.png" alt="usuario" style="width:100%"></a>
+      <h3>Listar Usuarios</h3>
+      <p>Dar alta de usuario y modificar permisos.</p>
+    </div>
+  </div> 
 {{/logueado}}
 {{^logueado}}
   {{> header}}
