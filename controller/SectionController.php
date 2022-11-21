@@ -1,23 +1,24 @@
 <?php
-class EdicionController
-{
 
-    private $edicionModel;
+class SectionController
+{
+    private $sectionModel;
     private $view;
     private $logger;
 
-    public function __construct($edicionModel, $view, $logger){
-        $this->edicionModel = $edicionModel;
+    public function __construct($sectionModel, $view, $logger){
+        $this->sectionModel = $sectionModel;
         $this->view = $view;
         $this->logger = $logger;
     }
 
     public function list(){
-        $data['editions'] = $this->edicionModel->getEdition();
+        $data['sections'] = $this->sectionModel->getSection();
         $data['logueado'] = $_SESSION["logueado"];
+        $this->logger->info("Estas son las secciones: " . json_encode($data['sections']));
         $this->view->render('edicionView.mustache', $data);
     }
-    
+
     public function itemSeleccionado(){
         $this->view->render('contentView.mustache');
     }

@@ -1,6 +1,6 @@
 <?php
-    class EdicionModel {
-    
+
+class SectionModel{
     private $database;
     private $logger;
 
@@ -9,8 +9,9 @@
         $this->logger = $logger;
     }
 
-    public function getEdition(){
-        $sql = 'SELECT * FROM edition';
+    public function getSection(){
+        $sql = 'SELECT * FROM section';
         return $this->database->query($sql);
     }
+
 }
