@@ -18,8 +18,6 @@ include_once("model/UserListModel.php");
 include_once("model/NewNoteModel.php");
 include_once("model/DailyModel.php");
 include_once("model/EdicionModel.php");
-include_once("model/SectionModel.php");
-include_once("model/ArticleModel.php");
 
 
 include_once('controller/RegistryController.php');
@@ -36,8 +34,6 @@ include_once("controller/UserListController.php");
 include_once("controller/NewNoteController.php");
 include_once("controller/DailyController.php");
 include_once("controller/EdicionController.php");
-include_once("controller/SectionController.php");
-include_once("controller/ArticleController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -97,20 +93,9 @@ class Configuration {
     public function getdailyController(){
         return new DailyController($this->getDailyModel(),$this->view,$this->logger);
     }
-
     public function getEdicionController(){
-        return new EdicionController($this->getEdicionModel(),$this->view,$this->logger);
+        return new EdicionController($this->getEdicionmodel(),$this->view,$this->logger);
     }
-
-    public function getSectionController(){
-        return new SectionController($this->getSectionModel(),$this->view,$this->logger);
-    }
-
-    public function getArticleController(){
-        return new ArticleController($this->getArticleModel(),$this->view,$this->logger);
-    }
-
-
     private function getMailController()
     {
         require_once("controller/MailController.php");
@@ -121,20 +106,12 @@ class Configuration {
         return new MailController();
     }
 
-    private function getDailyModel(): DailyModel {
-        return new DailyModel($this->database, $this->logger);
-    }
-
     private function getEdicionModel(): EdicionModel {
-        return new EdicionModel($this->database, $this->logger);
+        return new EdicionModel($this->database);
     }
 
-    private function getSectionModel(): SectionModel {
-        return new SectionModel($this->database, $this->logger);
-    }
-
-    private function getArticleModel(): ArticleModel {
-        return new ArticleModel($this->database, $this->logger);
+    private function getDailyModel(): DailyModel {
+        return new DailyModel($this->database);
     }
 
     private function getUserListModel(): UserListModel {

@@ -1,5 +1,6 @@
 <?php
-    class EdicionModel {
+
+class DailyModel {
     
     private $database;
 

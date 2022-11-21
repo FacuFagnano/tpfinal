@@ -12,7 +12,7 @@ class MailController
 
   public function enviarMail($destinatario, $user, $validar)
   {
-    $url = "http://localhost8888/validar/confirmAccount/?code=".urlencode($validar)."&email=".$destinatario;
+    $url = "http://localhost/validar/confirmAccount/?code=".urlencode($validar)."&email=".$destinatario;
     //Crear una instancia de PHPMailer
     $mail = new PHPMailer();
     //Definir que vamos a usar SMTP
