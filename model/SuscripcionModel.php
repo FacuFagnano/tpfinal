@@ -10,7 +10,7 @@ class SuscripcionModel {
     // Hay que definir los paquete por cada usuario y reflejarlo en la vista.
 
     public function getSuscripcion() {
-        $sql = 'SELECT * FROM articles a INNER JOIN section s on s.idSection = a.idArticles';
+        $sql = 'SELECT * from publications p INNER JOIN section s on s.id=p.id_section';
         return $this->database->query($sql);
     }
     public function borrar($valor){

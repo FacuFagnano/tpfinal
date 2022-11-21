@@ -8,7 +8,7 @@ class tecnologiaController {
     public function __construct($tecnologiaModel, $view, $logger)
     {
         
-        $this->tecnologiaModel = $tecnologiaModel;
+        $this->tecnologiaModel = $tecnolgiaModel;
         $this->renderer = $view;
         $this->logger = $logger;
     }
