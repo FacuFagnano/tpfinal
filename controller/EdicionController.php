@@ -6,7 +6,9 @@ class EdicionController
     private $view;
     private $logger;
 
-    public function __construct($edicionModel, $view, $logger){
+    public function __construct($edicionModel, $view, $logger)
+    {
+        
         $this->edicionModel = $edicionModel;
         $this->view = $view;
         $this->logger = $logger;
@@ -14,11 +16,20 @@ class EdicionController
 
     public function list(){
         $data['editions'] = $this->edicionModel->getEdition();
+        $data['editionsItem'] = $this->edicionModel->getDailySession();
         $data['logueado'] = $_SESSION["logueado"];
-        $this->view->render('edicionView.mustache', $data);
+        $this->view->render('edicionView.mustache',$data);
+       
     }
     
-    public function itemSeleccionado(){
-        $this->view->render('contentView.mustache');
+    
+    public function seccion(){
+        $data['editionsItem'] = $this->edicionModel->getDailySession();
+        $this->view->render('itemEdicionView.mustache',$data);
+    }
+
+    public function notas(){
+        $data['editionsNotas'] = $this->edicionModel->getNotasSession();
+        $this->view->render('notasEdicionView.mustache',$data);
     }
 }

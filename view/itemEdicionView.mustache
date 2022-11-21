@@ -1,73 +1,42 @@
 {{#logueado}}
   {{> headerLogueado}}
+  <br><br>
+<h2 class="w3-center">Secciones</h2>
+</div>
 
+
+
+  <div class="w3-card-8">
+  {{#editionsItem}}
+ <a href="/Edicion/notas"><img src="{{editionImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
+  
+      
+  {{/editionsItem}}
+  <hr>
 {{/logueado}}
 {{^logueado}}
   {{> header}}
+  <!-- The App Section -->
+<div class="w3-padding-64 w3-white">
+  <div class="w3-row-padding">
+    <div class="w3-col l8 m6">
+     <h1 class="w3-xxxlarge w3-text-green"><b>No puedes visualizar las revistas o diarios sin suscribirse..</b></h1>
+      <p><span class="w3-xlarge">Utiliza nuestra app.</span> <br>Podes visualizar 1 revista gratis.</p>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
+        <i class="fa fa-download"></i> Download Application
+      </button>
+      <p>Available for <i class="fa fa-android w3-xlarge w3-text-green"></i> <i class="fa fa-apple w3-xlarge"></i> <i class="fa fa-windows w3-xlarge w3-text-blue"></i></p>
+    </div>
+    <div class="w3-col l4 m6">
+      <img src="/public/w3images/bloqueo.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <div class="w3-center w3-hide-large w3-hide-medium">
+        <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
+          <i class="fa fa-download"></i> Download Application
+        </button>
+        <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
+      </div>
+    </div>
+  </div>
+</div>
 {{/logueado}}
-
-    <h2 class="w3-center"><b>NUESTROS DIARIOS Y REVISTAS</b></h2>
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding w3-center" id="food">
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Seccion Internacional</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-<a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Seccion Economia</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-<a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>All I Need Is a Popsicle</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-     <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Salmon For Your Skin</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>The Perfect Sandwich, A Real Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-     <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Le French</h3>
-      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
 {{> footer}}

@@ -4,16 +4,25 @@ class DailyController {
     private $view;
     private $logger;
 
-    public function __construct($dailyModel, $view, $logger){
+    public function __construct($dailyModel, $view, $logger)
+    {
+        
         $this->dailyModel = $dailyModel;
-        $this->renderer = $view;
+        $this->view = $view;
         $this->logger = $logger;
     }
 
+    
     public function list(){
-        $data['dailys'] = $this->DailyModel->getDaily();
+        
+        $data['dailys'] = $this->dailyModel->getDaily();
         $this->logger->info("Estos son los diarios: " . json_encode($data['diarios']));
-        $data['logueado'] = $_SESSION["logueado"];
+        $data['logueado'] = !empty($_SESSION["logueado"]);
         $this->view->render('dailyView.mustache', $data);
+    }
+
+
+    public function listarDiarios(){
+        $data['dailys'] = $this->dailyModel->getDaily();    
     }
 }
