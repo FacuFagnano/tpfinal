@@ -1,0 +1,4 @@
+[22-11-20 02:10:52][INFO] hiciste cualquiera
+[22-11-20 03:29:55][INFO] hiciste cualquiera
+[22-11-20 04:06:13][INFO] Se metió al else del título
+[22-11-20 04:06:13][INFO] hiciste cualquiera

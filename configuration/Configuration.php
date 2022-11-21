@@ -14,6 +14,10 @@ include_once("model/DeportesModel.php");
 include_once("model/EconomiaModel.php");
 include_once("model/TecnologiaModel.php");
 include_once("model/adminModel.php");
+include_once("model/UserListModel.php");
+include_once("model/NewNoteModel.php");
+include_once("model/DailyModel.php");
+include_once("model/EdicionModel.php");
 
 
 include_once('controller/RegistryController.php');
@@ -26,6 +30,10 @@ include_once("controller/DeportesController.php");
 include_once("controller/EconomiaController.php");
 include_once("controller/TecnologiaController.php");
 include_once("controller/adminController.php");
+include_once("controller/UserListController.php");
+include_once("controller/NewNoteController.php");
+include_once("controller/DailyController.php");
+include_once("controller/EdicionController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -75,6 +83,19 @@ class Configuration {
     public function getAdminController(){
         return new AdminController($this->getAdminModel(),$this->view,$this->logger);
     }
+    public function getUserListController(){
+        return new UserListController($this->getUserListModel(),$this->view,$this->logger);
+    }
+    public function getNewNoteController(){
+        return new NewNoteController($this->getNewNoteModel(),$this->view,$this->logger);
+    }
+
+    public function getdailyController(){
+        return new DailyController($this->getDailyModel(),$this->view,$this->logger);
+    }
+    public function getEdicionController(){
+        return new EdicionController($this->getEdicionmodel(),$this->view,$this->logger);
+    }
     private function getMailController()
     {
         require_once("controller/MailController.php");
@@ -85,6 +106,17 @@ class Configuration {
         return new MailController();
     }
 
+    private function getEdicionModel(): EdicionModel {
+        return new EdicionModel($this->database);
+    }
+
+    private function getDailyModel(): DailyModel {
+        return new DailyModel($this->database);
+    }
+
+    private function getUserListModel(): UserListModel {
+        return new UserListModel($this->database);
+    }
     private function getAdminModel(): AdminModel {
         return new AdminModel($this->database);
     }
@@ -133,5 +165,9 @@ class Configuration {
 
     public function getValidarModel() {
         return new ValidarModel($this->database, $this->logger);
+    }
+
+    public function getNewNoteModel() {
+        return new NewNoteModel($this->database, $this->logger);
     }
 }
