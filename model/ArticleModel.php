@@ -1,6 +1,7 @@
 <?php
-    class EdicionModel {
-    
+
+class ArticleModel
+{
     private $database;
     private $logger;
 
@@ -9,8 +10,8 @@
         $this->logger = $logger;
     }
 
-    public function getEdition(){
-        $sql = 'SELECT * FROM edition';
+    public function getArticle(){
+        $sql = 'SELECT * FROM article';
         return $this->database->query($sql);
     }
 }

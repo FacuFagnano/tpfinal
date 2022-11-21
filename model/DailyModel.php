@@ -1,5 +1,6 @@
 <?php
-    class EdicionModel {
+
+class DailyModel {
     
     private $database;
     private $logger;
@@ -9,8 +10,8 @@
         $this->logger = $logger;
     }
 
-    public function getEdition(){
-        $sql = 'SELECT * FROM edition';
+    public function getDaily(){
+        $sql = 'SELECT * FROM daily';
         return $this->database->query($sql);
     }
 }
