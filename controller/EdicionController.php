@@ -18,11 +18,7 @@ class EdicionController
         $this->renderer->render('edicionView.mustache');
     }
     
-    public function seccion(){
-        $this->renderer->render('itemEdicionView.mustache');
-    }
-
-    public function notas(){
-        $this->renderer->render('notasEdicionView.mustache');
+    public function itemSeleccionado(){
+        $this->renderer->render('contentView.mustache');
     }
 }

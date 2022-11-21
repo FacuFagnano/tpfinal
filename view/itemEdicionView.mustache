@@ -6,68 +6,24 @@
   {{> header}}
 {{/logueado}}
 
-    <h2 class="w3-center"><b>NUESTROS DIARIOS Y REVISTAS</b></h2>
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<!-- The logIn Section -->
+<div class="w3-black" id="login">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">INICIAR SESIÓN</h2>
+        <p class="w3-opacity w3-center"><i>¡Ingresá para ver todo nuestro contenido!</i></p><br>
+        <div class="w3-container">
+            <form action="/login/userLogin" method="post">
+                <p><label for="email"><i class="fa fa-user"></i> Usuario</label></p>
+                <input class="w3-input w3-border" name="email" id="email" type="email" placeholder="email@email.com">
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding w3-center" id="food">
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Seccion Internacional</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-<a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Seccion Economia</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-<a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>All I Need Is a Popsicle</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-     <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Salmon For Your Skin</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>The Perfect Sandwich, A Real Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-     <a href="/Edicion/notas" ><img src="/public/diarios/tapa/seccion/seccion.png" alt="Sandwich" style="width:100%"></a>
-      <h3>Le French</h3>
-      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
+                <p><label for="password"><i class="fa  fa-key"></i> Contraseña</label></p>
+                <input class="w3-input w3-border" name="password" id="password" type="password" placeholder="*******">
 
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+                <button type="submit" class="w3-button  w3-black w3-padding-16 w3-section">Iniciar sesión</button>
+
+                <a href="/registry" class="w3-text-white w3-hover-text-black"><div class="w3-button w3-black w3-padding-16 w3-section w3-right">Registrarse</div></a>
+            </form>
+        </div>
     </div>
-  </div>
+</div>
 {{> footer}}
