@@ -1,0 +1,76 @@
+[22-11-23 12:28:36][INFO] SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:28:36][INFO] este es data el suscripcion []
+[22-11-23 12:28:36][INFO] SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:30:48][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:30:48][INFO] este es data el suscripcion []
+[22-11-23 12:30:48][INFO] SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:33:17][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:33:17][INFO] este es data el suscripcion []
+[22-11-23 12:36:42][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:36:42][INFO] este es data el suscripcion []
+[22-11-23 12:40:18][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-23 12:40:21][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:40:21][INFO] este es data el suscripcion []
+[22-11-23 12:40:24][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:40:24][INFO] este es data el suscripcion []
+[22-11-23 12:40:34][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:40:34][INFO] este es data el suscripcion []
+[22-11-23 12:42:39][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.20 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:42:59][INFO] Este es el sql de getSuscripcion SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.20 
+        INNER JOIN daily d on d.dailyId = usd.idUsersDaily
+[22-11-23 12:45:23][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:45:23][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"}]
+[22-11-23 12:45:28][INFO] entre altaSuscripcion
+[22-11-23 12:45:28][INFO]  Este es el usuario20 Este es diario:4
+[22-11-23 12:45:28][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:45:28][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:45:30][INFO] entre bajaDesuscripcion
+[22-11-23 12:45:30][INFO] 4
+[22-11-23 12:45:30][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:45:31][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:45:34][INFO] entre bajaDesuscripcion
+[22-11-23 12:45:34][INFO] 4
+[22-11-23 12:45:34][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:45:34][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:01][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:01][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:02][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:02][INFO] 1
+[22-11-23 12:46:02][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:02][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:04][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:04][INFO] 4
+[22-11-23 12:46:04][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:04][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:06][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:06][INFO] 3
+[22-11-23 12:46:06][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:06][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:10][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:10][INFO] 1
+[22-11-23 12:46:10][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:10][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:35][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:35][INFO] este es data el suscripcion [{"idUsersDaily":"21","UserIdTable":"20","DailyIdTable":"1","dailyId":"1","name":"Clarin","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/ambito.png"},{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:36][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:36][INFO] 201
+[22-11-23 12:46:36][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:36][INFO] este es data el suscripcion [{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:46:40][INFO] entre altaSuscripcion
+[22-11-23 12:46:40][INFO]  Este es el usuario20 Este es diario:2
+[22-11-23 12:46:40][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:40][INFO] este es data el suscripcion [{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"},{"idUsersDaily":"24","UserIdTable":"20","DailyIdTable":"2","dailyId":"2","name":"La Nacion","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/pronto.png"}]
+[22-11-23 12:46:41][INFO] entre bajaDesuscripcion
+[22-11-23 12:46:41][INFO] 202
+[22-11-23 12:46:41][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:46:41][INFO] este es data el suscripcion [{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]
+[22-11-23 12:47:01][INFO] Este es el sql de getSuscripcion SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = 20 
+[22-11-23 12:47:01][INFO] este es data el suscripcion [{"idUsersDaily":"22","UserIdTable":"20","DailyIdTable":"3","dailyId":"3","name":"Cronica","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/infobae.png"},{"idUsersDaily":"23","UserIdTable":"20","DailyIdTable":"4","dailyId":"4","name":"Pagina 12","idTypeTable":"1","dailyImageUrl":"\/public\/diarios\/p12.png"}]

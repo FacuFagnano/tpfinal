@@ -12,8 +12,10 @@ class SuscripcionModel {
     // Hay que definir los paquete por cada usuario y reflejarlo en la vista.
 
     public function getSuscripcion() {
-        $sql = 'SELECT * FROM usersdaily usd INNER JOIN user u on usd.userIdTable = u.ID 
-        INNER JOIN daily d on d.dailyId = usd.idUsersDaily';
+        
+
+        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = '  . $_SESSION["logueado"] . ' ';
+        $this->logger->info("Este es el sql de getSuscripcion " ."$sql");
         return $this->database->query($sql);
     }
     public function getSuscripcionNuevas() {

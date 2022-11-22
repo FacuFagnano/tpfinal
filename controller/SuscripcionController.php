@@ -13,23 +13,20 @@ class SuscripcionController {
 
     public function list() {
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
+        $this->logger->info("este es data el suscripcion " . json_encode($data['suscripcion']));
         $this->view->render('suscripcionActivaView.mustache', $data);
     }
 
     public function listarSuscripcion(){
         $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();     
     }
-    public function baja()
-    {
-      $valor = $_POST["codigo"];
-      $this->suscripcionModel->borrar($valor);
-      Redirect::doIt("/suscripcion");
-    }
+
+
     public function altaSuscripcion(){
         $this->logger->info("entre altaSuscripcion");
-        $user = $_POST["userId"];
+        $user = $_SESSION["logueado"];
         $daily = $_POST["dailyId"];
-        $this->logger->info( $user . " " . $daily);
+        $this->logger->info(" Este es el usuario". $user . " Este es diario:" . $daily);
         $this->suscripcionModel->insertarSuscripcion($user,$daily);
         Redirect::doIt("/suscripcion");
     }
@@ -40,7 +37,7 @@ class SuscripcionController {
 
     public function bajaDesuscripcion(){
         $this->logger->info("entre bajaDesuscripcion");
-        $user = $_POST["userId"];
+        $user = $_SESSION["logueado"];
         $daily = $_POST["dailyId"];
 
         $this->logger->info($user . $daily);

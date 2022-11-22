@@ -111,7 +111,7 @@ class Configuration {
     }
 
     private function getDailyModel(): DailyModel {
-        return new DailyModel($this->database);
+        return new DailyModel($this->database,$this->logger);
     }
 
     private function getUserListModel(): UserListModel {

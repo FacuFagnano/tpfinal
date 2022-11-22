@@ -14,9 +14,8 @@ class DailyController {
 
     
     public function list(){
-        
         $data['dailys'] = $this->dailyModel->getDaily();
-        $this->logger->info("Estos son los diarios: " . json_encode($data['diarios']));
+       
         $data['logueado'] = !empty($_SESSION["logueado"]);
         $this->view->render('dailyView.mustache', $data);
     }
