@@ -69,7 +69,7 @@ class Configuration {
     }
 
     public function getSuscripcionController(){
-        return new SuscripcionController($this->getSuscripcionModel(),$this->view);
+        return new SuscripcionController($this->getSuscripcionModel(),$this->view,$this->logger);
     }
     public function getDeportesController(){
         return new DeportesController($this->getDeportesModel(),$this->view,$this->logger);
@@ -111,11 +111,11 @@ class Configuration {
     }
 
     private function getDailyModel(): DailyModel {
-        return new DailyModel($this->database);
+        return new DailyModel($this->database,$this->logger);
     }
 
     private function getUserListModel(): UserListModel {
-        return new UserListModel($this->database);
+        return new UserListModel($this->database,$this->logger);
     }
     private function getAdminModel(): AdminModel {
         return new AdminModel($this->database);
@@ -134,11 +134,11 @@ class Configuration {
     }
 
     private function getSuscripcionModel(): SuscripcionModel {
-        return new SuscripcionModel($this->database);
+        return new SuscripcionModel($this->database,$this->logger);
     }
 
     private function createValidarModel(): ValidarModel {
-        return new ValidarModel($this->database);
+        return new ValidarModel($this->database,$this->logger);
     }
 
     private function createContentModel(): ContentModel {

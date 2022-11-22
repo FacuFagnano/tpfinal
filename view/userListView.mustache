@@ -11,8 +11,10 @@
      
 <div class='w3-container w3-content w3-center' style='max-width:800px' id='userList'>
     <h2 class='w3-wide'>Usuario Registrados</h2>
+
     <table class='w3-table'>
         <tr>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Rol</th>
@@ -22,20 +24,24 @@
 
         {{#user}}
            <tr>
+                <td>{{ID}}</td>
                 <td>{{NAME}}</td>
                 <td>{{LASTNAME}}</td>
-                <td>{{ROL}}</td>
+                <td>{{DESCRIPTION}}</td>
                 <div class="w3-justify">
-                <td><button class="w3-button w3-round-xlarge">Eliminar</button></td>     
-                <td><select class="w3-input w3-border">
-                      <option value="3">Editor</option>
-                  </select>
-                </td>
+                <td><a href="/UserList/deleteDataUser?userId={{ID}}"><button class="w3-button w3-round-xlarge">Eliminar</button></a></td>    
+                <div class="w3-justify">     
+                <td><a href="/UserList/modifyDataUser?userId={{ID}}&select=value" ><button class="w3-button w3-round-xlarge">Modificar</button></a></td>     
+                
+                </div>    
+                
                 </div>
             </tr>
         {{/user}}
 
     </table>
+
+    
 </div>
           </div>
 {{/logueado}}

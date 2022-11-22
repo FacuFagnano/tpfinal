@@ -3,22 +3,33 @@ class EdicionController
 {
 
     private $edicionModel;
-    private $renderer;
+    private $view;
     private $logger;
 
     public function __construct($edicionModel, $view, $logger)
     {
         
         $this->edicionModel = $edicionModel;
-        $this->renderer = $view;
+        $this->view = $view;
         $this->logger = $logger;
     }
 
     public function list(){
-        $this->renderer->render('edicionView.mustache');
+        $data['editions'] = $this->edicionModel->getEdition();
+        $data['editionsItem'] = $this->edicionModel->getDailySession();
+        $data['logueado'] = $_SESSION["logueado"];
+        $this->view->render('edicionView.mustache',$data);
+       
     }
     
-    public function itemSeleccionado(){
-        $this->renderer->render('contentView.mustache');
+    
+    public function seccion(){
+        $data['editionsItem'] = $this->edicionModel->getDailySession();
+        $this->view->render('itemEdicionView.mustache',$data);
+    }
+
+    public function notas(){
+        $data['editionsNotas'] = $this->edicionModel->getNotasSession();
+        $this->view->render('notasEdicionView.mustache',$data);
     }
 }

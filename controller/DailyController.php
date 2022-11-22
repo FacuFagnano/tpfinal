@@ -2,16 +2,26 @@
 class DailyController {
     private $dailyModel;
     private $view;
+    private $logger;
 
     public function __construct($dailyModel, $view, $logger)
     {
         
         $this->dailyModel = $dailyModel;
-        $this->renderer = $view;
+        $this->view = $view;
         $this->logger = $logger;
     }
 
+    
     public function list(){
-        $this->renderer->render('dailyView.mustache');
+        $data['dailys'] = $this->dailyModel->getDaily();
+       
+        $data['logueado'] = !empty($_SESSION["logueado"]);
+        $this->view->render('dailyView.mustache', $data);
+    }
+
+
+    public function listarDiarios(){
+        $data['dailys'] = $this->dailyModel->getDaily();    
     }
 }

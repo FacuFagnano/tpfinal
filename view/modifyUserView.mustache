@@ -1,22 +1,54 @@
 {{#logueado}}
   {{> headerLogueado}}
-  <br><br>
-<h2 class="w3-center">Secciones</h2>
+<br><br>
+<h2 class="w3-center">Suscribirse</h2>
 </div>
 
+<div class="w3-row-padding ">
+
+  {{#userModify}}
+<form class="w3-container w3-card-4" action="/userList/updateDataUser" method="POST">
+  <h2>Elegir la suscripcion deseada</h2>
 
 
-  <div class="w3-card-8">
-  {{#editionsItem}}
- <a href="/Edicion/notas"><img src="{{editionImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
-  
+
+ <div class="w3-section">      
       
-  {{/editionsItem}}
-  <hr>
+    <input id="userId" name="userId" type="hidden" value="{{ID}}">
+  </div>
+  <div class="w3-section">          
+    <label>Nombre: {{NAME}}</label>
+  </div>
+
+  <div class="w3-section">          
+    <label>Rol Actual: {{DESCRIPTION}} </label>
+  </div>
+  <div class="w3-section">          
+    <label>Nuevo Rol</label>
+    <select class="w3-input w3-padding-16 w3-border" id="codigo" name="codigo">
+      <option value="1">Administrador</option>
+      <option value="2">Lector</option>
+      <option value="3">Editor</option>
+      <option value="4">Escritor</option>       
+    </select>
+  </div>
+  {{/userModify}}
+  <div class="w3-row">
+ <p><button class="w3-button w3-light-grey w3-block" type="submit">Cambiar Rol</button></p>
+  </div>
+</form>
+
+</div>
+
+</div>
+</div>
+<hr>
 {{/logueado}}
 {{^logueado}}
   {{> header}}
-  <!-- The App Section -->
+
+
+<!-- The App Section -->
 <div class="w3-padding-64 w3-white">
   <div class="w3-row-padding">
     <div class="w3-col l8 m6">
@@ -39,4 +71,5 @@
   </div>
 </div>
 {{/logueado}}
+
 {{> footer}}

@@ -25,13 +25,16 @@ class LoginController
 
         #? verifica que el usuario este en la tabla password y devuelve todos los datos del mismo.
         $userInPasswordTable = $this->loginModel->getUsers($email);
+       
+        $ID_USER= $userInPasswordTable[0]["ID_PASS"];
         if ($userInPasswordTable == []) {
             Redirect::doIt("/login"); #! ESTO ES VIEW?
         } else {
             #? guardamos los datos del usuario para obtener el numero de sesion.
             if($this->loginModel->passwordValidation($userInPasswordTable, $password)){
-                $_SESSION["logueado"]=1;
-                Redirect::doIt("/content");
+                
+                $_SESSION["logueado"]=$ID_USER;
+                Redirect::doIt("/daily");
             }else {
                 Redirect::doIt("/login");
             }
