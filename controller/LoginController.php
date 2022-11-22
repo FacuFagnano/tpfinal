@@ -31,7 +31,7 @@ class LoginController
             #? guardamos los datos del usuario para obtener el numero de sesion.
             if($this->loginModel->passwordValidation($userInPasswordTable, $password)){
                 $_SESSION["logueado"]=1;
-                Redirect::doIt("/content");
+                Redirect::doIt("/daily");
             }else {
                 Redirect::doIt("/login");
             }

@@ -16,7 +16,7 @@ class RegistryModel{
 #! ---------------------------------------------------------- ↓↓ ALTA DE USUARIO ↓↓ -----------------------------------------------------------
     public function alta($name, $lastname, $password, $email, $geoposition, $hash_validate){
         $sql = "INSERT INTO user(`NAME`, `LASTNAME`, `GEOPOSITION`, `ROL`, `ESTATE`) 
-                VALUES ('$name','$lastname','$geoposition','1','1')";
+                VALUES ('$name','$lastname','$geoposition','2','1')";
 
         $sql2 = "INSERT INTO password (`ID_PASS`, `PASS`, `HASH_VALIDATOR`, `EMAIL`)
                 VALUES (LAST_INSERT_ID(), '$password', '$hash_validate',  '$email')";

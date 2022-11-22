@@ -1,29 +1,41 @@
 {{#logueado}}
   {{> headerLogueado}}
-<br>
-<br>
+<br><br>
+<h2 class="w3-center">Suscripciones Activas</h2>
 
 
-<div class="w3-container w3-white w3-margin w3-padding-large w3-center">
-          <div class=>
-            <h3>ADMIN</h3>
-            
-          </div> 
 
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    
-    <div class="w3-quarter">
-      <a href="/admin/listadoDeArticulos"><img src="/public/admin/documentos.png" alt="documentos" style="width:100%"></a>
-      <h3>Listar Articulos y Secciones</h3>
-      <p>Dar alta de seccion, articulo y ediciones.</p>
+
+  {{#suscripcion}}
+
+<form class="w3-container w3-center" action="/Suscripcion/bajaDesuscripcion" method="POST">
+
+  <div class="w3-row-padding">
+
+    <div class="w3-center w3-col s4 w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{{dailyImageUrl}}" alt="Clarin" width="300">
+
+        <input id="userId" name="userId" type="hidden" value="{{ID}}">
+        <input id="dailyId" name="dailyId" type="hidden" value="{{DailyIdTable}}">
+  
+        <div class="w3-container w3-center">
+          <p>Precio $$$$$</p>
+          <button class="w3-button w3-red w3-center w3-margin">Desuscribirse</button>
+        </div>
+      </div>
+
     </div>
-    <div class="w3-quarter">
-      <a href="/userList"><img src="/public/admin/usuario.png" alt="usuario" style="width:100%"></a>
-      <h3>Listar Usuarios</h3>
-      <p>Dar alta de usuario y modificar permisos.</p>
-    </div>
-  </div> 
+  
+
+  </div>
+
+</form>
+ {{/suscripcion}}
+ </div>
+   
+
+<hr>
 {{/logueado}}
 {{^logueado}}
   {{> header}}
@@ -33,7 +45,8 @@
 <div class="w3-padding-64 w3-white">
   <div class="w3-row-padding">
     <div class="w3-col l8 m6">
-     <h1 class="w3-xxxlarge w3-text-green"><b>No tienes permisos</b></h1>
+     <h1 class="w3-xxxlarge w3-text-green"><b>No puedes visualizar las revistas o diarios sin suscribirse..</b></h1>
+      <p><span class="w3-xlarge">Utiliza nuestra app.</span> <br>Podes visualizar 1 revista gratis.</p>
       <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">
         <i class="fa fa-download"></i> Download Application
       </button>
@@ -51,4 +64,5 @@
   </div>
 </div>
 {{/logueado}}
+
 {{> footer}}

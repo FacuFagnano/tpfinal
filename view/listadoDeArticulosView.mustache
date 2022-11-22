@@ -2,16 +2,24 @@
   {{> headerLogueado}}
 <br>
 <div class="w3-container w3-white w3-margin w3-center">
-            <h3>Redactá tu propia nota</h3>
+          
+            <h3>Articulos</h3>
+            
+                      
+
+
+     
 <div class='w3-container w3-content w3-center' style='max-width:800px' id='userList'>
-    <h2 class='w3-wide'>Usuario Registrados</h2>
+    <h2 class='w3-wide'>Articulos diponible</h2>
     <table class='w3-table'>
         <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Rol</th>
-            <th>Accion</th>
-            <th>Cambiar Rol</th>
+            <th>Revista</th>
+            <th>Edicion</th>
+            <th>Seccion</th>
+            <th>Articulo</th>
+            <th>Usuario</th>
+            <th>Eliminar</th>
+            
         </tr>
 
         {{#user}}
@@ -32,15 +40,27 @@
     </table>
 </div>
           </div>
-<hr>
+          <hr>
+    <form class="w3-container w3-card-4" action="/suscripcion/altaSuscripcion" method="POST">
+  <h2>Nuevo Articulo</h2>
+  
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Name</label>
+  </div>
 
+  <p><button class="w3-button w3-light-grey w3-block" type="submit">CREAR ARTICULO</button></p>
+  </div>
+</form>
+
+</div>
 {{/logueado}}
 {{^logueado}}
   {{> header}}
 
 
-<!-- The newNote Section -->
-<!-- <div class="w3-padding-64 w3-white">
+<!-- The App Section -->
+<div class="w3-padding-64 w3-white">
   <div class="w3-row-padding">
     <div class="w3-col l8 m6">
      <h1 class="w3-xxxlarge w3-text-green"><b>No tienes permisos</b></h1>
@@ -59,7 +79,10 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 {{/logueado}}
 
+
 {{> footer}}
+
+

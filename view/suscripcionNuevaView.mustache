@@ -1,45 +1,40 @@
 {{#logueado}}
   {{> headerLogueado}}
 <br><br>
-<h2 class="w3-center">Suscribirse</h2>
-</div>
-
-<div class="w3-row-padding ">
+<h2 class="w3-center">Suscripciones Nuevas</h2>
 
 
-<form class="w3-container w3-card-4" action="/suscripcion/altaSuscripcion" method="POST">
-  <h2>Elegir la suscripcion deseada</h2>
-  <div class="w3-section">      
-    <input class="w3-input" type="text" required>
-    <label>Name</label>
-  </div>
-  <div class="w3-section">      
-    <input class="w3-input" type="text" required>
-    <label>Email</label>
-  </div>
 
 
-  <div class="w3-row">
-  <div class="w3-half">
-    <input id="Tecnologia" name="Tecnologia" class="w3-check" type="checkbox" checked="checked">
-    <label>TECNOLOGIA</label>
-    <br>
-    <input id="Tecnologia" name="Tecnologia" class="w3-check" type="checkbox">
-    <label>DEPORTES</label>
-    <br>
-    <input id="Tecnologia" name="Tecnologia" class="w3-check" type="checkbox" disabled>
-    <label>ECONOMIA (Disabled)</label>
-    <br><br>
+  {{#suscripcion}}
+
+<form class="w3-container w3-center" action="/suscripcion/altaSuscripcion" method="POST">
+
+  <div class="w3-row-padding">
+
+    <div class="w3-center w3-col s4 w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{{dailyImageUrl}}" alt="{{NAME}}" width="300">
+
+        <input id="userId" name="userId"  placeholder="{{ID}}" value="{{ID}}">
+        <input id="dailyId" name="dailyId"  placeholder="{{DailyIdTable}}" value="{{DailyIdTable}}">
+  
+        <div class="w3-container w3-center">
+          <p>Precio $$$$$</p>
+          <button class="w3-button w3-green w3-center w3-margin">Suscribirse</button>
+        </div>
+      </div>
+
+    </div>
+  
+
   </div>
 
-  <p><button class="w3-button w3-light-grey w3-block" type="submit">ALTA DE SUSCRIPCION</button></p>
-  </div>
 </form>
+ {{/suscripcion}}
+ </div>
+   
 
-</div>
-
-</div>
-</div>
 <hr>
 {{/logueado}}
 {{^logueado}}

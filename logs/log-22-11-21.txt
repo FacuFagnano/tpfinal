@@ -824,3 +824,189 @@
 [22-11-21 08:51:10][INFO] Array
 [22-11-21 08:51:10][INFO] Estos son los diarios: null
 [22-11-21 08:51:11][INFO] Estos son los diarios: null
+[22-11-21 08:54:33][INFO] Estos son los diarios: null
+[22-11-21 08:54:33][INFO] Estos son los diarios: null
+[22-11-21 08:54:43][INFO] USUARIO CIERRA SESION
+[22-11-21 08:54:43][INFO] Estos son los diarios: null
+[22-11-21 11:14:43][INFO] Estos son los diarios: null
+[22-11-21 11:14:45][INFO] Estos son los diarios: null
+[22-11-21 11:14:51][INFO] Estos son los diarios: null
+[22-11-21 11:14:51][INFO] Estos son los diarios: null
+[22-11-21 11:14:51][INFO] Estos son los diarios: null
+[22-11-21 11:14:59][INFO] Estos son los diarios: null
+[22-11-21 11:14:59][INFO] Estos son los diarios: null
+[22-11-21 11:15:01][INFO] Estos son los diarios: null
+[22-11-21 11:15:02][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-21 11:15:02][INFO] Estos son los diarios: null
+[22-11-21 11:16:07][INFO] USUARIO CIERRA SESION
+[22-11-21 11:16:07][INFO] Estos son los diarios: null
+[22-11-21 11:16:08][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-21 11:16:08][INFO] Estos son los diarios: null
+[22-11-21 11:16:08][INFO] Estos son los diarios: null
+[22-11-21 11:16:41][INFO] USUARIO CIERRA SESION
+[22-11-21 11:16:41][INFO] Estos son los diarios: null
+[22-11-21 11:16:42][INFO] Estos son los diarios: null
+[22-11-21 11:16:43][INFO] Estos son los diarios: null
+[22-11-21 11:17:04][INFO] Estos son los diarios: null
+[22-11-21 11:17:04][INFO] Estos son los diarios: null
+[22-11-21 11:17:05][INFO] Estos son los diarios: null
+[22-11-21 11:17:07][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-21 11:17:07][INFO] Estos son los diarios: null
+[22-11-21 11:17:07][INFO] Estos son los diarios: null
+[22-11-21 11:17:40][INFO] Estos son los diarios: null
+[22-11-21 11:17:40][INFO] Estos son los diarios: null
+[22-11-21 11:18:50][INFO] Estos son los diarios: null
+[22-11-21 11:18:53][INFO] Estos son los diarios: null
+[22-11-21 11:18:54][INFO] Estos son los diarios: null
+[22-11-21 11:18:56][INFO] Estos son los diarios: null
+[22-11-21 11:19:08][INFO] Estos son los diarios: null
+[22-11-21 11:19:09][INFO] Estos son los diarios: null
+[22-11-21 11:19:09][INFO] Estos son los diarios: null
+[22-11-21 11:19:12][INFO] Estos son los diarios: null
+[22-11-21 11:19:14][INFO] Estos son los diarios: null
+[22-11-21 11:19:16][INFO] Estos son los diarios: null
+[22-11-21 11:19:17][INFO] Estos son los diarios: null
+[22-11-21 11:19:17][INFO] Estos son los diarios: null
+[22-11-21 11:19:18][INFO] Estos son los diarios: null
+[22-11-21 11:19:19][INFO] Estos son los diarios: null
+[22-11-21 11:19:19][INFO] Estos son los diarios: null
+[22-11-21 11:19:20][INFO] Estos son los diarios: null
+[22-11-21 11:19:21][INFO] Estos son los diarios: null
+[22-11-21 11:19:21][INFO] Estos son los diarios: null
+[22-11-21 11:19:22][INFO] Estos son los diarios: null
+[22-11-21 11:19:23][INFO] Estos son los diarios: null
+[22-11-21 11:19:23][INFO] Estos son los diarios: null
+[22-11-21 11:19:24][INFO] Estos son los diarios: null
+[22-11-21 11:19:38][INFO] Estos son los diarios: null
+[22-11-21 11:26:06][INFO] Estos son los diarios: null
+[22-11-21 11:26:09][INFO] ESTOY EN LIST
+[22-11-21 11:26:09][INFO] Array
+[22-11-21 11:26:09][INFO] Estos son los diarios: null
+[22-11-21 11:26:21][INFO] Estos son los diarios: null
+[22-11-21 11:26:23][INFO] ESTOY EN LIST
+[22-11-21 11:26:23][INFO] Array
+[22-11-21 11:26:23][INFO] Estos son los diarios: null
+[22-11-21 11:32:02][INFO] Estos son los diarios: null
+[22-11-21 11:32:23][INFO] ESTOY EN LIST
+[22-11-21 11:32:23][INFO] Array
+[22-11-21 11:32:23][INFO] Estos son los diarios: null
+[22-11-21 11:32:26][INFO] Estos son los diarios: null
+[22-11-21 11:32:27][INFO] Estos son los diarios: null
+[22-11-21 11:32:28][INFO] Estos son los diarios: null
+[22-11-21 11:32:48][INFO] Estos son los diarios: null
+[22-11-21 11:32:51][INFO] Estos son los diarios: null
+[22-11-21 11:33:02][INFO] Estos son los diarios: null
+[22-11-21 11:33:24][INFO] Estos son los diarios: null
+[22-11-21 11:34:34][INFO] Estos son los diarios: null
+[22-11-21 11:34:46][INFO] USUARIO CIERRA SESION
+[22-11-21 11:34:46][INFO] Estos son los diarios: null
+[22-11-21 11:34:48][INFO] Estos son los diarios: null
+[22-11-21 11:35:16][INFO] Estos son los diarios: null
+[22-11-21 11:35:16][INFO] Estos son los diarios: null
+[22-11-21 11:36:09][INFO] Estos son los diarios: null
+[22-11-21 11:36:09][INFO] Estos son los diarios: null
+[22-11-21 11:36:13][INFO] Estos son los diarios: null
+[22-11-21 11:36:33][INFO] ESTOY EN LIST
+[22-11-21 11:36:33][INFO] Array
+[22-11-21 11:36:34][INFO] Estos son los diarios: null
+[22-11-21 11:36:34][INFO] Estos son los diarios: null
+[22-11-21 11:36:35][INFO] Estos son los diarios: null
+[22-11-21 11:38:03][INFO] Estos son los diarios: null
+[22-11-21 11:38:05][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-21 11:38:05][INFO] Estos son los diarios: null
+[22-11-21 11:38:05][INFO] Estos son los diarios: null
+[22-11-21 11:38:07][INFO] Estos son los diarios: null
+[22-11-21 11:38:38][INFO] La nota se envío correctamente.
+[22-11-21 11:38:38][INFO] Estos son los diarios: null
+[22-11-21 11:41:01][INFO] Estos son los diarios: null
+[22-11-21 11:41:01][INFO] Estos son los diarios: null
+[22-11-21 11:41:10][INFO] Estos son los diarios: null
+[22-11-21 11:41:12][INFO] Estos son los diarios: null
+[22-11-21 11:41:13][INFO] Estos son los diarios: null
+[22-11-21 11:41:14][INFO] Estos son los diarios: null
+[22-11-21 11:41:17][INFO] Estos son los diarios: null
+[22-11-21 11:41:17][INFO] Estos son los diarios: null
+[22-11-21 11:41:22][INFO] Estos son los diarios: null
+[22-11-21 11:41:24][INFO] Estos son los diarios: null
+[22-11-21 11:41:24][INFO] Estos son los diarios: null
+[22-11-21 11:41:25][INFO] Estos son los diarios: null
+[22-11-21 11:41:27][INFO] Estos son los diarios: null
+[22-11-21 11:41:27][INFO] Estos son los diarios: null
+[22-11-21 11:41:29][INFO] Estos son los diarios: null
+[22-11-21 11:42:16][INFO] Estos son los diarios: null
+[22-11-21 11:42:17][INFO] Estos son los diarios: null
+[22-11-21 11:42:21][INFO] Estos son los diarios: null
+[22-11-21 11:42:21][INFO] Estos son los diarios: null
+[22-11-21 11:42:27][INFO] Estos son los diarios: null
+[22-11-21 11:42:27][INFO] Estos son los diarios: null
+[22-11-21 11:42:32][INFO] Estos son los diarios: null
+[22-11-21 11:42:34][INFO] Estos son los diarios: null
+[22-11-21 11:42:34][INFO] Estos son los diarios: null
+[22-11-21 11:42:36][INFO] Estos son los diarios: null
+[22-11-21 11:42:38][INFO] ESTOY EN LIST
+[22-11-21 11:42:38][INFO] Array
+[22-11-21 11:42:38][INFO] Estos son los diarios: null
+[22-11-21 11:42:39][INFO] Estos son los diarios: null
+[22-11-21 11:42:57][INFO] Estos son los diarios: null
+[22-11-21 11:42:57][INFO] Estos son los diarios: null
+[22-11-21 11:42:58][INFO] Estos son los diarios: null
+[22-11-21 11:43:17][INFO] Estos son los diarios: null
+[22-11-21 11:43:17][INFO] Estos son los diarios: null
+[22-11-21 11:43:29][INFO] Estos son los diarios: null
+[22-11-21 11:43:29][INFO] Estos son los diarios: null
+[22-11-21 11:43:31][INFO] Estos son los diarios: null
+[22-11-21 11:43:33][INFO] Estos son los diarios: null
+[22-11-21 11:43:35][INFO] Estos son los diarios: null
+[22-11-21 11:43:36][INFO] USUARIO CIERRA SESION
+[22-11-21 11:43:36][INFO] Estos son los diarios: null
+[22-11-21 11:43:42][INFO] Estos son los diarios: null
+[22-11-21 11:43:55][INFO] Estos son los diarios: null
+[22-11-21 11:43:55][INFO] Estos son los diarios: null
+[22-11-21 11:43:58][INFO] Estos son los diarios: null
+[22-11-21 11:43:59][INFO] Estos son los diarios: null
+[22-11-21 11:44:01][INFO] Estos son los diarios: null
+[22-11-21 11:44:01][INFO] Estos son los diarios: null
+[22-11-21 11:44:05][INFO] Estos son los diarios: null
+[22-11-21 11:44:05][INFO] Estos son los diarios: null
+[22-11-21 11:44:09][INFO] Estos son los diarios: null
+[22-11-21 11:44:09][INFO] Estos son los diarios: null
+[22-11-21 11:44:16][INFO] Estos son los diarios: null
+[22-11-21 11:44:17][INFO] Estos son los diarios: null
+[22-11-21 11:44:17][INFO] Estos son los diarios: null
+[22-11-21 11:44:18][INFO] Estos son los diarios: null
+[22-11-21 11:44:19][INFO] Estoy en el Login model: {"ID_PASS":"20","PASS":"$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2","DATE_CADUCATE":null,"VALIDATED_STATUS":"1","HASH_VALIDATOR":"0","EMAIL":"lucasjorgereta@gmail.com"}
+[22-11-21 11:44:20][INFO] Estos son los diarios: null
+[22-11-21 11:44:20][INFO] Estos son los diarios: null
+[22-11-21 11:44:23][INFO] Estos son los diarios: null
+[22-11-21 11:44:23][INFO] Estos son los diarios: null
+[22-11-21 11:44:25][INFO] Estos son los diarios: null
+[22-11-21 11:44:28][INFO] Estos son los diarios: null
+[22-11-21 11:44:29][INFO] Estos son los diarios: null
+[22-11-21 11:44:38][INFO] Estos son los diarios: null
+[22-11-21 11:44:40][INFO] ESTOY EN LIST
+[22-11-21 11:44:40][INFO] Array
+[22-11-21 11:44:40][INFO] Estos son los diarios: null
+[22-11-21 11:46:24][INFO] Estos son los diarios: null
+[22-11-21 11:46:35][INFO] Estos son los diarios: null
+[22-11-21 11:47:24][INFO] Estos son los diarios: null
+[22-11-21 11:47:46][INFO] Estos son los diarios: null
+[22-11-21 11:50:26][INFO] Estos son los diarios: null
+[22-11-21 11:50:27][INFO] Estos son los diarios: null
+[22-11-21 11:50:32][INFO] Estos son los diarios: null
+[22-11-21 11:50:34][INFO] Estos son los diarios: null
+[22-11-21 11:50:35][INFO] Estos son los diarios: null
+[22-11-21 11:51:17][INFO] Estos son los diarios: null
+[22-11-21 11:51:19][INFO] Estos son los diarios: null
+[22-11-21 11:51:22][INFO] Estos son los diarios: null
+[22-11-21 11:51:24][INFO] Estos son los diarios: null
+[22-11-21 11:51:53][INFO] Estos son los diarios: null
+[22-11-21 11:52:10][INFO] Estos son los diarios: null
+[22-11-21 11:52:46][INFO] Estos son los diarios: null
+[22-11-21 11:53:00][INFO] Estos son los diarios: null
+[22-11-21 11:53:00][INFO] Estos son los diarios: null
+[22-11-21 11:53:02][INFO] Estos son los diarios: null
+[22-11-21 11:53:04][INFO] Estos son los diarios: null
+[22-11-21 11:53:06][INFO] Estos son los diarios: null
+[22-11-21 11:53:25][INFO] Estos son los diarios: null
+[22-11-21 11:53:35][INFO] Estos son los diarios: null
+[22-11-21 11:58:43][INFO] Estos son los diarios: null
