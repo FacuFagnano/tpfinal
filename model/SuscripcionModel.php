@@ -2,24 +2,34 @@
 
 class SuscripcionModel {
     private $database;
+    private $logger;
 
-    public function __construct($database) {
+    public function __construct($database,$logger) {
         $this->database = $database;
+        $this->logger = $logger;
     }
 
     // Hay que definir los paquete por cada usuario y reflejarlo en la vista.
 
     public function getSuscripcion() {
-        $sql = 'SELECT * FROM articles a INNER JOIN section s on s.idSection = a.idArticles';
+        
+
+        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = '  . $_SESSION["logueado"] . ' ';
+        $this->logger->info("Este es el sql de getSuscripcion " ."$sql");
         return $this->database->query($sql);
     }
-    public function borrar($valor){
-        $query = "DELETE FROM publications WHERE id_publications = $valor";//ELETE FROM `section` WHERE `section`.`id` = '$valor'"; // DELETE FROM publications WHERE id_section = (SELECT id from section where id = 1)revisar tabla y valor
+    public function getSuscripcionNuevas() {
+        $sql = 'SELECT *  from daily where dailyId not in (SELECT DailyIdTable  FROM usersdaily )';
+        return $this->database->query($sql);
+    }
+
+    public function bajaSuscripcion($user,$daily){
+        $query = "DELETE FROM usersdaily WHERE UserIdTable = $user and DailyIdTable = $daily";
         $this->database->execute($query);
     }
 
-    public function insertarSuscripcion(){
-        $query = "INSERT INTO `publications` (`id_publications`, `titulo_pub`, `descripcion`, `id_section`) VALUES ('3', 'Notebook 2 X1', 'des', '1')"; // revisar tabla y valor
+    public function insertarSuscripcion($user,$daily){
+        $query = "INSERT INTO `usersdaily` (`UserIdTable`, `DailyIdTable`) VALUES ('$user', '$daily')";
         $this->database->execute($query);
     }
 }

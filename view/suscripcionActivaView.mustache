@@ -1,0 +1,51 @@
+{{#logueado}}
+  {{> headerLogueado}}
+<br><br>
+<h2 class="w3-center">Suscripciones Activas</h2>
+
+
+
+
+  {{#suscripcion}}
+
+<form class="w3-container w3-center" action="/Suscripcion/bajaDesuscripcion" method="POST">
+
+  <div class="w3-row-padding">
+
+    <div class="w3-center w3-col s4 w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="{{dailyImageUrl}}" alt="Clarin" width="300">
+
+        <input id="userId" name="userId" type="hidden" value="{{ID}}">
+        <input id="dailyId" name="dailyId" type="hidden" value="{{DailyIdTable}}">
+  
+        <div class="w3-container w3-center">
+          <p>Precio $$$$$</p>
+          <button class="w3-button w3-red w3-center w3-margin">Desuscribirse</button>
+        </div>
+      </div>
+
+    </div>
+  
+
+  </div>
+
+</form>
+ {{/suscripcion}}
+ </div>
+   
+
+<hr>
+{{/logueado}}
+{{^logueado}}
+  {{> header}}
+
+
+
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide">Para suscribirse , haga click en registrarse..</h2>
+	<a href="/registry"> <input type="submit" class="w3-btn w3-green w3-round-large" value="Registrarse"></a>
+</div>
+{{/logueado}}
+
+{{> footer}}

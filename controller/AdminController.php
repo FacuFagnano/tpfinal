@@ -18,4 +18,13 @@ class adminController {
         $this->renderer->render('adminView.mustache');
     }
 
+    public function listadoDeArticulos()
+    {
+        $this->renderer->render('listadoDeArticulosView.mustache');
+    }
+    public function nuevoDocumento()
+    {
+        $this->renderer->render('NewNoteView.mustache');
+    }
+
 }
