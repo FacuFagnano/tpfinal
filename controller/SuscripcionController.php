@@ -23,7 +23,7 @@ class SuscripcionController {
     {
       $valor = $_POST["codigo"];
       $this->suscripcionModel->borrar($valor);
-      Redirect::doIt("/content");
+      Redirect::doIt("/suscripcion");
     }
     public function altaSuscripcion(){
         $this->logger->info("entre altaSuscripcion");
