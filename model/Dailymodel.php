@@ -15,6 +15,12 @@ class DailyModel {
         
         return $this->database->query($sql);
     }
+
+    public function getDailyHome(){
+        $sql = 'SELECT*from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable';
+        
+        return $this->database->query($sql);
+    }
    
 
 
