@@ -14,7 +14,8 @@ class DailyController {
 
     
     public function list(){
-        $data['dailys'] = $this->dailyModel->getDaily();
+        //$data['dailys'] = $this->dailyModel->getDaily();
+        $data['dailys'] = $this->dailyModel->getDailyHome();
        
         $data['logueado'] = !empty($_SESSION["logueado"]);
         $this->view->render('dailyView.mustache', $data);

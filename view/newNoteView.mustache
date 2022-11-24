@@ -1,38 +1,45 @@
 {{#logueado}}
   {{> headerLogueado}}
 <br>
-<div class="w3-container w3-white w3-margin w3-center">
+<!-- The newNote Section -->
+<div class="w3-container w3-padding-64 w3-white w3-margin w3-center">
             <h3>Redactá tu propia nota</h3>
-<div class='w3-container w3-content w3-center' style='max-width:800px' id='userList'>
-    <h2 class='w3-wide'>Usuario Registrados</h2>
-    <table class='w3-table'>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Rol</th>
-            <th>Accion</th>
-            <th>Cambiar Rol</th>
-        </tr>
 
-        {{#user}}
-           <tr>
-                <td>{{NAME}}</td>
-                <td>{{LASTNAME}}</td>
-                <td>{{ROL}}</td>
-                <div class="w3-justify">
-                <td><button class="w3-button w3-round-xlarge">Eliminar</button></td>     
-                <td><select class="w3-input w3-border">
-                      <option value="3">Editor</option>
-                  </select>
-                </td>
-                </div>
-            </tr>
-        {{/user}}
+            <form class="w3-container" action="/newnote/sendnote" method="post" enctype="multipart/form-data">
+                  <p class="w3-left-align">
+                  <label for="title">Título</label>
+                  <input class="w3-input w3-margin-top w3-animate-input" type="text" name="title" id="title" style="width:30%" required>
+                  </p>
 
-    </table>
+                  <p class="w3-left-align">
+                  <label for="image">Imagen</label>
+                  <input class="w3-input w3-margin-top" type="file" id="image" name="image" style="width: 30%" required>
+                  </p>
+
+                  <p class="w3-left-align">
+                  <label for="note">Escribí tu nota:</label>
+                  <textarea class="w3-input w3-margin-top w3-animate-input" type="text" name="note" id="note" style="width: 30%; height: 250px; resize:none" required>
+                  </textarea>
+                  </p>
+
+                  <p class="w3-padding-24">
+                  <input class="w3-radio w3-padding-small" type="radio" name="section" value="1" required>
+                  <label class="w3-padding-small">Tecnología</label>
+                  <input class="w3-radio w3-padding-small" type="radio" name="section" value="2">
+                  <label class="w3-padding-small">Economía</label>
+                  <input class="w3-radio w3-padding-small" type="radio" name="section" value="3">
+                  <label class="w3-padding-small">Deportes</label>
+                  <input class="w3-radio w3-padding-small" type="radio" name="section" value="5">
+                  <label class="w3-padding-small">Política</label>
+                  </p>
+
+                  <p>
+                  <button type="submit" class="w3-button  w3-black w3-padding-16 w3-section">Enviar nota</button>
+                  </p>
+            </form>
+
+
 </div>
-          </div>
-<hr>
 
 {{/logueado}}
 {{^logueado}}
