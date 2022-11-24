@@ -14,10 +14,11 @@ class DailyController {
 
     
     public function list(){
-        $data['dailys'] = $this->dailyModel->getDaily();
-       
+        //$data['dailys'] = $this->dailyModel->getDaily();
+        $data['dailys'] = $this->dailyModel->getDailyNotLogin();
+        $this->logger->info('Este es el data del controller, en la key Daily '. json_encode($data['dailys']));
         $data['logueado'] = !empty($_SESSION["logueado"]);
-        $this->view->render('dailyView.mustache', $data);
+        $this->view->render('homeView.mustache', $data);
     }
 
 
