@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2022 a las 05:07:47
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 24-11-2022 a las 23:52:07
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,18 +53,20 @@ CREATE TABLE `daily` (
   `dailyId` int(10) NOT NULL,
   `name` varchar(20) NOT NULL,
   `idTypeTable` int(10) DEFAULT NULL,
-  `dailyImageUrl` varchar(50) DEFAULT NULL
+  `dailyImageUrl` varchar(50) DEFAULT NULL,
+  `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `daily`
 --
 
-INSERT INTO `daily` (`dailyId`, `name`, `idTypeTable`, `dailyImageUrl`) VALUES
-(1, 'Ambito', 1, '/public/diarios/ambito.png'),
-(2, 'Pronto', 1, '/public/diarios/pronto.png'),
-(3, 'Infobae', 1, '/public/diarios/infobae.png'),
-(4, 'Ole', 2, '/public/diarios/ambito.png');
+INSERT INTO `daily` (`dailyId`, `name`, `idTypeTable`, `dailyImageUrl`, `description`) VALUES
+(1, 'Ambito', 1, '/public/diarios/ambito.png', 'El diario de la gente'),
+(2, 'Pronto', 1, '/public/diarios/pronto.png', 'Noticias del espectaculo'),
+(3, 'Infobae', 4, '/public/diarios/infobae.png', 'Hacemos Periodismo'),
+(4, 'Clarin', 1, '/public/diarios/clarin.jpg', 'El gran diario Argentino'),
+(5, 'La Nacion', 2, '/public/diarios/laNacion.png', 'Informate distinto');
 
 -- --------------------------------------------------------
 
@@ -150,8 +152,32 @@ CREATE TABLE `password` (
 INSERT INTO `password` (`ID_PASS`, `PASS`, `DATE_CADUCATE`, `VALIDATED_STATUS`, `HASH_VALIDATOR`, `EMAIL`) VALUES
 (1, '$2y$10$jRFEOaToRiqoNa1e.nryxOKnb4ZQwowgwHTWP74Y.h7fpENLsfNWG', NULL, 0, '1001', 'santiago.opera@gmail.com'),
 (4, '$2y$10$/waXiya7oAi9EqixsGXQyeOzGm7PT/lv0SIsKe3pJKDTX2R.V7Yi.', NULL, 0, '1001', 'asd@asd.com'),
+(5, '$2y$10$oU7PXcTlJBZwnEbgaLVkNeUNQENRCMntt/NfSUC.O/l0TtViJqkZK', NULL, 0, '1002', 'lreta@lreta.com.ar'),
 (13, '$2y$10$buM1c6EY3QIb8FkySxtpAekv/8WpDuw9KQVrzTREMeCAU9jb8i4xW', NULL, 0, '1002', 'lreta@lreta.com.awr'),
-(20, '$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2', NULL, 1, '0', 'lucasjorgereta@gmail.com');
+(20, '$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2', NULL, 1, '0', 'lucasjorgereta@gmail.com'),
+(21, '$2y$10$GzHOmV4DIeI99B4VJSfW0.En8a2aTCInXprpZJ/.JKVhIjCQvc.36', NULL, 1, '0', 'santiago.opera@hotmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `publications`
+--
+
+CREATE TABLE `publications` (
+  `id_publications` int(11) NOT NULL,
+  `titulo_pub` varchar(50) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `pub_img_url` varchar(50) NOT NULL,
+  `id_section` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `publications`
+--
+
+INSERT INTO `publications` (`id_publications`, `titulo_pub`, `descripcion`, `pub_img_url`, `id_section`) VALUES
+(1, 'BOCA Perdio con Patronato', 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.', '/public/w3images/boca.jpeg', 3),
+(3, 'Notebook 2 X1', 'des', '', 1);
 
 -- --------------------------------------------------------
 
@@ -233,13 +259,16 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `NAME`, `LASTNAME`, `GEOPOSITION`, `ROL`, `ESTATE`) VALUES
-(4, 'sad', 'asd', 'asd', 2, '1'),
+(1, 'Santiago', 'Reta', 'Villa Luzuriaga', 1, '1'),
+(4, 'sad', 'asd', 'asd', 1, '1'),
+(5, 'asd', 'asd', 'asd', 1, '1'),
 (14, 'lucas', 'reta', 'bsas', 1, '1'),
 (15, 'lucas', 'reta', 'bsas', 1, '1'),
-(16, 'Pablo', 'pablo', 'BSAS', 3, '1'),
+(16, 'Pablo', 'pablo', 'BSAS', 1, '1'),
 (17, 'lucas', 'reta', 'BSAS', 1, '1'),
 (19, 'Lucas', 'Reta', 'bsas', 1, '1'),
-(20, 'lucas', 'Reta', 'bsas', 1, '1');
+(20, 'lucas', 'Reta', 'bsas', 1, '1'),
+(21, 'Santiago', 'Opera', 'Villa Luzuriaga', 1, '1');
 
 -- --------------------------------------------------------
 
@@ -258,7 +287,8 @@ CREATE TABLE `usersdaily` (
 --
 
 INSERT INTO `usersdaily` (`idUsersDaily`, `UserIdTable`, `DailyIdTable`) VALUES
-(3, 20, 3);
+(1, 20, 1),
+(2, 20, 2);
 
 --
 -- Índices para tablas volcadas
@@ -303,6 +333,13 @@ ALTER TABLE `notestatus`
 --
 ALTER TABLE `password`
   ADD PRIMARY KEY (`ID_PASS`);
+
+--
+-- Indices de la tabla `publications`
+--
+ALTER TABLE `publications`
+  ADD PRIMARY KEY (`id_publications`),
+  ADD KEY `fk_section` (`id_section`);
 
 --
 -- Indices de la tabla `section`
@@ -370,13 +407,13 @@ ALTER TABLE `sectiontype`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usersdaily`
 --
 ALTER TABLE `usersdaily`
-  MODIFY `idUsersDaily` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idUsersDaily` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
@@ -400,6 +437,12 @@ ALTER TABLE `daily`
 --
 ALTER TABLE `edition`
   ADD CONSTRAINT `edition_ibfk_1` FOREIGN KEY (`idDailyTable`) REFERENCES `daily` (`dailyId`);
+
+--
+-- Filtros para la tabla `publications`
+--
+ALTER TABLE `publications`
+  ADD CONSTRAINT `fk_section` FOREIGN KEY (`id_section`) REFERENCES `section` (`idSection`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `section`
