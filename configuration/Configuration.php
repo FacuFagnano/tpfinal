@@ -107,7 +107,7 @@ class Configuration {
     }
 
     private function getEdicionModel(): EdicionModel {
-        return new EdicionModel($this->database);
+        return new EdicionModel($this->database, $this->logger);
     }
 
     private function getDailyModel(): DailyModel {

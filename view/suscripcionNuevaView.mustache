@@ -1,42 +1,29 @@
 {{#logueado}}
   {{> headerLogueado}}
-<br><br>
-<h2 class="w3-center">Suscripciones Nuevas</h2>
 
+    <h2 class="w3-center w3-padding-64">Suscripciones Nuevas</h2>
+  {{#noneSubscription}}
+    <form class="w3-container w3-center" action="/suscripcion/registerSubscription" method="POST">
+      <div class="w3-row-padding w3-padding w3-center" id="food">
 
+              <div class="w3-quarter">
+                <a href="/Edicion"><img src="{{dailyImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
+                <h3>{{dailyName}}</h3>
+                <p>{{dailyDescription}}</p>
+                <div class="w3-container w3-center">
+                  <p>Precio: ${{dailyPrice}}</p>
+                  <button class="w3-button w3-green w3-center w3-margin">Suscribirse</button>
+                  <input id="dailyId" name="dailyId" type="hidden" value="{{dailyId}}">
+                </div>
+              </div>
 
-
-  {{#suscripcion}}
-
-<form class="w3-container w3-center" action="/suscripcion/altaSuscripcion" method="POST">
-
-  <div class="w3-row-padding">
-
-    <div class="w3-center w3-col s4 w3-margin-bottom">
-      <div class="w3-card-4">
-        <img src="{{dailyImageUrl}}" alt="{{NAME}}" width="300">
-  
-        <input id="dailyId" name="dailyId" type="hidden" value="{{dailyId}}">
-   
-   
-  
-        <div class="w3-container w3-center">
-          <p>Precio $$$$$</p>
-          <button class="w3-button w3-green w3-center w3-margin">Suscribirse</button>
-        </div>
       </div>
+     </form>
+     {{/noneSubscription}}
 
-    </div>
-  
 
-  </div>
 
-</form>
- {{/suscripcion}}
- </div>
-   
 
-<hr>
 {{/logueado}}
 {{^logueado}}
   {{> header}}
