@@ -12,36 +12,37 @@ class SuscripcionController {
     }
 
     public function list() {
-        $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();
-        $this->logger->info("este es data el suscripcion " . json_encode($data['suscripcion']));
+        $data['subscription'] = $this->suscripcionModel->getSubscription();
+        $this->logger->info("este es data el suscripcion " . json_encode($data['subscription']));
         $this->view->render('suscripcionActivaView.mustache', $data);
     }
 
     public function listarSuscripcion(){
-        $data['suscripcion'] = $this->suscripcionModel->getSuscripcion();     
+        $data['subscription'] = $this->suscripcionModel->getSubscription();
     }
 
 
-    public function altaSuscripcion(){
+    public function registerSubscription(){
         $this->logger->info("entre altaSuscripcion");
         $user = $_SESSION["logueado"];
         $daily = $_POST["dailyId"];
         $this->logger->info(" Este es el usuario". $user . " Este es diario:" . $daily);
-        $this->suscripcionModel->insertarSuscripcion($user,$daily);
+        $this->suscripcionModel->insertNewSubscription($user,$daily);
         Redirect::doIt("/suscripcion");
     }
-    public function verListaDeSuscripciones() {
-        $data['suscripcion'] = $this->suscripcionModel->getSuscripcionNuevas();
+
+    public function showSuscriptionList() {
+        $data['noneSubscription'] = $this->suscripcionModel->getNotSubscription();
+        $this->logger->info("Este es el showSuscription DATA: " . json_encode($data['noneSubscription']));
         $this->view->render('suscripcionNuevaView.mustache', $data);
     }
 
-    public function bajaDesuscripcion(){
+    public function unregister(){
         $this->logger->info("entre bajaDesuscripcion");
         $user = $_SESSION["logueado"];
         $daily = $_POST["dailyId"];
 
-        $this->logger->info($user . $daily);
-        $data['suscripcion'] = $this->suscripcionModel->bajaSuscripcion($user,$daily);
+        $data['subscription'] = $this->suscripcionModel->unsubscribe($user,$daily);
         Redirect::doIt("/suscripcion");    
     }
 

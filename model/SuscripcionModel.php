@@ -16,12 +16,13 @@ class SuscripcionModel {
         return $this->database->query($sql);
     }
     public function getNotSubscription() {
-        $sql = 'SELECT *  from daily where dailyId not in (SELECT dailyIdTable  FROM usersdaily )';
+        $sql = 'SELECT *  from daily where dailyId not in (SELECT dailyIdTable  FROM usersdaily WHERE userIdTable = '  . $_SESSION["logueado"] . ' )';
         return $this->database->query($sql);
     }
 
     public function unsubscribe($user, $daily){
-        $query = "DELETE FROM usersdaily WHERE userIdTable = $user and dailyIdTable = $daily";
+        $this->logger->info("Este es el user: " . $user . " y este es el daily: " . $daily);
+        $query = "DELETE FROM usersDaily WHERE userIdTable = $user and dailyIdTable = $daily";
         $this->database->execute($query);
     }
 
