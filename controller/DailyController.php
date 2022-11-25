@@ -4,9 +4,7 @@ class DailyController {
     private $view;
     private $logger;
 
-    public function __construct($dailyModel, $view, $logger)
-    {
-        
+    public function __construct($dailyModel, $view, $logger){
         $this->dailyModel = $dailyModel;
         $this->view = $view;
         $this->logger = $logger;

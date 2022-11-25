@@ -10,13 +10,13 @@ class NewNoteModel{
     }
 
     public function getNotes() {
-        $sql = "SELECT * FROM publications";
+        $sql = "SELECT * FROM articles";
         $this->database->query($sql);
     }
 
     public function sendNoteToVerify($title, $image, $note, $section){
-        $sql = "INSERT INTO publications(`titulo_pub`, `pub_img_url`, `descripcion`, `id_section`) 
-                VALUES ('$title','$image','$note','$section')";
+        $sql = "INSERT INTO articles(`articleTitle`, `articleContent`, `articleImage`, `articleEditorComment`,`idSectionTable`,`idNoteStatusTable`) 
+                VALUES ('$title','$note','$image', ' ', '$section', 1)";
         if(!$this->alreadyExist($title)){
             $this->database->execute($sql);
             return true;
@@ -27,7 +27,7 @@ class NewNoteModel{
     }
 
     public function alreadyExist($title){
-        $sql = "SELECT * FROM publications WHERE titulo_pub LIKE '$title'";
+        $sql = "SELECT * FROM articles WHERE articleTitle LIKE '$title'";
         $result = $this->database->query($sql);
         return $result;
     }
