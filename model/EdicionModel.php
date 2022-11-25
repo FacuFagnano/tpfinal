@@ -21,13 +21,7 @@
     }
 
     public function getDailySession(){
-        $sql = 'SELECT * from edition e INNER JOIN daily d on d.dailyId = e.id_edition';
+        $sql = 'SELECT * from edition e INNER JOIN daily d on d.dailyId = e.editionId';
         return $this->database->query($sql);
-    }
-
-    public function getEdition(){
-        $sql = 'SELECT * from edition';
-        return $this->database->query($sql);
-
     }
 }

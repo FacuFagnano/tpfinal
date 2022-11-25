@@ -21,7 +21,7 @@ class RegistryModel{
         $sql2 = "INSERT INTO password (`ID_PASS`, `PASS`, `HASH_VALIDATOR`, `EMAIL`)
                 VALUES (LAST_INSERT_ID(), '$password', '$hash_validate',  '$email')";
 
-        if(!$this->verificarCuenta($email)){ #? si es un 1 (quiere decir que no esta en la base de datos), ejecuta las querys. Si es un null (esta en la base de datos), no las ejecuta.
+        if(!$this->verificarCuenta($email)){
             $this->database->execute($sql);
             $this->database->execute($sql2);
             $this->logger->info("El usuario: " . $email . " ha sido registrado exitosamente.");
@@ -33,8 +33,8 @@ class RegistryModel{
 
 
     public function verificarCuenta($email){
-        $sql = "SELECT * FROM PASSWORD WHERE EMAIL like '%$email%'"; #? verificamos que el mail no se encuentra ya en la base de datos.
-        $resultado = $this->database->query($sql);#? retorna un 1 si no encuentra nada
+        $sql = "SELECT * FROM PASSWORD WHERE EMAIL like '%$email%'";
+        $resultado = $this->database->query($sql);
         return $resultado;
     }
 }

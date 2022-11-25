@@ -8,7 +8,7 @@ class ContentModel {
     }
 
     public function getContent() {
-        $sql = 'SELECT * FROM articles a INNER JOIN section s on s.idSection = a.idArticles';
+        $sql = 'SELECT * FROM articles a INNER JOIN section s on s.sectionId = a.idArticles';
         return $this->database->query($sql);
     }
 }

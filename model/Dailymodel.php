@@ -11,14 +11,14 @@ class DailyModel {
     }
 
     public function getDaily(){
-        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = '  . $_SESSION["logueado"] . ' ';
+        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.dailyIdTable where ud.`userIdTable` = '  . $_SESSION["logueado"] . ' ';
         return $this->database->query($sql);
     }
 
-    public function getDailyHome(){
+    /*public function getDailyHome(){
         $sql = 'SELECT*from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable';
         return $this->database->query($sql);
-    }
+    }*/
 
     public function getDailyNotLogin(){
         $sql = 'SELECT * from daily';

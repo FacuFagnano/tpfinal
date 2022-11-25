@@ -11,25 +11,22 @@ class SuscripcionModel {
 
     // Hay que definir los paquete por cada usuario y reflejarlo en la vista.
 
-    public function getSuscripcion() {
-        
-
-        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.DailyIdTable where ud.`UserIdTable` = '  . $_SESSION["logueado"] . ' ';
-        $this->logger->info("Este es el sql de getSuscripcion " ."$sql");
+    public function getSubscription() {
+        $sql = 'SELECT * from usersdaily ud INNER JOIN daily d on d.dailyId = ud.dailyIdTable where ud.`userIdTable` = '  . $_SESSION["logueado"] . ' ';
         return $this->database->query($sql);
     }
-    public function getSuscripcionNuevas() {
-        $sql = 'SELECT *  from daily where dailyId not in (SELECT DailyIdTable  FROM usersdaily )';
+    public function getNotSubscription() {
+        $sql = 'SELECT *  from daily where dailyId not in (SELECT dailyIdTable  FROM usersdaily )';
         return $this->database->query($sql);
     }
 
-    public function bajaSuscripcion($user,$daily){
-        $query = "DELETE FROM usersdaily WHERE UserIdTable = $user and DailyIdTable = $daily";
+    public function unsubscribe($user, $daily){
+        $query = "DELETE FROM usersdaily WHERE userIdTable = $user and dailyIdTable = $daily";
         $this->database->execute($query);
     }
 
-    public function insertarSuscripcion($user,$daily){
-        $query = "INSERT INTO `usersdaily` (`UserIdTable`, `DailyIdTable`) VALUES ('$user', '$daily')";
+    public function insertNewSubscription($user, $daily){
+        $query = "INSERT INTO `usersdaily` (`userIdTable`, `dailyIdTable`) VALUES ('$user', '$daily')";
         $this->database->execute($query);
     }
 }

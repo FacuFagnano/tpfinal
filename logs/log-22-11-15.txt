@@ -1,6 +1,0 @@
-[22-11-15 11:14:17][INFO] Este es el hash c1c7d250c2b02f51d1e38725b58a221f
-[22-11-15 11:14:21][INFO] El usuario: pablooantunez@gmail.com ha sido registrado exitosamente.
-[22-11-15 11:14:21][INFO] ESTOY EN EL TRUE
-[22-11-15 11:27:07][INFO] Este es el hash 14c6dabb5976252f8e56f908b26e04cc
-[22-11-15 11:27:10][INFO] El usuario: pablooantunez@gmail.com ha sido registrado exitosamente.
-[22-11-15 11:27:10][INFO] ESTOY EN EL TRUE

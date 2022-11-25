@@ -1,5 +1,0 @@
-[22-11-06 06:50:35][INFO] [{"ID_PASS":"1","PASS":"$2y$10$dNkACqcdZaOfx4xb2PpwF.PDf34zL9yCGH0TiU1Exu2qKY3.me61W","DATE_CADUCATE":null,"VALIDATED_STATUS":"0","HASH_VALIDATOR":"100","EMAIL":"pablo@pablo.com"}]
-[22-11-06 06:50:35][INFO] USUARIO LOGUEADO
-[22-11-06 07:49:33][INFO] Array
-[22-11-06 07:50:14][INFO] Array
-[22-11-06 07:50:33][INFO] [{"ID":"1","NAME":"Pablo","LASTNAME":"Antunez","GEOPOSITION":"hola","ROL":"1","ESTATE":"1"},{"ID":"2","NAME":"mari","LASTNAME":"mari","GEOPOSITION":"go","ROL":"1","ESTATE":"1"},{"ID":"3","NAME":"Walter","LASTNAME":"Walter","GEOPOSITION":"hola","ROL":"1","ESTATE":"1"},{"ID":"4","NAME":"Franco","LASTNAME":"Armentano","GEOPOSITION":"hola","ROL":"1","ESTATE":"1"}]

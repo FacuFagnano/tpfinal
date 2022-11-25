@@ -9,7 +9,7 @@ class ValidarModel{
         $this->logger = $logger;
     }
 
-    public function getValidar($email){
+    public function getValidation($email){
         $sql = "SELECT * FROM password WHERE email = '$email'";
         return $this->database->query($sql);
     }
@@ -22,7 +22,7 @@ class ValidarModel{
     }
 
     public function activateAccount($code, $email){
-        $data = $this->getValidar($email);
+        $data = $this->getValidation($email);
         foreach ($data as $result) {
             if ($result["HASH_VALIDATOR"] == $code) {
                 $this->hashCleaner($email);
