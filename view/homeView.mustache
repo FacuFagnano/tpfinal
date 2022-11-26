@@ -1,16 +1,25 @@
 {{#logueado}}
   {{> headerLogueado}}
-    <h2 class="w3-center w3-padding-64">Mis Diarios y Revistas</h2>
-   <div class="w3-row-padding w3-padding w3-center" id="">
+    
+
+  <div class="w3-center w3-padding-top-64">
+  <h2 class="w3-padding-16">Mis Diarios y Revista</h2>
       {{#subscription}}
-        <div class="w3-quarter w3-padding">
-          <a href="/Edicion"><img src="{{dailyImageUrl}}" class="w3-image w3-margin-top" width="275" height=""></a>
-          <h3>{{dailyName}}</h3>
-          <p>{{dailyDescription}}</p>
-        </div>
-      {{/subscription}}
-    </div>
-  {{/logueado}}
+      <div class="w3-display-container">
+        <center>
+          <ul class="w3-ul w3-card-4 w3-margin-left" style="width:50%">
+            
+            <li class="w3-margin w3-center">
+            <a href="/Edicion"><img src="{{dailyImageUrl}}" alt="" width="120"></a>
+            <p>{{dailyDescription}}</p>
+            </li>
+
+          </ul>
+        </center>
+      </div>
+     {{/subscription}}
+  </div>
+{{/logueado}}
 
 <!-- !USUARIO NO LOGUEADO! -->
 
@@ -23,14 +32,23 @@
               </center>
         </div>
 
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-    <div class="w3-row-padding w3-padding w3-center" id="food">
+<div class="w3-main w3-content" style="max-width:1200px;margin-top:20px">
+    <div class="w3-row-padding w3-center" id="">
       {{#dailys}}
-        <div class="w3-quarter">
-          <a href="/Edicion"><img src="{{dailyImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
-          <h3>{{dailyName}}</h3>
-          <p>{{dailyDescription}}</p>
-        </div>
+        <div class="w3-display-container ">
+        <center>
+          <ul class="w3-ul w3-card-4" style="width:50%">
+            
+            <li class="w3-margin w3-center">
+            <a href="/Edicion"><img src="{{dailyImageUrl}}" alt="" width="120"></a>
+            <p>{{dailyDescription}}</p>
+            <p><b>¡Suscribite ahora mismo!</b></p>
+            <a href
+            </li>
+
+          </ul>
+        </center>
+      </div>
       {{/dailys}}
     </div>
 {{/logueado}}
