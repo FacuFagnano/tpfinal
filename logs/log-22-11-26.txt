@@ -1,0 +1,6 @@
+[22-11-26 03:36:37][INFO] Este es el hash 94951b23b8d04e5125d3be4ca7c39ba5
+[22-11-26 03:36:37][INFO] El usuario: lucasjorsge@gmail.com ha sido registrado exitosamente.
+[22-11-26 03:36:37][INFO] ESTOY EN EL TRUE
+[22-11-26 03:42:14][INFO] Mostramos usuario: 20
+[22-11-26 03:42:14][INFO] Mostramos ROL: 1
+[22-11-26 03:42:14][INFO] CASO 1
