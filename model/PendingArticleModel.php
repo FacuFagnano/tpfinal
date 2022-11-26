@@ -1,6 +1,6 @@
 <?php
 
-class ArticleModel
+class PendingArticleModel
 {
     private $database;
     private $logger;
@@ -10,8 +10,8 @@ class ArticleModel
         $this->logger = $logger;
     }
 
-    public function getArticle(){
-        $sql = 'SELECT * FROM article';
+    public function getPendingArticles(){
+        $sql = 'SELECT * FROM articles WHERE `idNoteStatusTable` =1;';
         return $this->database->query($sql);
     }
     public function getArticleById($id){
