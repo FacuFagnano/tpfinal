@@ -27,14 +27,42 @@ class LoginController
         $userInPasswordTable = $this->loginModel->getUsers($email);
        
         $ID_USER= $userInPasswordTable[0]["ID_PASS"];
+
+        
+       
         if ($userInPasswordTable == []) {
             Redirect::doIt("/login"); #! ESTO ES VIEW?
         } else {
             #? guardamos los datos del usuario para obtener el numero de sesion.
             if($this->loginModel->passwordValidation($userInPasswordTable, $password)){
                 
+                
                 $_SESSION["logueado"]=$ID_USER;
-                Redirect::doIt("/daily");
+                $this->logger->info("Mostramos usuario: " . $_SESSION["logueado"]);
+                $_SESSION["RoleType"]= $this->loginModel->getRol($_SESSION["logueado"]);
+                $ID_ROL= $_SESSION["RoleType"][0]["ROL"];
+                $this->logger->info("Mostramos ROL: " . $ID_ROL);
+                
+
+                switch($ID_ROL){
+                    case 1:
+                        $this->logger->info("CASO 1");
+                        Redirect::doIt("/admin");
+                        break;
+                    case 2:
+                        $this->logger->info("CASO 2");
+                        Redirect::doIt("/daily");
+                    break;
+                    case 3:
+                        $this->logger->info("CASO 3");    
+                    break;
+                    case 4:
+                        $this->logger->info("CASO 3");    
+                    break;
+                }
+                
+                
+
             }else {
                 Redirect::doIt("/login");
             }

@@ -2,29 +2,36 @@
 
 class adminController {
     private $adminModel;
-    private $renderer;
+    private $view;
     private $logger;
 
     public function __construct($adminModel, $view, $logger)
     {
         
         $this->adminModel = $adminModel;
-        $this->renderer = $view;
+        $this->view = $view;
         $this->logger = $logger;
     }
 
     public function list()
     {
-        $this->renderer->render('adminView.mustache');
+        
+        if($_SESSION["RoleType"][0]["ROL"] == 1){
+                
+        $this->view->render('adminView.mustache');
+        }
+        else{
+            $this->view->render('errorAdminView.mustache');
+        }
     }
 
     public function listadoDeArticulos()
     {
-        $this->renderer->render('listadoDeArticulosView.mustache');
+        $this->view->render('listadoDeArticulosView.mustache');
     }
     public function nuevoDocumento()
     {
-        $this->renderer->render('NewNoteView.mustache');
+        $this->view->render('NewNoteView.mustache');
     }
 
 }
