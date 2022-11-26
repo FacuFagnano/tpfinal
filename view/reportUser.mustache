@@ -1,0 +1,47 @@
+{{#logueado}}
+  {{> headerLogueado}}
+
+{{/logueado}}
+{{^logueado}}
+  {{> header}}
+{{/logueado}}
+
+<!-- The Band Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">INFONETE</h2>
+
+     <table class='w3-table w3-bordered'>
+        <tr>
+            <th>Total de usuarios</th>
+            <th>Total de articulos vendidos</th>
+            
+        </tr>
+
+       
+           <tr>
+
+                <div class="">
+                        <td><button class="w3-button w3-round-xlarge">Ver</button></a></td>    
+                </div>     
+                    <div class="">     
+                        <td><button class="w3-button w3-round-xlarge">Ver</button></a></td>     
+                    
+                </div>    
+                
+                
+            </tr>
+        
+
+    </table>
+    
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+        
+        <input type="submit" class="w3-bar-item w3-button w3-green" onclick="history.back()" value="ATRAS" name="guardar">
+</div>
+
+<div id="piechart" style="width:100%;max-width:600px"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+{{> footer}}

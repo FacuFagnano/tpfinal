@@ -18,8 +18,13 @@ include_once("model/UserListModel.php");
 include_once("model/NewNoteModel.php");
 include_once("model/DailyModel.php");
 include_once("model/EdicionModel.php");
+include_once("model/ArticleModel.php");
+include_once("model/ReportModel.php");
 
 
+
+include_once('controller/ReportController.php');
+include_once('controller/ArticleController.php');
 include_once('controller/RegistryController.php');
 include_once('controller/ContentController.php');
 include_once('controller/RevistaController.php');
@@ -93,9 +98,27 @@ class Configuration {
     public function getdailyController(){
         return new DailyController($this->getDailyModel(),$this->view,$this->logger);
     }
+    public function getArticleController(){
+        return new ArticleController($this->getArticleModel(),$this->view,$this->logger);
+    }
+
     public function getEdicionController(){
         return new EdicionController($this->getEdicionmodel(),$this->view,$this->logger);
     }
+
+    public function getReportController(){
+        return new ReportController($this->getReportmodel(),$this->view,$this->logger);
+    }
+
+    private function getReportmodel(): ReportModel {
+        return new ReportModel($this->database, $this->logger);
+    }
+
+
+    private function getArticleModel(): ArticleModel {
+        return new ArticleModel($this->database, $this->logger);
+    }
+
     private function getMailController()
     {
         require_once("controller/MailController.php");

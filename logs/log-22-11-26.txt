@@ -1,6 +1,81 @@
-[22-11-26 03:36:37][INFO] Este es el hash 94951b23b8d04e5125d3be4ca7c39ba5
-[22-11-26 03:36:37][INFO] El usuario: lucasjorsge@gmail.com ha sido registrado exitosamente.
-[22-11-26 03:36:37][INFO] ESTOY EN EL TRUE
-[22-11-26 03:42:14][INFO] Mostramos usuario: 20
-[22-11-26 03:42:14][INFO] Mostramos ROL: 1
-[22-11-26 03:42:14][INFO] CASO 1
+[22-11-26 04:57:41][INFO] dentro de donwload articulo 1
+[22-11-26 04:59:09][INFO] dentro de donwload articulo 1
+[22-11-26 05:00:35][INFO] dentro de donwload articulo 1
+[22-11-26 05:02:01][INFO] dentro de donwload articulo 1
+[22-11-26 05:02:01][INFO] dentro de get articulo
+[22-11-26 05:02:01][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:02:01][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:02:09][INFO] dentro de donwload articulo /public/w3images/boca.jpeg
+[22-11-26 05:02:09][INFO] dentro de get articulo
+[22-11-26 05:02:09][INFO] SELECT * FROM `articles` WHERE idArticles = /public/w3images/boca.jpeg
+[22-11-26 05:02:14][INFO] dentro de donwload articulo 1
+[22-11-26 05:02:14][INFO] dentro de get articulo
+[22-11-26 05:02:14][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:02:14][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:07:35][INFO] dentro de donwload articulo 1
+[22-11-26 05:07:35][INFO] dentro de get articulo
+[22-11-26 05:07:35][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:07:35][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:07:51][INFO] dentro de donwload articulo 1
+[22-11-26 05:07:51][INFO] dentro de get articulo
+[22-11-26 05:07:51][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:07:51][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:09:00][INFO] dentro de donwload articulo 1
+[22-11-26 05:09:00][INFO] dentro de get articulo
+[22-11-26 05:09:00][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:09:00][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:16:14][INFO] dentro de donwload articulo 1
+[22-11-26 05:16:14][INFO] dentro de get articulo
+[22-11-26 05:16:14][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:16:14][INFO] datos array[{"idArticles":"1","articleTitle":"BRASIL CAMPEON","articleContent":"alemania segundo","articleImage":"\/public\/w3images\/boca.jpeg","articleEditorComment":null,"idSectionTable":"1","idNoteStatusTable":"1"}]
+[22-11-26 05:20:20][INFO] dentro de donwload articulo 1
+[22-11-26 05:20:45][INFO] dentro de donwload articulo 1
+[22-11-26 05:20:45][INFO] dentro de get articulo
+[22-11-26 05:20:45][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:21:12][INFO] dentro de donwload articulo 1
+[22-11-26 05:21:12][INFO] dentro de get articulo
+[22-11-26 05:21:12][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:22:25][INFO] dentro de donwload articulo 1
+[22-11-26 05:22:25][INFO] dentro de get articulo
+[22-11-26 05:22:25][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:22:48][INFO] dentro de donwload articulo 1
+[22-11-26 05:22:48][INFO] dentro de get articulo
+[22-11-26 05:22:48][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:23:11][INFO] dentro de donwload articulo 1
+[22-11-26 05:23:11][INFO] dentro de get articulo
+[22-11-26 05:23:11][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:27:22][INFO] dentro de donwload articulo 1
+[22-11-26 05:27:22][INFO] dentro de get articulo
+[22-11-26 05:27:22][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 05:29:50][INFO] dentro de donwload articulo 1
+[22-11-26 05:29:50][INFO] dentro de get articulo
+[22-11-26 05:29:50][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 11:45:31][INFO] Mostramos usuario: 1
+[22-11-26 11:45:31][INFO] Mostramos ROL: 1
+[22-11-26 11:45:31][INFO] CASO 1
+[22-11-26 11:56:59][INFO] USUARIO CIERRA SESION
+[22-11-26 11:57:07][INFO] Mostramos usuario: 1
+[22-11-26 11:57:07][INFO] Mostramos ROL: 1
+[22-11-26 11:57:07][INFO] CASO 1
+[22-11-26 12:21:41][INFO] este es data el suscripcion [{"usersDailyId":"1","userIdTable":"1","dailyIdTable":"3","dailyId":"3","dailyName":"Infobae","dailyImageUrl":"\/public\/diarios\/infobae.png","dailyDescription":"Hacemos Periodismo","dailyPrice":"0","idTypeTable":"4"}]
+[22-11-26 12:21:43][INFO] Este es el showSuscription DATA: [{"dailyId":"1","dailyName":"Ambito","dailyImageUrl":"\/public\/diarios\/ambito.png","dailyDescription":"El diario de la gente","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"2","dailyName":"Pronto","dailyImageUrl":"\/public\/diarios\/pronto.png","dailyDescription":"Noticias del espectaculo","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"4","dailyName":"Clarin","dailyImageUrl":"\/public\/diarios\/clarin.jpg","dailyDescription":"El gran diario Argentino","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"5","dailyName":"La Nacion","dailyImageUrl":"\/public\/diarios\/laNacion.png","dailyDescription":"Informate distinto","dailyPrice":"0","idTypeTable":"2"}]
+[22-11-26 12:21:44][INFO] este es data el suscripcion [{"usersDailyId":"1","userIdTable":"1","dailyIdTable":"3","dailyId":"3","dailyName":"Infobae","dailyImageUrl":"\/public\/diarios\/infobae.png","dailyDescription":"Hacemos Periodismo","dailyPrice":"0","idTypeTable":"4"}]
+[22-11-26 12:21:58][INFO] USUARIO CIERRA SESION
+[22-11-26 12:22:09][INFO] Mostramos usuario: 1
+[22-11-26 12:22:09][INFO] Mostramos ROL: 1
+[22-11-26 12:22:09][INFO] CASO 1
+[22-11-26 12:22:11][INFO] Este es el showSuscription DATA: [{"dailyId":"1","dailyName":"Ambito","dailyImageUrl":"\/public\/diarios\/ambito.png","dailyDescription":"El diario de la gente","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"2","dailyName":"Pronto","dailyImageUrl":"\/public\/diarios\/pronto.png","dailyDescription":"Noticias del espectaculo","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"4","dailyName":"Clarin","dailyImageUrl":"\/public\/diarios\/clarin.jpg","dailyDescription":"El gran diario Argentino","dailyPrice":"0","idTypeTable":"1"},{"dailyId":"5","dailyName":"La Nacion","dailyImageUrl":"\/public\/diarios\/laNacion.png","dailyDescription":"Informate distinto","dailyPrice":"0","idTypeTable":"2"}]
+[22-11-26 12:22:16][INFO] USUARIO CIERRA SESION
+[22-11-26 12:22:18][INFO] Mostramos usuario: 1
+[22-11-26 12:22:18][INFO] Mostramos ROL: 1
+[22-11-26 12:22:18][INFO] CASO 1
+[22-11-26 12:56:38][INFO] este es data el suscripcion [{"usersDailyId":"1","userIdTable":"1","dailyIdTable":"3","dailyId":"3","dailyName":"Infobae","dailyImageUrl":"\/public\/diarios\/infobae.png","dailyDescription":"Hacemos Periodismo","dailyPrice":"0","idTypeTable":"4"}]
+[22-11-26 01:08:33][INFO] dentro de donwload articulo 1
+[22-11-26 01:08:33][INFO] dentro de get articulo
+[22-11-26 01:08:33][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 01:11:18][INFO] dentro de donwload articulo 1
+[22-11-26 01:11:18][INFO] dentro de get articulo
+[22-11-26 01:11:18][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-26 01:27:03][INFO] dentro de donwload articulo 1
+[22-11-26 01:27:03][INFO] dentro de get articulo
+[22-11-26 01:27:03][INFO] SELECT * FROM `articles` WHERE idArticles = 1
