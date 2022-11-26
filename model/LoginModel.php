@@ -4,6 +4,7 @@ class LoginModel {
 
     private $database;
     private $logger;
+    private $rolUser;
 
     public function __construct($database, $logger) {
         $this->database = $database;
@@ -15,10 +16,17 @@ class LoginModel {
         return $this->database->query($sql);
     }
 
+    public function getRol($rol) {
+        $sql = "SELECT ROL FROM user WHERE ID = '$rol'";
+        return $this->database->query($sql);
+    }
+
+
     public function passwordValidation($userInPasswordTable, $password){
         foreach ($userInPasswordTable as $result) {
+           
             #? Le asigna en el session el id del usuario logueado.
-            $this->logger->info("Estoy en el Login model: ". json_encode($result));
+            //$this->logger->info("Estoy en el Login model: ". json_encode($result));
             if (password_verify($password, $result["PASS"]) && $result["VALIDATED_STATUS"] == 1) {
                 return true;
             } else {
