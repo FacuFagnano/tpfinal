@@ -1,44 +1,30 @@
 {{#logueado}}
   {{> headerLogueado}}
 
+<div class="w3-center w3-padding-top-64">
+<h2 class="">Edicion</h2>
+</div>
 
-<h2 class="w3-center">Edicion</h2>
-
-
-<!-- AGREGAR EL ID DE LA SECCION -->
-
-
-  <div class="w3-card-8">
-
+ 
+<div class="w3-center">
 
   {{#editionsItem}}
- <a href="/Edicion/seccion"><img src="{{editionImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
-
-<div class="w3-center w3-padding-top-64">
-  <h2 class="">Suscripciones Activas</h2>
-  {{#subscription}}
-    <form action="/Suscripcion/unregister" method="POST">
-      <div class="w3-display-container ">
+      <div class="w3-display-container">
         <center>
-          <ul class="w3-ul w3-card-4 w3-margin-left" style="width:50%">
+          <ul class="w3-ul w3-card-4" style="width:40%">
             
             <li class="w3-margin w3-center">
-            <img src="{{dailyImageUrl}}" alt="" width="120">
-            <button class="w3-button w3-red w3-margin-left">Desuscribirse</button>
+              <a href="/Section/getDailySections"><img src="{{editionImageUrl}}" width="100"><p>{{editionDescription}}</p></a> 
             </li>
-              
-            <input id="userId" name="userId" type="hidden" value="{{ID}}">
-            <input id="dailyId" name="dailyId" type="hidden" value="{{dailyIdTable}}">
 
           </ul>
         </center>
       </div>
-    </form>
-  {{/subscription}}
+  {{/editionsItem}}
 </div>
   
       
-  {{/editionsItem}}
+  
     
 
 {{/logueado}}

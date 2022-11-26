@@ -7,11 +7,12 @@
 
 
   <div class="w3-card-8">
-  {{#editionsItem}}
- <a href="/Edicion/notas"><img src="{{editionImageUrl}}" class="w3-image w3-margin-top" width="335" height="471"></a>
-  
-      
-  {{/editionsItem}}
+
+  {{#sections}}
+
+ <a href="/Edicion/notas"><p>{{sectionDescription}}</p>
+
+  {{/sections}}
   <hr>
 {{/logueado}}
 {{^logueado}}
