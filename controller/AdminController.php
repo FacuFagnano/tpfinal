@@ -27,7 +27,7 @@ class adminController {
 
     public function listadoDeArticulos()
     {
-        $this->view->render('listadoDeArticulosView.mustache');
+        $this->view->render('listPendingArticlesView.mustache');
     }
     public function nuevoDocumento()
     {

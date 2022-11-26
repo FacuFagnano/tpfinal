@@ -13,8 +13,7 @@ class tecnologiaController {
         $this->logger = $logger;
     }
 
-    public function list()
-    {
+    public function list(){
         $this->renderer->render('tecnologiaView.mustache');
     }
 
