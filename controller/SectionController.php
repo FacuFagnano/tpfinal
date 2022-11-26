@@ -16,7 +16,14 @@ class SectionController
         $data['sections'] = $this->sectionModel->getSection();
         $data['logueado'] = $_SESSION["logueado"];
         $this->logger->info("Estas son las secciones: " . json_encode($data['sections']));
-        $this->view->render('edicionView.mustache', $data);
+        $this->view->render('sectionView.mustache', $data);
+    }
+
+    public function getDailySections(){
+        $data['sections'] = $this->sectionModel->getSection();
+        $data['logueado'] = $_SESSION["logueado"];
+        $this->logger->info("Estoy en el getDailySections: " . json_encode($data['sections']));
+        $this->view->render('sectionView.mustache', $data);
     }
 
     public function itemSeleccionado(){

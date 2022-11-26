@@ -1,1 +1,14 @@
-[22-11-26 04:24:15][INFO] Entre en el caso 3: 
+[22-11-26 11:24:25][INFO] Estoy en section de EditionController
+[22-11-26 11:27:21][INFO] Estoy en section de EditionController
+[22-11-26 11:27:22][INFO] Estoy en section de EditionController
+[22-11-26 11:27:22][INFO] Estoy en section de EditionController
+[22-11-26 11:27:22][INFO] Estoy en section de EditionController
+[22-11-26 11:27:22][INFO] Estoy en section de EditionController
+[22-11-26 11:27:23][INFO] Estoy en section de EditionController
+[22-11-26 11:33:09][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:34:28][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:34:29][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:34:29][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:34:29][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:35:17][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]
+[22-11-26 11:35:31][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Lo mejor sobre deportes","sectionImageUrl":"hola.png","idSectionTypeTable":"1","idEditionTable":"1"}]

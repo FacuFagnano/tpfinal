@@ -25,7 +25,8 @@ class EdicionController
     
     public function seccion(){
         $data['editionsItem'] = $this->edicionModel->getDailySession();
-        $this->view->render('seccionView.mustache',$data);
+        $this->logger->info("Estoy en section de EditionController");
+        $this->view->render('sectionView.mustache',$data);
     }
 
     public function notas(){
