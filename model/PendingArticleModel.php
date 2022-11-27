@@ -14,7 +14,7 @@ class PendingArticleModel
         $sql = 'SELECT * FROM articles WHERE `idNoteStatusTable` =1;';
         return $this->database->query($sql);
     }
-    public function getPendingArticlesById($id){
+    public function getArticleById($id){
         $this->logger->info("dentro de get articulo");
         $sql = "SELECT * FROM `articles` WHERE idArticles = $id";
         $this->logger->info("$sql");

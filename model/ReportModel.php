@@ -8,20 +8,7 @@ class ReportModel {
     }
 
     public function getCountUser() {
-        $sql = 'SELECT count(*) as CantidadUsuario FROM `user`';
-       
-        return $this->database->query($sql);
-    }
-
-    public function getCountdailys() {
-        $sql = 'SELECT count(*) as CantidadDiario FROM `daily`';
-       
-        return $this->database->query($sql);
-    }
-
-    public function getCountSalesDailys() {
-        $sql = 'SELECT count(*) as CantidadDeVentas FROM `usersdaily`;';
-       
+        $sql = 'SELECT * FROM `user`';
         return $this->database->query($sql);
     }
 }
