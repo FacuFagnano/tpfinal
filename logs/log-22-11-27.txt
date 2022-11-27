@@ -1,0 +1,12 @@
+[22-11-27 05:37:18][INFO] Entre en el caso 2: 
+[22-11-27 05:47:54][INFO] Entre en el caso 2: 
+[22-11-27 05:48:58][INFO] este es data el suscripcion []
+[22-11-27 05:48:58][INFO] Entre en el caso 2: 
+[22-11-27 05:49:01][INFO] Este es el showSuscription DATA: [{"dailyId":"1","dailyName":"Ambito","dailyImageUrl":"\/public\/diarios\/ambito.png","dailyDescription":"El diario de la gente","idTypeTable":"1"},{"dailyId":"2","dailyName":"Pronto","dailyImageUrl":"\/public\/diarios\/pronto.png","dailyDescription":"Noticias del espectaculo","idTypeTable":"1"},{"dailyId":"3","dailyName":"Infobae","dailyImageUrl":"\/public\/diarios\/infobae.png","dailyDescription":"Hacemos Periodismo","idTypeTable":"4"},{"dailyId":"4","dailyName":"Clarin","dailyImageUrl":"\/public\/diarios\/clarin.jpg","dailyDescription":"El gran diario Argentino","idTypeTable":"1"},{"dailyId":"5","dailyName":"La Nacion","dailyImageUrl":"\/public\/diarios\/laNacion.png","dailyDescription":"Informate distinto","idTypeTable":"2"}]
+[22-11-27 05:49:01][INFO] Entre en el caso 2: 
+[22-11-27 05:49:02][INFO] este es data el suscripcion []
+[22-11-27 05:49:02][INFO] Entre en el caso 2: 
+[22-11-27 05:49:36][INFO] Entre en el caso 2: 
+[22-11-27 05:56:16][INFO] Entre en el caso 2: 
+[22-11-27 05:59:45][INFO] Entre en el caso 2: 
+[22-11-27 06:01:43][INFO] Entre en el caso 2: 
