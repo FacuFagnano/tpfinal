@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2022 a las 20:53:10
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 24-11-2022 a las 23:52:07
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -53,17 +53,20 @@ CREATE TABLE `daily` (
   `dailyId` int(10) NOT NULL,
   `name` varchar(20) NOT NULL,
   `idTypeTable` int(10) DEFAULT NULL,
-  `dailyImageUrl` varchar(50) DEFAULT NULL
+  `dailyImageUrl` varchar(50) DEFAULT NULL,
+  `description` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `daily`
 --
 
-INSERT INTO `daily` (`dailyId`, `name`, `idTypeTable`, `dailyImageUrl`) VALUES
-(1, 'Ambito', 1, '/public/diarios/ambito.png'),
-(2, 'Pronto', 1, '/public/diarios/pronto.png'),
-(3, 'Infobae', 4, '/public/diarios/infobae.png');
+INSERT INTO `daily` (`dailyId`, `name`, `idTypeTable`, `dailyImageUrl`, `description`) VALUES
+(1, 'Ambito', 1, '/public/diarios/ambito.png', 'El diario de la gente'),
+(2, 'Pronto', 1, '/public/diarios/pronto.png', 'Noticias del espectaculo'),
+(3, 'Infobae', 4, '/public/diarios/infobae.png', 'Hacemos Periodismo'),
+(4, 'Clarin', 1, '/public/diarios/clarin.jpg', 'El gran diario Argentino'),
+(5, 'La Nacion', 2, '/public/diarios/laNacion.png', 'Informate distinto');
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,8 @@ INSERT INTO `password` (`ID_PASS`, `PASS`, `DATE_CADUCATE`, `VALIDATED_STATUS`, 
 (4, '$2y$10$/waXiya7oAi9EqixsGXQyeOzGm7PT/lv0SIsKe3pJKDTX2R.V7Yi.', NULL, 0, '1001', 'asd@asd.com'),
 (5, '$2y$10$oU7PXcTlJBZwnEbgaLVkNeUNQENRCMntt/NfSUC.O/l0TtViJqkZK', NULL, 0, '1002', 'lreta@lreta.com.ar'),
 (13, '$2y$10$buM1c6EY3QIb8FkySxtpAekv/8WpDuw9KQVrzTREMeCAU9jb8i4xW', NULL, 0, '1002', 'lreta@lreta.com.awr'),
-(20, '$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2', NULL, 1, '0', 'lucasjorgereta@gmail.com');
+(20, '$2y$10$CoCID7jasX3E87RI9699neh5hPjcN8SJMPOCEAZsSG2HNgyCgLBH2', NULL, 1, '0', 'lucasjorgereta@gmail.com'),
+(21, '$2y$10$GzHOmV4DIeI99B4VJSfW0.En8a2aTCInXprpZJ/.JKVhIjCQvc.36', NULL, 1, '0', 'santiago.opera@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -263,7 +267,8 @@ INSERT INTO `user` (`ID`, `NAME`, `LASTNAME`, `GEOPOSITION`, `ROL`, `ESTATE`) VA
 (16, 'Pablo', 'pablo', 'BSAS', 1, '1'),
 (17, 'lucas', 'reta', 'BSAS', 1, '1'),
 (19, 'Lucas', 'Reta', 'bsas', 1, '1'),
-(20, 'lucas', 'Reta', 'bsas', 1, '1');
+(20, 'lucas', 'Reta', 'bsas', 1, '1'),
+(21, 'Santiago', 'Opera', 'Villa Luzuriaga', 1, '1');
 
 -- --------------------------------------------------------
 
@@ -402,7 +407,7 @@ ALTER TABLE `sectiontype`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usersdaily`

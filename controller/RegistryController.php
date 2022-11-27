@@ -24,13 +24,14 @@ class RegistryController
         $lastname = $_POST['lastname'] ?? '';
         $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //? Hash Password. Convierte la password en un hash para que no sea hackeada.
         $email = $_POST['email'] ?? '';
-        $geoposition = $_POST['geoposition'] ?? '';
+        $latitude = $_POST['latitude'] ?? '';
+        $longitude = $_POST['longitude'] ?? '';
         $hash_validate = md5(time());
         $this->logger->info("Este es el hash ".$hash_validate);
-        $this->mail->enviarMail($email, $name, $hash_validate);
+        //$this->mail->enviarMail($email, $name, $hash_validate);
         #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
-        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email, $geoposition,$hash_validate);
+        $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email,$longitude, $latitude,$hash_validate);
         if ($correctAlta){
             //Redirect::doIt("/validateUser");
             $this->logger->info('ESTOY EN EL TRUE');

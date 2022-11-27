@@ -18,9 +18,15 @@ include_once("model/UserListModel.php");
 include_once("model/NewNoteModel.php");
 include_once("model/DailyModel.php");
 include_once("model/EdicionModel.php");
+include_once("model/PendingArticleModel.php");
+include_once("model/ReportModel.php");
 include_once("model/SectionModel.php");
+include_once("model/VerifyNotesModel.php");
 
 
+
+include_once('controller/ReportController.php');
+include_once('controller/PendingArticlesController.php');
 include_once('controller/RegistryController.php');
 include_once('controller/ContentController.php');
 include_once('controller/RevistaController.php');
@@ -36,6 +42,7 @@ include_once("controller/NewNoteController.php");
 include_once("controller/DailyController.php");
 include_once("controller/EdicionController.php");
 include_once("controller/SectionController.php");
+include_once("controller/VerifyNotesController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -100,9 +107,30 @@ class Configuration {
     public function getdailyController(){
         return new DailyController($this->getDailyModel(),$this->view,$this->logger);
     }
+    public function getPendingArticlesController(){
+        return new PendingArticlesController($this->getPendingArticleModel(),$this->view,$this->logger);
+    }
+
     public function getEdicionController(){
         return new EdicionController($this->getEdicionmodel(),$this->view,$this->logger);
     }
+
+    public function getReportController(){
+        return new ReportController($this->getReportmodel(),$this->view,$this->logger);
+    }
+    public function getVerifyNotesController(){
+        return new ReportController($this->getVerifyNotesModel(),$this->view,$this->logger);
+    }
+
+    private function getReportmodel(): ReportModel {
+        return new ReportModel($this->database, $this->logger);
+    }
+
+
+    private function getPendingArticleModel(): PendingArticleModel {
+        return new PendingArticleModel($this->database, $this->logger);
+    }
+
     private function getMailController()
     {
         require_once("controller/MailController.php");
@@ -182,5 +210,10 @@ class Configuration {
 
     public function getNewNoteModel() {
         return new NewNoteModel($this->database, $this->logger);
+    }
+
+    private function getVerifyNotesModel()
+    {
+        return new VerifyNotesModel($this->database, $this->logger);
     }
 }
