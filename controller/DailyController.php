@@ -34,7 +34,7 @@ class DailyController {
                     $data["role4"] = 4;
                     break;
             }
-
+            $this->view->render('tecnologiaView.mustache', $data);
         }
         $data['logueado'] = !empty($_SESSION["logueado"]);
         $this->view->render('homeView.mustache', $data);

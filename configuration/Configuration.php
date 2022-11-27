@@ -21,7 +21,6 @@ include_once("model/EdicionModel.php");
 include_once("model/PendingArticleModel.php");
 include_once("model/ReportModel.php");
 include_once("model/SectionModel.php");
-include_once("model/VerifyNotesModel.php");
 
 
 
@@ -42,7 +41,6 @@ include_once("controller/NewNoteController.php");
 include_once("controller/DailyController.php");
 include_once("controller/EdicionController.php");
 include_once("controller/SectionController.php");
-include_once("controller/VerifyNotesController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -117,9 +115,6 @@ class Configuration {
 
     public function getReportController(){
         return new ReportController($this->getReportmodel(),$this->view,$this->logger);
-    }
-    public function getVerifyNotesController(){
-        return new ReportController($this->getVerifyNotesModel(),$this->view,$this->logger);
     }
 
     private function getReportmodel(): ReportModel {
@@ -210,10 +205,5 @@ class Configuration {
 
     public function getNewNoteModel() {
         return new NewNoteModel($this->database, $this->logger);
-    }
-
-    private function getVerifyNotesModel()
-    {
-        return new VerifyNotesModel($this->database, $this->logger);
     }
 }
