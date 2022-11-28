@@ -7,41 +7,77 @@
 {{/logueado}}
 
 <!-- The Band Section -->
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">INFONETE</h2>
-
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
+    <h2 class="w3-wide">Reportes Globales</h2>
      <table class='w3-table w3-bordered'>
         <tr>
             <th>Total de usuarios</th>
-            <th>Total de articulos vendidos</th>
-            
+            <th>Total de Diarios</th>
+            <th>Cantidad de Productos Vendidos</th>
         </tr>
-
-       
            <tr>
-
                 <div class="">
-                        <td><button class="w3-button w3-round-xlarge">Ver</button></a></td>    
-                </div>     
-                    <div class="">     
-                        <td><button class="w3-button w3-round-xlarge">Ver</button></a></td>     
-                    
-                </div>    
-                
-                
+                {{#countUser}}
+                        <td><button class="w3-button w3-round-xlarge">{{CantidadUsuario}}</button></a></td>
+                {{/countUser}}
+                </div>
+                <div class="">
+                       {{#countDailys}}
+                        <td><button class="w3-button w3-round-xlarge">{{CantidadDiario}}</button></a></td>
+                       {{/countDailys}}
+                </div>
+                <div class="">
+                       {{#countSalesDailys}}
+                        <td><button class="w3-button w3-round-xlarge">{{CantidadDeVentas}}</button></a></td>
+                       {{/countSalesDailys}}
+
+                </div>
             </tr>
-        
-
     </table>
-    
+
+
+
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-        
-        <input type="submit" class="w3-bar-item w3-button w3-green" onclick="history.back()" value="ATRAS" name="guardar">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+
+<script>
+var xValues = ["Ambito", "Pronto", "Infobae", "Clarin", "La Nacion"];
+var yValues = [55,60,70,14,56];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Total de ventas por Diarios 2022"
+    }
+  }
+});
+
+</script>
+
 </div>
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+        <input type="submit" class="w3-bar-item w3-button w3-green" onclick="history.back()" value="VOLVER" name="guardar">
+    </div>
 
-<div id="piechart" style="width:100%;max-width:600px"></div>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
+</div>
 {{> footer}}
