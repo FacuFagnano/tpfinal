@@ -10,8 +10,13 @@ class ArticleModel {
         $this->logger = $logger;
     }
 
-    public function getArticles(){
-        $sql = 'SELECT * FROM articles';
+    public function getArticles($sectionId){
+        $sql = 'SELECT * FROM articles WHERE idSectionTable = '. $sectionId . '';
+        return $this->database->query($sql);
+    }
+
+    public function finalArticle($idArticles){
+        $sql = "SELECT * FROM articles WHERE idArticles = " . $idArticles . "";
         return $this->database->query($sql);
     }
 

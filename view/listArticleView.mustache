@@ -10,16 +10,18 @@
 
   {{#article}}
       <div class="w3-display-container">
+      <form action="/Article/showArticle" method="POST">
         <center>
           <ul class="w3-ul w3-card-4" style="width:40%">
             
             <li class="w3-margin w3-center">
-              <a href="/Article/articles"><img src="{{articleImage}}" width="100"><p>{{articleTitle}}</p></a>
+              <button class="w3-button w3-margin-left"><img src="/{{articleImage}}" width="100"><p>{{articleTitle}}</p></button>
             </li>
-
+            <input id="idArticles" name="idArticles" type="hidden" value="{{idArticles}}">
           </ul>
         </center>
       </div>
+      </form>
   {{/article}}
 </div>
   

@@ -10,16 +10,18 @@
 
   {{#sections}}
       <div class="w3-display-container">
-        <center>
-          <ul class="w3-ul w3-card-4" style="width:40%">
-            
-            <li class="w3-margin w3-center">
-              <a href="/Article"><img src="/{{sectionImageUrl}}" width="100"><p>{{sectionDescription}}</p></a>
-            </li>
+          <form action="/Article/getArticleById" method="POST">
+                <center>
+                  <ul class="w3-ul w3-card-4" style="width:40%">
 
-          </ul>
-        </center>
-      </div>
+                    <li class="w3-margin w3-center">
+                      <button class="w3-button w3-margin-left"><img src="/{{sectionImageUrl}}" width="100"><p>{{sectionDescription}}</p></button>
+                    </li>
+                    <input id="sectionId" name="sectionId" type="hidden" value="{{sectionId}}">
+                  </ul>
+                </center>
+          </div>
+          </form>
   {{/sections}}
 </div>
 

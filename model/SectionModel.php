@@ -9,8 +9,8 @@ class SectionModel{
         $this->logger = $logger;
     }
 
-    public function getSection(){
-        $sql = 'SELECT * FROM section';
+    public function getSection($editionId){
+        $sql = 'SELECT * FROM section WHERE idEditionTable = ' . $editionId . '';
         return $this->database->query($sql);
     }
 

@@ -27,10 +27,17 @@ class ArticleController
         $this->view->render('sectionView.mustache',$data);
     }
 
-    public function articles(){
-        $data['article'] = $this->articleModel->getArticles();
-        $data['articleItem'] = $this->articleModel->getDailySession();
+    public function getArticleById(){
+        $sectionId = $_POST["sectionId"];
+        $data['article'] = $this->articleModel->getArticles($sectionId);
         $data['logueado'] = $_SESSION["logueado"];
+        $this->logger->info("el idArticles es: " . $sectionId);
+        $this->view->render('listArticleView.mustache',$data);
+    }
+
+    public function showArticle() {
+        $idArticles = $_POST["idArticles"];
+        $data["article"] = $this->articleModel->finalArticle($idArticles);
         $this->view->render('articleView.mustache',$data);
     }
 

@@ -20,7 +20,7 @@ class DailyController {
         $this->view->render('homeView.mustache', $data);
     }
 
-    
+
 
     public function listarDiarios(){
         $data['dailys'] = $this->dailyModel->getDaily();    

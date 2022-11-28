@@ -10,9 +10,6 @@ include_once('model/RegistryModel.php');
 include_once("model/LoginModel.php");
 include_once("model/ValidarModel.php"); // LR Validacion Usuarios
 include_once("model/SuscripcionModel.php");
-//include_once("model/DeportesModel.php");
-include_once("model/EconomiaModel.php");
-include_once("model/TecnologiaModel.php");
 include_once("model/adminModel.php");
 include_once("model/UserListModel.php");
 include_once("model/NewNoteModel.php");
@@ -25,7 +22,6 @@ include_once("model/VerifyNotesModel.php");
 include_once("model/ArticleModel.php");
 
 
-
 include_once('controller/ReportController.php');
 include_once('controller/PendingArticlesController.php');
 include_once('controller/RegistryController.php');
@@ -34,9 +30,8 @@ include_once('controller/RevistaController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ValidarController.php');// LR Validacion Usuarios
 include_once("controller/SuscripcionController.php");
-include_once("controller/DeportesController.php");
-include_once("controller/EconomiaController.php");
-include_once("controller/TecnologiaController.php");
+include_once("controller/NoteNotSendToVerifyController.php");
+include_once("controller/NoteSendToVerifyController.php");
 include_once("controller/adminController.php");
 include_once("controller/UserListController.php");
 include_once("controller/NewNoteController.php");
@@ -91,14 +86,11 @@ class Configuration {
     public function getSuscripcionController(){
         return new SuscripcionController($this->getSuscripcionModel(),$this->view,$this->logger);
     }
-    public function getDeportesController(){
-        return new DeportesController($this->getDeportesModel(),$this->view,$this->logger);
+    public function getNoteNotSendToVerifyController(){
+        return new NoteNotSendToVerifyController(this->view,$this->logger);
     }
-    public function getEconomiaController(){
-        return new EconomiaController($this->getEconomiaModel(),$this->view,$this->logger);
-    }
-    public function getTecnologiaController(){
-        return new TecnologiaController($this->getTecnologiaModel(),$this->view,$this->logger);
+    public function getNoteSendToVerifyController(){
+        return new NoteSendToVerifyController(this->view,$this->logger);
     }
     public function getAdminController(){
         return new AdminController($this->getAdminModel(),$this->view,$this->logger);
@@ -170,18 +162,6 @@ class Configuration {
     }
     private function getAdminModel(): AdminModel {
         return new AdminModel($this->database);
-    }
-
-    private function getTecnologiaModel(): TecnologiaModel {
-        return new TecnologiaModel($this->database);
-    }
-
-    private function getEconomiaModel(): EconomiaModel {
-        return new EconomiaModel($this->database);
-    }
-
-    private function getDeportesModel(): DeportesModel {
-        return new DeportesModel($this->database);
     }
 
     private function getSuscripcionModel(): SuscripcionModel {

@@ -28,7 +28,7 @@ class ReportController {
              $data["countUser"] = $this->reportModel->getCountUser();
              $data["countDailys"] = $this->reportModel->getCountdailys();
              $data["countSalesDailys"] = $this->reportModel->getCountSalesDailys();         
-             $this->view->render('reportUser.mustache',$data);
+             $this->view->render('reportUserView.mustache',$data);
         }
 
         else{

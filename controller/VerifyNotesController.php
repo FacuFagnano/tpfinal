@@ -23,4 +23,27 @@ class VerifyNotesController
             $this->view->render('errorAdminView.mustache');
         }
     }
+
+    public function getArticleById() {
+        $idArticles = $_POST["idArticles"];
+        $button = $_POST["button"];
+        $this->logger->info($button);
+        switch ($button) {
+            case "readNote":
+                $data["article"] = $this->verifyNotesModel->finalArticle($idArticles);
+                $this->view->render('articleView.mustache',$data);
+                break;
+            case "backToWriter":
+                $this->logger->info($idArticles);
+                $this->verifyNotesModel->noteBackToWriter($idArticles);
+                Redirect::doIt("/verifyNotes");
+                break;
+            case "sendToPost":
+                $this->verifyNotesModel->noteSendToPost($idArticles);
+                Redirect::doIt("/verifyNotes");
+                break;
+        }
+
+
+    }
 }
