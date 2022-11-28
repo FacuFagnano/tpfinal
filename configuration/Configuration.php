@@ -10,7 +10,7 @@ include_once('model/RegistryModel.php');
 include_once("model/LoginModel.php");
 include_once("model/ValidarModel.php"); // LR Validacion Usuarios
 include_once("model/SuscripcionModel.php");
-include_once("model/DeportesModel.php");
+//include_once("model/DeportesModel.php");
 include_once("model/EconomiaModel.php");
 include_once("model/TecnologiaModel.php");
 include_once("model/adminModel.php");
@@ -22,7 +22,7 @@ include_once("model/PendingArticleModel.php");
 include_once("model/ReportModel.php");
 include_once("model/SectionModel.php");
 include_once("model/VerifyNotesModel.php");
-
+include_once("model/ArticleModel.php");
 
 
 
@@ -43,8 +43,8 @@ include_once("controller/NewNoteController.php");
 include_once("controller/DailyController.php");
 include_once("controller/EdicionController.php");
 include_once("controller/SectionController.php");
-include_once ("controller/VerifyNotesController.php");
-
+include_once("controller/VerifyNotesController.php");
+include_once("controller/ArticleController.php");
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -57,6 +57,10 @@ class Configuration {
         $this->database = new MySQlDatabase();
         $this->view = new MustacheRenderer("view/", 'view/partial/');
         $this->logger = new Logger();
+    }
+
+    public function getArticleController() {
+        return new ArticleController($this->getArticleModel(), $this->view, $this->logger);
     }
 
     public function getSectionController() {
@@ -123,6 +127,7 @@ class Configuration {
     public function getVerifyNotesController(){
         return new VerifyNotesController($this->getVerifyNotesModel(), $this->view, $this->logger);
     }
+    
 
     private function getReportmodel(): ReportModel {
         return new ReportModel($this->database, $this->logger);
@@ -143,6 +148,9 @@ class Configuration {
         return new MailController();
     }
 
+    private function getArticleModel(): ArticleModel {
+        return new ArticleModel($this->database, $this->logger);
+    }
 
     private function getSectionModel(): SectionModel {
         return new SectionModel($this->database, $this->logger);

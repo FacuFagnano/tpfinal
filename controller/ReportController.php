@@ -14,7 +14,7 @@ class ReportController {
     public function list() {
         
         if($_SESSION["RoleType"][0]["ROL"] == 1){
-        $data["report"] = $this->reportModel->getCountUser();        
+        $data["countUser"] = $this->reportModel->getCountUser();        
         $this->view->render('reportView.mustache',$data);
         }
         else{
@@ -23,7 +23,18 @@ class ReportController {
     }
 
     public function reportUser(){
-        $this->view->render('reportUser.mustache');
+        
+        if($_SESSION["RoleType"][0]["ROL"] == 1){
+             $data["countUser"] = $this->reportModel->getCountUser();
+             $data["countDailys"] = $this->reportModel->getCountdailys();
+             $data["countSalesDailys"] = $this->reportModel->getCountSalesDailys();         
+             $this->view->render('reportUser.mustache',$data);
+        }
+
+        else{
+
+             $this->view->render('errorAdminView.mustache');
+        }
     }
 
 
