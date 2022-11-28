@@ -24,7 +24,12 @@ class NewNoteController
         $this->logger->info("este es data de sections " . json_encode($data['sections']));
         $data['editions'] = $this->newNoteModel->getEditions();
         $this->logger->info("este es data de editions " . json_encode($data['editions']));
-        $this->renderer->render('newNoteView.mustache', $data);
+        if ($_SESSION["RoleType"][0]["ROL"] == 3) {
+            $this->renderer->render('newNoteView.mustache', $data);
+        }
+        else {
+            $this->renderer->render('errorAdminView.mustache');
+        }
 
     }
 

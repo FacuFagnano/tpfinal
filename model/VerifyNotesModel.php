@@ -1,6 +1,6 @@
 <?php
 
-class verifyNotesModel
+class VerifyNotesModel
 {
     private $database;
     private $logger;
@@ -10,17 +10,9 @@ class verifyNotesModel
         $this->logger = $logger;
     }
 
-    public function getRol($rol) {
-        $sql = "SELECT ROL FROM user WHERE ID = '$rol'";
+    public function getNotesToVerify() {
+        $sql = "SELECT * FROM articles WHERE idNoteStatusTable = 1";
+        $this->logger->info("esto tiene que devolver algo: " . json_encode($this->database->query($sql)));
         return $this->database->query($sql);
     }
-
-    public function getNotesToVerify()
-    {
-        $sql = "SELECT * FROM articles WHERE idNoteStatusTable = 1";
-        return $this->database->execute($sql);
-    }
-
-
-
 }

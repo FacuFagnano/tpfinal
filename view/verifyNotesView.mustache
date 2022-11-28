@@ -5,12 +5,14 @@
   <h2 class="">Notas para Verificar</h2>
   {{#notes}}
   <div class="w3-display-container ">
+  <form action="/Suscripcion/unregister" method="POST">
           <center>
             <ul class="w3-ul w3-card-4 w3-margin-left" style="width:50%">
 
               <li class="w3-margin w3-center">
-              <img src="{{dailyImageUrl}}" alt="" width="120">
-              <button class="w3-button w3-red w3-margin-left">Desuscribirse</button>
+              <img src="{{articleImage}}" alt="" width="120">
+              <h3>{{articleTitle}}</h3>
+              <button class="w3-button w3-green">Verificar Nota</button>
               </li>
 
               <input id="userId" name="userId" type="hidden" value="{{ID}}">
@@ -19,10 +21,10 @@
             </ul>
           </center>
         </div>
-    <form action="/Suscripcion/unregister" method="POST">
+
       
-    </form>
-  {{/subscription}}
+  </form>
+  {{/notes}}
 </div>
 
 {{/logueado}}

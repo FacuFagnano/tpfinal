@@ -13,7 +13,6 @@ class SuscripcionController {
 
     public function list() {
         $data['subscription'] = $this->suscripcionModel->getSubscription();
-        $this->logger->info("este es data el suscripcion " . json_encode($data['subscription']));
         $this->view->render('suscripcionActivaView.mustache', $data);
     }
 

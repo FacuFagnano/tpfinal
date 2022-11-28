@@ -1,7 +1,6 @@
-
 <?php
 
-class verifyNotesController
+class VerifyNotesController
 {
     private $verifyNotesModel;
     private $view;
@@ -14,21 +13,14 @@ class verifyNotesController
     }
 
     public function list() {
-
         $data['notes'] = $this->verifyNotesModel->getNotesToVerify();
-        $this->logger->info("este es data el notes " . json_encode($data['notes']));
-        $_SESSION["RoleType"]= $this->loginModel->getRol($_SESSION["logueado"]);
-        $ID_ROL= $_SESSION["RoleType"][0]["ROL"];
-        $this->logger->info("Mostramos ROL: " . $ID_ROL);
-        if($_SESSION["RoleType"][0]["ROL"] == 1 || $_SESSION["RoleType"][0]["ROL"] == 2 ){
-                    $data["report"] = $this->reportModel->getCountUser();
-                    $this->view->render('verifyNotesView.mustache', $data);
-                }
-            else{
-                $this->view->render('errorAdminView.mustache');
-            }
+        $this->logger->info($_SESSION["RoleType"][0]["ROL"]);
+        if ($_SESSION["RoleType"][0]["ROL"] == 1 || $_SESSION["RoleType"][0]["ROL"] == 2)
+        {
+            $this->view->render('verifyNotesView.mustache', $data);
+        } else
+        {
+            $this->view->render('errorAdminView.mustache');
+        }
     }
-
-
-
 }
