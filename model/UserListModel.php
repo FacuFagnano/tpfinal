@@ -11,7 +11,7 @@ class UserListModel {
     }
 
     public function getUsersList() {
-        $sql = "SELECT * FROM `user` u LEFT JOIN role r on r.ID_ROLE = u.ROL";
+        $sql = "SELECT * FROM `user` u INNER JOIN role r on r.ID_ROLE = u.ROL";
         $this->logger->info("Esto es respuesta userListModel" . json_encode($this->database->query($sql)));
         return $this->database->query($sql);
     }

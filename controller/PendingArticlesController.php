@@ -1,35 +1,32 @@
 <?php
 require('./public/library/fpdf185/fpdf.php');
+require('./public/library/dompdf/autoload.inc.php');
 use Dompdf\Dompdf;
-use Dompdf\Options;
 
 class PendingArticlesController{
-    private $pendingArticleModel;
+    private $articleModel;
     private $renderer;
     private $logger;
 
-    public function __construct($pendingArticleModel, $view, $logger) {
-        $this->pendingArticleModel = $pendingArticleModel;
+    public function __construct($articleModel, $view, $logger) {
+        $this->articleModel = $articleModel;
         $this->renderer = $view;
         $this->logger = $logger;
     }
 
     public function list() {
-        if(!empty($_SESSION["logueado"])){
         $this->renderer->render('listPendingArticlesView.mustache');
-        }
     }
 
     public function listarPublicaciones(){
-        $data['publicaciones'] = $this->pendingArticleModel->getContent();
+        $data['publicaciones'] = $this->articleModel->getContent();
         $this->renderer->list("listPendingArticlesView.mustache");
     }
 
     public function listPendingArticles(){
-        $data['pendingArticles'] = $this->pendingArticleModel->getPendingArticles();
+        $data['pendingArticles'] = $this->articleModel->getPendingArticles();
         $this->logger->info("Estos son los articulos pendientes: " . $data['pendingArticles']);
         $this->renderer->list("listPendingArticlesView.mustache");
     }
-
 
 }
