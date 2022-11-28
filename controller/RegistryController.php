@@ -22,63 +22,20 @@ class RegistryController
         #! ------------------------------------------ VARIABLES --------------------------------------------
         $name = $_POST['name'] ?? '';
         $lastname = $_POST['lastname'] ?? '';
-        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT); //? Hash Password. Convierte la password en un hash para que no sea hackeada.
+        $password = password_hash($_POST["password"] ?? '', PASSWORD_DEFAULT);
         $email = $_POST['email'] ?? '';
         $latitude = $_POST['latitude'] ?? '';
         $longitude = $_POST['longitude'] ?? '';
         $hash_validate = md5(time());
-        $this->logger->info("Este es el hash ".$hash_validate);
-        //$this->mail->enviarMail($email, $name, $hash_validate);
+        $this->mail->enviarMail($email, $name, $hash_validate);
         #! ------------------------------------------ REGISTRO LOGIC ---------------------------------------
 
         $correctAlta = $this->registryModel->alta($name, $lastname, $password, $email,$longitude, $latitude,$hash_validate);
         if ($correctAlta){
-            //Redirect::doIt("/validateUser");
-            $this->logger->info('ESTOY EN EL TRUE');
             $this->renderer->render('validateUserView.mustache');
         }else{
-            $this->logger->info('ESTOY EN EL FALSE');
             Redirect::doIt("/registry");
         }
-
-
-
-        //
     }
 }
-
-/*
-class RegistryController {
-    private $registryModel;
-    private $renderer;
-    private $logger;
-
-    public function __construct($presentacionesModel, $view, $logger) {
-        $this->registryModel = $presentacionesModel;
-        $this->renderer = $view;
-        $this->logger = $logger;
-    }
-
-    public function list() {
-        $data['presentaciones'] = $this->registryModel->getPresentaciones();
-
-        $this->logger->info("RegistryController: listaron las presentaciones");
-
-        $this->renderer->render('tourView.mustache', $data);
-    }
-
-    public function alta() {
-        $this->renderer->render('tourAltaForm.mustache');
-    }
-
-    public function procesarAlta() {
-        $fecha  = $_POST['fecha'] ?? '';
-        $precio = $_POST['precio'] ?? '';
-        $nombre = $_POST['nombre'] ?? '';
-
-        $this->registryModel->alta($nombre,$precio,$fecha);
-
-        Redirect::doIt("presentaciones");
-    }
-} */
 
