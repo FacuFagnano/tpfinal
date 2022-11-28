@@ -75,7 +75,6 @@ class adminController {
 
     public function newEdition(){
 
-        $title = "nuevaIMAGEN";
         $image = $_FILES["image"];
         $precio = $_POST["precio"];
         $daily = $_POST["dailyId"];
@@ -83,7 +82,7 @@ class adminController {
 
         $this->logger->info(" Recibo diario = " . $daily . " Descripcion : " . $descripcion . " Precio = " . $precio );
 
-        $imageName = str_replace(" ", "_", $title);
+        $imageName = str_replace(" ", "_", $descripcion);
         $rutaArchivoTemporal = $_FILES["image"]["tmp_name"];
         $rutaArchivoFinal = "public/w3images/" . $imageName . "photo.jpg";
         move_uploaded_file($rutaArchivoTemporal, $rutaArchivoFinal);

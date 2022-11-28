@@ -11,7 +11,7 @@ class ArticleModel {
     }
 
     public function getArticles($sectionId){
-        $sql = 'SELECT * FROM articles WHERE idSectionTable = '. $sectionId . '';
+        $sql = 'SELECT * FROM articles WHERE idSectionTable = '. $sectionId . ' AND idNoteStatusTable = 3';
         return $this->database->query($sql);
     }
 

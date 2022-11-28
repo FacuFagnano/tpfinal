@@ -1,5 +1,5 @@
 {{#logueado}}
-  {{> headerPermisions}}
+  {{> headerLogueado}}
 <br>
 <div class="w3-container w3-white w3-margin w3-center">
 <br>        
@@ -37,9 +37,10 @@
 
              <hr>
 
-    <form class="w3-container w3-card-4" action="/admin/newEdition" method="POST">
+    <form class="w3-container w3-card-4" action="/admin/newEdition" enctype="multipart/form-data" method="POST">
   <h2>Nueva Edicion</h2>
-                 
+
+
                    <p class="w3-left-align">
                   <label for="descripcion">Descripcion</label>
                   <input class="w3-input w3-margin-top w3-animate-input" type="text" name="descripcion" id="descripcion" style="width:30%" required>
@@ -99,7 +100,9 @@
 </div>
 {{/logueado}}
 
-
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+         <input type="submit" class="w3-bar-item w3-button w3-green" onclick="history.back()" value="VOLVER" name="guardar">
+ </div>
 {{> footer}}
 
 

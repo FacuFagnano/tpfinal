@@ -15,7 +15,7 @@
               <ul class="w3-ul w3-card-4" style="width:40%">
 
                 <li class="w3-margin w3-center">
-                  <input type="image"  id="saveform" class="w3-opacity w3-hover-opacity-off" src="{{editionImageUrl}}" alt="Submit Form" style="width: 100px"/>
+                  <input type="image"  id="saveform" class="w3-opacity w3-hover-opacity-off" src="/{{editionImageUrl}}" alt="Submit Form" style="width: 100px"/>
                   <p>{{editionDescription}}</p>
                 </li>
                 <input id="editionId" name="editionId" type="hidden" value="{{editionId}}">
@@ -68,4 +68,7 @@
 </div>
 {{/logueado}}
 
+<form action="/" method="POST" class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+         <button type="submit" class="w3-bar-item w3-button w3-green">VOLVER AL HOME</button>
+ </form>
 {{> footer}}
