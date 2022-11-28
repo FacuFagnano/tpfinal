@@ -1,0 +1,131 @@
+
+[22-11-28 01:12:25][INFO] Entre en el caso 2: 
+[22-11-28 01:12:25][INFO] Entre en el caso 2: 
+[22-11-28 01:15:23][INFO] Entre en el caso 2: 
+[22-11-28 01:15:23][INFO] Entre en el caso 2: 
+[22-11-28 01:15:23][INFO] Entre en el caso 2: 
+[22-11-28 01:15:24][INFO] Entre en el caso 2: 
+[22-11-28 01:16:33][INFO] Entre en el caso 2: 
+[22-11-28 01:16:34][INFO] Entre en el caso 2: 
+[22-11-28 01:16:34][INFO] Entre en el caso 2: 
+[22-11-28 01:19:32][INFO] Entre en el caso 2: 
+[22-11-28 01:19:39][INFO] dentro de get articulo
+[22-11-28 01:19:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:19:39][INFO] Entre en el caso 2: 
+[22-11-28 01:22:20][INFO] Entre en el caso 2: 
+[22-11-28 01:22:23][INFO] dentro de get articulo
+[22-11-28 01:22:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:22:23][INFO] Entre en el caso 2: 
+[22-11-28 01:22:58][INFO] Entre en el caso 2: 
+[22-11-28 01:22:59][INFO] Entre en el caso 2: 
+[22-11-28 01:22:59][INFO] Entre en el caso 2: 
+[22-11-28 01:22:59][INFO] Entre en el caso 2: 
+[22-11-28 01:24:17][INFO] Entre en el caso 2: 
+[22-11-28 01:24:17][INFO] Entre en el caso 2: 
+[22-11-28 01:24:17][INFO] Entre en el caso 2: 
+[22-11-28 01:25:13][INFO] dentro de get articulo
+[22-11-28 01:25:13][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:25:13][INFO] Entre en el caso 2: 
+[22-11-28 01:26:00][INFO] Entre en el caso 2: 
+[22-11-28 01:26:00][INFO] Entre en el caso 2: 
+[22-11-28 01:26:00][INFO] Entre en el caso 2: 
+[22-11-28 01:26:01][INFO] Entre en el caso 2: 
+[22-11-28 01:26:02][INFO] dentro de get articulo
+[22-11-28 01:26:02][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:26:02][INFO] Entre en el caso 2: 
+[22-11-28 01:27:21][INFO] Entre en el caso 2: 
+[22-11-28 01:27:22][INFO] Entre en el caso 2: 
+[22-11-28 01:27:23][INFO] dentro de get articulo
+[22-11-28 01:27:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:27:23][INFO] dentro de get articulo
+[22-11-28 01:27:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:27:23][INFO] dentro de get articulo
+[22-11-28 01:27:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:27:24][INFO] Entre en el caso 2: 
+[22-11-28 01:31:37][INFO] Entre en el caso 2: 
+[22-11-28 01:31:39][INFO] dentro de get articulo
+[22-11-28 01:31:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:39][INFO] dentro de get articulo
+[22-11-28 01:31:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:39][INFO] dentro de get articulo
+[22-11-28 01:31:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:39][INFO] Entre en el caso 2: 
+[22-11-28 01:31:55][INFO] Entre en el caso 2: 
+[22-11-28 01:31:56][INFO] dentro de get articulo
+[22-11-28 01:31:56][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:56][INFO] dentro de get articulo
+[22-11-28 01:31:56][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:56][INFO] dentro de get articulo
+[22-11-28 01:31:56][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:31:56][INFO] Entre en el caso 2: 
+[22-11-28 01:32:54][INFO] Entre en el caso 2: 
+[22-11-28 01:32:55][INFO] Entre en el caso 2: 
+[22-11-28 01:32:55][INFO] Entre en el caso 2: 
+[22-11-28 01:33:16][INFO] Entre en el caso 2: 
+[22-11-28 01:33:16][INFO] Entre en el caso 2: 
+[22-11-28 01:33:37][INFO] Entre en el caso 2: 
+[22-11-28 01:33:37][INFO] Entre en el caso 2: 
+[22-11-28 01:33:37][INFO] Entre en el caso 2: 
+[22-11-28 01:33:40][INFO] dentro de get articulo
+[22-11-28 01:33:40][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:33:40][INFO] dentro de get articulo
+[22-11-28 01:33:40][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:33:40][INFO] dentro de get articulo
+[22-11-28 01:33:40][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:33:40][INFO] Entre en el caso 2: 
+[22-11-28 01:34:37][INFO] Entre en el caso 2: 
+[22-11-28 01:34:37][INFO] Entre en el caso 2: 
+[22-11-28 01:34:38][INFO] Entre en el caso 2: 
+[22-11-28 01:34:39][INFO] dentro de get articulo
+[22-11-28 01:34:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:34:39][INFO] dentro de get articulo
+[22-11-28 01:34:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:34:39][INFO] dentro de get articulo
+[22-11-28 01:34:39][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:34:39][INFO] Entre en el caso 2: 
+[22-11-28 01:35:16][INFO] Entre en el caso 2: 
+[22-11-28 01:35:17][INFO] Entre en el caso 2: 
+[22-11-28 01:35:17][INFO] Entre en el caso 2: 
+[22-11-28 01:35:18][INFO] Entre en el caso 2: 
+[22-11-28 01:35:23][INFO] dentro de get articulo
+[22-11-28 01:35:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:23][INFO] dentro de get articulo
+[22-11-28 01:35:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:23][INFO] dentro de get articulo
+[22-11-28 01:35:23][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:23][INFO] Entre en el caso 2: 
+[22-11-28 01:35:38][INFO] Entre en el caso 2: 
+[22-11-28 01:35:39][INFO] Entre en el caso 2: 
+[22-11-28 01:35:39][INFO] Entre en el caso 2: 
+[22-11-28 01:35:49][INFO] Entre en el caso 2: 
+[22-11-28 01:35:49][INFO] Entre en el caso 2: 
+[22-11-28 01:35:50][INFO] dentro de get articulo
+[22-11-28 01:35:50][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:50][INFO] dentro de get articulo
+[22-11-28 01:35:50][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:50][INFO] dentro de get articulo
+[22-11-28 01:35:50][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:35:50][INFO] Entre en el caso 2: 
+[22-11-28 01:36:30][INFO] Entre en el caso 2: 
+[22-11-28 01:36:30][INFO] Entre en el caso 2: 
+[22-11-28 01:36:30][INFO] Entre en el caso 2: 
+[22-11-28 01:36:32][INFO] dentro de get articulo
+[22-11-28 01:36:32][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:36:32][INFO] dentro de get articulo
+[22-11-28 01:36:32][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:36:32][INFO] dentro de get articulo
+[22-11-28 01:36:32][INFO] SELECT * FROM `articles` WHERE idArticles = 1
+[22-11-28 01:36:32][INFO] Entre en el caso 2: 
+[22-11-28 01:37:44][INFO] Entre en el caso 2: 
+[22-11-28 01:37:44][INFO] Entre en el caso 2: 
+[22-11-28 01:37:45][INFO] Entre en el caso 2: 
+[22-11-28 01:37:46][INFO] Estoy en el getDailySections: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1"}]
+[22-11-28 01:37:46][INFO] Estas son las secciones: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1"}]
+[22-11-28 01:37:46][INFO] Estas son las secciones: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1"}]
+[22-11-28 01:37:46][INFO] Entre en el caso 2: 
+[22-11-28 01:37:48][INFO] Entre en el caso 2: 
+[22-11-28 01:37:51][INFO] Entre en el caso 2: 
+[22-11-28 01:38:32][INFO] Entre en el caso 2: 
+[22-11-28 01:38:42][INFO] Entre en el caso 2: 
+[22-11-28 01:38:50][INFO] Entre en el caso 2: 
+[22-11-28 01:39:00][INFO] Entre en el caso 2: 
