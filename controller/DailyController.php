@@ -13,11 +13,14 @@ class DailyController {
     
     public function list(){
         $data['dailys'] = $this->dailyModel->getDailyNotLogin();
-        $data['subscription'] = $this->dailyModel->getSubscription();
+        if(!empty($_SESSION["logueado"])){
+            $data['subscription'] = $this->dailyModel->getSubscription();
+        }
         $data['logueado'] = !empty($_SESSION["logueado"]);
         $this->view->render('homeView.mustache', $data);
     }
 
+    
 
     public function listarDiarios(){
         $data['dailys'] = $this->dailyModel->getDaily();    
