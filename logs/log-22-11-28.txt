@@ -1,215 +1,189 @@
-[22-11-28 01:14:26][INFO] Entre en el caso 1: 
-[22-11-28 01:14:29][INFO] Entre en el caso 1: 
-[22-11-28 01:14:31][INFO] Entre en el caso 1: 
-[22-11-28 01:14:31][INFO] ESTOY EN LIST
-[22-11-28 01:14:31][INFO] Esto es respuesta userListModel[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 01:14:31][INFO] esto es thisListconttroler[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 01:14:32][INFO] Entre en el caso 1: 
-[22-11-28 01:14:36][INFO] Entre en el caso 1: 
-[22-11-28 01:22:00][INFO] Entre en el caso 1: 
-[22-11-28 01:22:01][INFO] Entre en el caso 1: 
-[22-11-28 01:22:33][INFO] Entre en el caso 1: 
-[22-11-28 01:22:43][INFO] Entre en el caso 1: 
-[22-11-28 01:22:55][INFO] Entre en el caso 1: 
-[22-11-28 01:23:25][INFO] Entre en el caso 1: 
-[22-11-28 01:23:36][INFO] Entre en el caso 1: 
-[22-11-28 01:23:45][INFO] Entre en el caso 1: 
-[22-11-28 01:27:15][INFO] Entre en el caso 1: 
-[22-11-28 01:28:12][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 01:28:12][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 01:28:13][INFO] Entre en el caso 1: 
-[22-11-28 03:25:03][INFO] Mostramos usuario: 1
-[22-11-28 03:25:03][INFO] Mostramos ROL: 1
-[22-11-28 03:25:03][INFO] CASO 1
-[22-11-28 03:25:04][INFO] Entre en el caso 1: 
-[22-11-28 03:25:05][INFO] Entre en el caso 1: 
-[22-11-28 03:25:07][INFO] Entre en el caso 1: 
-[22-11-28 03:26:08][INFO] Entre en el caso 1: 
-[22-11-28 03:26:08][INFO] Entre en el caso 1: 
-[22-11-28 03:28:57][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:28:57][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:28:57][INFO] Entre en el caso 1: 
-[22-11-28 03:31:46][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:31:46][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:31:47][INFO] Entre en el caso 1: 
-[22-11-28 03:32:11][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:32:11][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:32:11][INFO] Entre en el caso 1: 
-[22-11-28 03:34:07][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:34:07][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:34:07][INFO] Entre en el caso 1: 
-[22-11-28 03:36:17][INFO] Entre en el caso 1: 
-[22-11-28 03:36:18][INFO] Entre en el caso 1: 
-[22-11-28 03:36:20][INFO] Entre en el caso 1: 
-[22-11-28 03:36:22][INFO] Entre en el caso 1: 
-[22-11-28 03:36:24][INFO] Entre en el caso 1: 
-[22-11-28 03:36:25][INFO] Entre en el caso 1: 
-[22-11-28 03:36:27][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:36:27][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:36:27][INFO] Entre en el caso 1: 
-[22-11-28 03:36:32][INFO] Entre en el caso 1: 
-[22-11-28 03:38:08][INFO] Entre en el caso 1: 
-[22-11-28 03:38:12][INFO] Entre en el caso 1: 
-[22-11-28 03:38:39][INFO] Entre en el caso 1: 
-[22-11-28 03:38:41][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:38:41][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:38:41][INFO] Entre en el caso 1: 
-[22-11-28 03:38:55][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:38:55][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:38:56][INFO] Entre en el caso 1: 
-[22-11-28 03:38:56][INFO] Entre en el caso 1: 
-[22-11-28 03:38:58][INFO] Entre en el caso 1: 
-[22-11-28 03:38:59][INFO] Entre en el caso 1: 
-[22-11-28 03:39:01][INFO] SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable
-[22-11-28 03:39:01][INFO] Estos son los articulos pendientes: [{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Brasil Campeon"},{"diario":"Ambito","edicion":"Edicion del Lunes","seccion":"Futbol Argentino","articulo":"Gano Polonia"}]
-[22-11-28 03:39:01][INFO] Entre en el caso 1: 
-[22-11-28 03:45:24][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1"}]
-[22-11-28 03:45:24][INFO] Entre en el caso 1: 
-[22-11-28 03:45:26][INFO] Entre en el caso 1: 
-[22-11-28 03:45:27][INFO] Entre en el caso 1: 
-[22-11-28 03:45:30][INFO] Entre en el caso 1: 
-[22-11-28 03:45:32][INFO] Entre en el caso 1: 
-[22-11-28 03:45:34][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1"}]
-[22-11-28 03:45:34][INFO] Entre en el caso 1: 
-[22-11-28 03:45:36][INFO] Entre en el caso 1: 
-[22-11-28 03:54:49][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 03:54:49][INFO] Entre en el caso 1: 
-[22-11-28 03:55:33][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 03:55:33][INFO] Entre en el caso 1: 
-[22-11-28 03:56:20][INFO] Entre en el caso 1: 
-[22-11-28 03:56:21][INFO] ESTOY EN LIST
-[22-11-28 03:56:21][INFO] Esto es respuesta userListModel[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 03:56:21][INFO] esto es thisListconttroler[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 03:56:21][INFO] Entre en el caso 1: 
-[22-11-28 03:56:23][INFO] Esto es respuesta getModifyUsers[]
-[22-11-28 03:56:23][INFO] Entre en el caso 1: 
-[22-11-28 03:56:28][INFO] ESTOY EN LIST
-[22-11-28 03:56:28][INFO] Esto es respuesta userListModel[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 03:56:28][INFO] esto es thisListconttroler[{"ID":"1","NAME":"Santiago","LASTNAME":"Opera","GEOPOSITION":"Villa Luzuriaga","ROL":"1","ESTATE":"1","ID_ROLE":null,"DESCRIPTION":null}]
-[22-11-28 03:56:28][INFO] Entre en el caso 1: 
-[22-11-28 04:00:51][INFO] Entre en el caso 1: 
-[22-11-28 04:00:52][INFO] Entre en el caso 1: 
-[22-11-28 04:00:53][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:00:54][INFO] Entre en el caso 1: 
-[22-11-28 04:02:47][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:02:47][INFO] Entre en el caso 1: 
-[22-11-28 04:04:26][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:04:26][INFO] Entre en el caso 1: 
-[22-11-28 04:04:29][INFO] Entre en el caso 1: 
-[22-11-28 04:04:32][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:04:32][INFO] Entre en el caso 1: 
-[22-11-28 04:04:34][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:04:34][INFO] Entre en el caso 1: 
-[22-11-28 04:05:04][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:05:04][INFO] Entre en el caso 1: 
-[22-11-28 04:05:23][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:05:24][INFO] Entre en el caso 1: 
-[22-11-28 04:05:26][INFO] Entre en el caso 1: 
-[22-11-28 04:05:28][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:05:28][INFO] Entre en el caso 1: 
-[22-11-28 04:05:29][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:05:29][INFO] Entre en el caso 1: 
-[22-11-28 04:07:27][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:07:27][INFO] Entre en el caso 1: 
-[22-11-28 04:08:08][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"},{"sectionId":"5","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:08:08][INFO] Entre en el caso 1: 
-[22-11-28 04:08:11][INFO] Entre en el caso 1: 
-[22-11-28 04:08:30][INFO] Entre en el caso 1: 
-[22-11-28 04:08:38][INFO] Entre en el caso 1: 
-[22-11-28 04:08:38][INFO] Entre en el caso 1: 
-[22-11-28 04:08:40][INFO] Entre en el caso 1: 
-[22-11-28 04:09:45][INFO] Entre en el caso 1: 
-[22-11-28 04:09:47][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:09:47][INFO] Entre en el caso 1: 
-[22-11-28 04:09:49][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:09:49][INFO] Entre en el caso 1: 
-[22-11-28 04:09:58][INFO] Entre en el caso 1: 
-[22-11-28 04:10:00][INFO] Entre en el caso 1: 
-[22-11-28 04:10:19][INFO] Entre en el caso 1: 
-[22-11-28 04:10:40][INFO] Entre en el caso 1: 
-[22-11-28 04:10:47][INFO] Entre en el caso 1: 
-[22-11-28 04:10:49][INFO] Entre en el caso 1: 
-[22-11-28 04:10:51][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:10:51][INFO] Entre en el caso 1: 
-[22-11-28 04:10:53][INFO] Entre en el caso 1: 
-[22-11-28 04:12:13][INFO] Entre en el caso 1: 
-[22-11-28 04:17:13][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"1","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:17:13][INFO] Entre en el caso 1: 
-[22-11-28 04:17:14][INFO] Entre en el caso 1: 
-[22-11-28 04:17:15][INFO] Entre en el caso 1: 
-[22-11-28 04:17:18][INFO] Entre en el caso 1: 
-[22-11-28 04:18:46][INFO] Entre en el caso 1: 
-[22-11-28 04:19:24][INFO] Entre en el caso 1: 
-[22-11-28 04:25:06][INFO] Entre en el caso 1: 
-[22-11-28 04:25:30][INFO] Entre en el caso 1: 
-[22-11-28 04:25:35][INFO] Entre en el caso 1: 
-[22-11-28 04:26:38][INFO] Entre en el caso 1: 
-[22-11-28 04:26:40][INFO] Entre en el caso 1: 
-[22-11-28 04:26:40][INFO] Entre en el caso 1: 
-[22-11-28 04:26:45][INFO] Entre en el caso 1: 
-[22-11-28 04:26:45][INFO] Entre en el caso 1: 
-[22-11-28 04:26:46][INFO] Entre en el caso 1: 
-[22-11-28 04:26:46][INFO] Entre en el caso 1: 
-[22-11-28 04:26:47][INFO] Entre en el caso 1: 
-[22-11-28 04:26:49][INFO] Entre en el caso 1: 
-[22-11-28 04:26:51][INFO] Entre en el caso 1: 
-[22-11-28 04:26:52][INFO] Entre en el caso 1: 
-[22-11-28 04:26:59][INFO] Entre en el caso 1: 
-[22-11-28 04:27:01][INFO] Entre en el caso 1: 
-[22-11-28 04:27:02][INFO] Entre en el caso 1: 
-[22-11-28 04:27:04][INFO] Entre en el caso 1: 
-[22-11-28 04:27:04][INFO] Entre en el caso 1: 
-[22-11-28 04:27:06][INFO] Entre en el caso 1: 
-[22-11-28 04:27:08][INFO] Entre en el caso 1: 
-[22-11-28 04:28:23][INFO] Entre en el caso 1: 
-[22-11-28 04:28:24][INFO] Entre en el caso 1: 
-[22-11-28 04:28:26][INFO] Entre en el caso 1: 
-[22-11-28 04:28:27][INFO] Entre en el caso 1: 
-[22-11-28 04:28:27][INFO] Entre en el caso 1: 
-[22-11-28 04:28:28][INFO] Entre en el caso 1: 
-[22-11-28 04:28:28][INFO] Entre en el caso 1: 
-[22-11-28 04:30:20][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:30:20][INFO] Entre en el caso 1: 
-[22-11-28 04:32:58][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:33:00][INFO] Entre en el caso 1: 
-[22-11-28 04:33:04][INFO] Entre en el caso 1: 
-[22-11-28 04:34:55][INFO] Entre en el caso 1: 
-[22-11-28 04:35:15][INFO] Entre en el caso 1: 
-[22-11-28 04:35:27][INFO] Entre en el caso 1: 
-[22-11-28 04:36:27][INFO] Entre en el caso 1: 
-[22-11-28 04:36:42][INFO] Entre en el caso 1: 
-[22-11-28 04:40:10][INFO] Entre en el caso 1: 
-[22-11-28 04:40:14][INFO] Entre en el caso 1: 
-[22-11-28 04:40:14][INFO] Entre en el caso 1: 
-[22-11-28 04:44:14][INFO] Entre en el caso 1: 
-[22-11-28 04:44:14][INFO] Entre en el caso 1: 
-[22-11-28 04:44:19][INFO] Entre en el caso 1: 
-[22-11-28 04:44:21][INFO] Entre en el caso 1: 
-[22-11-28 04:44:22][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:44:23][INFO] Entre en el caso 1: 
-[22-11-28 04:44:26][INFO] Entre en el caso 1: 
-[22-11-28 04:44:27][INFO] Entre en el caso 1: 
-[22-11-28 04:44:31][INFO] Entre en el caso 1: 
-[22-11-28 04:44:32][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:44:32][INFO] Entre en el caso 1: 
-[22-11-28 04:44:33][INFO] Entre en el caso 1: 
-[22-11-28 04:44:43][INFO] Estos son los articulos pendientes: [{"sectionId":"1","sectionDescription":"Futbol Argentino","sectionImageUrl":"\/public\/diarios\/tapa\/seccion\/Cronista.jpeg","idSectionTypeTable":"1","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"1","sectionTypeDescription":"Deportes"},{"sectionId":"2","sectionDescription":"Economia Mundial","sectionImageUrl":"Bitcoin.png","idSectionTypeTable":"3","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"3","sectionTypeDescription":"Economia"},{"sectionId":"3","sectionDescription":"Ultimos lanzamientos","sectionImageUrl":"Cronista.jpeg","idSectionTypeTable":"4","idEditionTable":"1","editionId":"1","editionPrice":"100","editionDescription":"Edicion del Lunes","editionImageUrl":"\/public\/diarios\/tapa\/seccion\/seccion.png","idDailyTable":"3","idSectionType":"4","sectionTypeDescription":"Tecnologia"}]
-[22-11-28 04:44:43][INFO] Entre en el caso 1: 
+[22-11-28 06:00:04][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:00:04][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:00:04][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:01:14][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:01:14][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:01:14][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:02:08][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:02:08][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:02:08][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:02:50][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:02:50][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:02:50][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:03:22][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:03:22][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:03:22][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:03:32][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:03:32][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:03:32][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:07:47][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:07:47][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:07:47][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:09:26][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:09:26][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:09:26][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:20:49][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:20:49][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:20:49][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:22:03][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:22:03][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:22:03][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:22:37][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:22:37][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:22:37][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:23:18][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:23:18][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:23:18][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:24:17][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:24:17][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:24:17][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:28:20][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:28:20][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:28:20][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:29:18][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:29:18][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:29:18][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:29:36][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:29:36][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:29:36][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:30:17][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:30:17][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:30:17][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:30:34][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:30:34][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:30:34][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:31:51][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:31:51][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:31:51][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:32:07][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:32:07][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:32:07][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:32:28][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:32:28][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:32:28][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:32:36][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:32:36][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:32:36][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:33:08][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:33:08][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:33:08][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:33:23][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:33:23][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:33:23][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:33:48][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:33:48][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:33:48][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:37:01][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:37:01][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:37:01][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:37:55][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:37:55][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:37:55][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:38:12][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:38:12][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:38:12][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:38:30][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:38:30][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:38:30][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:40:22][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:40:22][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:40:22][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:40:26][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:40:26][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:40:26][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:40:52][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:40:52][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:40:52][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:42:01][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:42:01][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:42:01][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:42:08][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:42:08][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:42:08][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:42:16][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:42:16][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:42:16][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:42:19][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:42:19][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:42:19][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:44:32][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:44:32][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:44:32][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:49:20][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:49:20][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:49:20][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:49:32][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:49:32][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:49:32][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:50:37][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:50:37][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:50:37][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:50:39][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:50:39][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:50:39][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:54:19][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:54:19][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:54:19][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:54:39][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:54:39][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:54:39][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:55:13][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:55:13][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:55:13][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:56:23][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:56:23][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:56:23][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:56:41][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:56:41][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:56:41][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:57:25][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:57:25][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:57:25][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 06:59:54][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 06:59:54][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 06:59:54][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:00:51][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:00:51][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:00:51][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:02:23][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:02:23][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:02:23][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:04:06][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:04:06][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:04:06][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:07:23][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:07:23][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:07:23][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:07:33][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:07:33][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:07:33][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:07:58][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:07:58][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:07:58][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:08:59][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:08:59][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:08:59][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:13:15][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:13:15][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:13:15][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:13:51][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:13:51][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:13:51][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:14:09][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:14:09][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:14:09][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:16:14][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:16:14][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:16:14][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:24:50][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:24:50][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:24:50][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:25:02][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:25:02][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:25:02][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:25:12][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:25:12][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:25:12][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 07:27:12][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
+[22-11-28 07:27:12][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
+[22-11-28 07:27:12][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
