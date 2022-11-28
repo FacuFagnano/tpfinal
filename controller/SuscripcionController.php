@@ -45,5 +45,10 @@ class SuscripcionController {
         Redirect::doIt("/suscripcion");    
     }
 
+    public function subscriptionPlan() {
+        $this->logger->info("entre subscriptionPlanView");
+        $this->view->render('subscriptionPlanView.mustache');
+    }
+
 
 }
