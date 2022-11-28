@@ -45,11 +45,11 @@ class ReEditionNoteController
         move_uploaded_file($rutaArchivoTemporal, $rutaArchivoFinal);
 
         $this->logger->info("Ruta de archivo final: " . $rutaArchivoFinal);
-
+        $this->logger->info("el id del articulo es: " . $idArticles);
         $data['user'] = $this->reEditionNoteModel->getUser();
         $user = $this->reEditionNoteModel->getUser();
-        $this->longitude = 0;
-        $this->latitude = 0;
+        $this->longitude = $user[0]["LONGITUDE"];
+        $this->latitude = $user[0]["LATITUDE"];
 
         $sendCorrect = $this->reEditionNoteModel->sendNoteToVerify($title, $rutaArchivoFinal, $note, $this->longitude, $this->latitude, $daily, $section, $edition, $idArticles);
         if($sendCorrect)
