@@ -10,9 +10,6 @@ include_once('model/RegistryModel.php');
 include_once("model/LoginModel.php");
 include_once("model/ValidarModel.php"); // LR Validacion Usuarios
 include_once("model/SuscripcionModel.php");
-include_once("model/DeportesModel.php");
-include_once("model/EconomiaModel.php");
-include_once("model/TecnologiaModel.php");
 include_once("model/adminModel.php");
 include_once("model/UserListModel.php");
 include_once("model/NewNoteModel.php");
@@ -22,6 +19,8 @@ include_once("model/PendingArticleModel.php");
 include_once("model/ReportModel.php");
 include_once("model/SectionModel.php");
 include_once("model/VerifyNotesModel.php");
+include_once("model/ArticleModel.php");
+include_once("model/ReEditionNoteModel.php");
 
 
 
@@ -33,9 +32,8 @@ include_once('controller/RevistaController.php');
 include_once('controller/LoginController.php');
 include_once('controller/ValidarController.php');// LR Validacion Usuarios
 include_once("controller/SuscripcionController.php");
-include_once("controller/DeportesController.php");
-include_once("controller/EconomiaController.php");
-include_once("controller/TecnologiaController.php");
+include_once("controller/NoteNotSendToVerifyController.php");
+include_once("controller/NoteSendToVerifyController.php");
 include_once("controller/adminController.php");
 include_once("controller/UserListController.php");
 include_once("controller/NewNoteController.php");
@@ -43,6 +41,9 @@ include_once("controller/DailyController.php");
 include_once("controller/EdicionController.php");
 include_once("controller/SectionController.php");
 include_once("controller/VerifyNotesController.php");
+include_once("controller/ArticleController.php");
+include_once("controller/ReEditionNoteController.php");
+
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -55,6 +56,15 @@ class Configuration {
         $this->database = new MySQlDatabase();
         $this->view = new MustacheRenderer("view/", 'view/partial/');
         $this->logger = new Logger();
+    }
+
+    public function getReEditionNoteController() {
+        return new ReEditionNoteController($this->getReEditionNoteModel(), $this->view, $this->logger);
+    }
+
+
+    public function getArticleController() {
+        return new ArticleController($this->getArticleModel(), $this->view, $this->logger);
     }
 
     public function getSectionController() {
@@ -85,14 +95,11 @@ class Configuration {
     public function getSuscripcionController(){
         return new SuscripcionController($this->getSuscripcionModel(),$this->view,$this->logger);
     }
-    public function getDeportesController(){
-        return new DeportesController($this->getDeportesModel(),$this->view,$this->logger);
+    public function getNoteNotSendToVerifyController(){
+        return new NoteNotSendToVerifyController(this->view,$this->logger);
     }
-    public function getEconomiaController(){
-        return new EconomiaController($this->getEconomiaModel(),$this->view,$this->logger);
-    }
-    public function getTecnologiaController(){
-        return new TecnologiaController($this->getTecnologiaModel(),$this->view,$this->logger);
+    public function getNoteSendToVerifyController(){
+        return new NoteSendToVerifyController(this->view,$this->logger);
     }
     public function getAdminController(){
         return new AdminController($this->getAdminModel(),$this->view,$this->logger);
@@ -119,8 +126,9 @@ class Configuration {
         return new ReportController($this->getReportmodel(),$this->view,$this->logger);
     }
     public function getVerifyNotesController(){
-        return new ReportController($this->getVerifyNotesModel(),$this->view,$this->logger);
+        return new VerifyNotesController($this->getVerifyNotesModel(), $this->view, $this->logger);
     }
+    
 
     private function getReportmodel(): ReportModel {
         return new ReportModel($this->database, $this->logger);
@@ -141,6 +149,13 @@ class Configuration {
         return new MailController();
     }
 
+    private function getReEditionNoteModel(): ReEditionNoteModel {
+        return new ReEditionNoteModel($this->database, $this->logger);
+    }
+
+    private function getArticleModel(): ArticleModel {
+        return new ArticleModel($this->database, $this->logger);
+    }
 
     private function getSectionModel(): SectionModel {
         return new SectionModel($this->database, $this->logger);
@@ -160,18 +175,6 @@ class Configuration {
     }
     private function getAdminModel(): AdminModel {
         return new AdminModel($this->database,$this->logger);
-    }
-
-    private function getTecnologiaModel(): TecnologiaModel {
-        return new TecnologiaModel($this->database);
-    }
-
-    private function getEconomiaModel(): EconomiaModel {
-        return new EconomiaModel($this->database);
-    }
-
-    private function getDeportesModel(): DeportesModel {
-        return new DeportesModel($this->database);
     }
 
     private function getSuscripcionModel(): SuscripcionModel {
@@ -216,4 +219,6 @@ class Configuration {
     {
         return new VerifyNotesModel($this->database, $this->logger);
     }
+
+
 }

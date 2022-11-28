@@ -47,9 +47,11 @@ class LoginController
                     break;
                     case 3:
                         $this->logger->info("CASO 3");
+                        Redirect::doIt("/daily");
                     break;
                     case 4:
-                        $this->logger->info("CASO 3");    
+                        $this->logger->info("CASO 4");
+                        Redirect::doIt("/daily");
                     break;
                 }
             }else {

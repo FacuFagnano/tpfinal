@@ -15,13 +15,20 @@ class EdicionController
     }
 
     public function list(){
-        $data['editions'] = $this->edicionModel->getEdition();
         $data['editionsItem'] = $this->edicionModel->getDailySession();
         $data['logueado'] = $_SESSION["logueado"];
         $this->view->render('edicionView.mustache',$data);
        
     }
-    
+
+    public function getEditionsById(){
+        $idDaily = $_POST["dailyIdTable"];
+        $data['editions'] = $this->edicionModel->getEdition($idDaily);
+        $this->logger->info("Las ediciones de este diario son: " . json_encode($data));
+        $this->view->render('edicionView.mustache',$data);
+        $this->logger->info("el dailyIdTable es: " . $idDaily);
+
+    }
     
     public function seccion(){
         $data['editionsItem'] = $this->edicionModel->getDailySession();

@@ -13,7 +13,6 @@ class SuscripcionController {
 
     public function list() {
         $data['subscription'] = $this->suscripcionModel->getSubscription();
-        $this->logger->info("este es data el suscripcion " . json_encode($data['subscription']));
         $this->view->render('suscripcionActivaView.mustache', $data);
     }
 
@@ -44,6 +43,11 @@ class SuscripcionController {
 
         $data['subscription'] = $this->suscripcionModel->unsubscribe($user,$daily);
         Redirect::doIt("/suscripcion");    
+    }
+
+    public function subscriptionPlan() {
+        $this->logger->info("entre subscriptionPlanView");
+        $this->view->render('subscriptionPlanView.mustache');
     }
 
 
