@@ -6,17 +6,19 @@
   <h2 class="w3-padding-16">Mis Diarios y Revista</h2>
       {{#subscription}}
       <div class="w3-display-container">
-        <center>
-          <ul class="w3-ul w3-card-4 w3-margin-left" style="width:50%">
-            
-            <li class="w3-margin w3-center">
-            <a href="/Edicion"><img src="{{dailyImageUrl}}" alt="" width="120"></a>
-            <p>{{dailyDescription}}</p>
-            </li>
+      <form action="/Edicion/getEditionsById" method="POST">
+            <center>
+              <ul class="w3-ul w3-card-4 w3-margin-left" style="width:50%">
 
-          </ul>
-        </center>
-      </div>
+                <li class="w3-margin w3-center">
+                <button class="w3-button w3-margin-left"><img src="{{dailyImageUrl}}" alt="" width="120"></button>
+                <p>{{dailyDescription}}</p>
+                </li>
+                 <input id="dailyIdTable" name="dailyIdTable" type="hidden" value="{{dailyIdTable}}">
+              </ul>
+            </center>
+          </div>
+      </form>
      {{/subscription}}
   </div>
 {{/logueado}}

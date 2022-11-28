@@ -2,30 +2,34 @@
   {{> headerLogueado}}
 
 <div class="w3-center w3-padding-top-64">
-<h2 class="">Sección</h2>
+<h2 class="">Notas disponibles</h2>
 
 
  
 <div class="w3-center">
 
-  {{#sections}}
+  {{#article}}
       <div class="w3-display-container">
-          <form action="/Article/getArticleById" method="POST">
-                <center>
-                  <ul class="w3-ul w3-card-4" style="width:40%">
-
-                    <li class="w3-margin w3-center">
-                      <button class="w3-button w3-margin-left"><img src="/{{sectionImageUrl}}" width="100"><p>{{sectionDescription}}</p></button>
-                    </li>
-                    <input id="sectionId" name="sectionId" type="hidden" value="{{sectionId}}">
-                  </ul>
-                </center>
-          </div>
-          </form>
-  {{/sections}}
+      <form action="/Article/showArticle" method="POST">
+        <center>
+          <ul class="w3-ul w3-card-4" style="width:40%">
+            
+            <li class="w3-margin w3-center">
+              <button class="w3-button w3-margin-left"><img src="/{{articleImage}}" width="100"><p>{{articleTitle}}</p></button>
+            </li>
+            <input id="idArticles" name="idArticles" type="hidden" value="{{idArticles}}">
+          </ul>
+        </center>
+      </div>
+      </form>
+  {{/article}}
 </div>
+  
+      
+  
+    
 
- {{/logueado}}
+{{/logueado}}
 {{^logueado}}
   {{> header}}
 

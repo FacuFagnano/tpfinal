@@ -29,30 +29,4 @@ class PendingArticlesController{
         $this->renderer->list("listPendingArticlesView.mustache");
     }
 
-    public function donwloadArticle(){
-
-        $id = $_GET["id"];
-        $this->logger->info("dentro de donwload articulo " . $id);
-        $ArticuloSeleccionado="";
-        $datos = $this->articleModel->getArticleById($id);
-        
-        foreach ($datos as $buscarArray) {
-            $ArticuloSeleccionado = $buscarArray["articleImage"];
-        }
-    
-        $dompdf = new Dompdf();
-        ob_start();
-        include "./public/revistaView.mustache";
-        $html = ob_get_clean();
-        $dompdf->loadHtml($html);
-        $dompdf->render();
-        header("Content-type: application/pdf");
-        header("Content-Disposition: inline; filename=documento.pdf");
-        echo $dompdf->output();
-                
-            }
-
-
-        
-    
 }

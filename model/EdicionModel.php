@@ -9,8 +9,8 @@
         $this->logger = $logger;
     }
 
-    public function getEdition(){
-        $sql = 'SELECT * FROM edition';
+    public function getEdition($idDaily){
+        $sql = 'SELECT * FROM edition WHERE idDailyTable = ' . $idDaily .' ';
         return $this->database->query($sql);
     }
 
