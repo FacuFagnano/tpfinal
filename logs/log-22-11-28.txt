@@ -183,3 +183,9 @@
 [22-11-28 04:46:48][INFO] el dailyIdTable es: 1
 [22-11-28 04:46:49][INFO] el editionId es: 1
 [22-11-28 04:46:49][INFO] el idArticles es: 1
+[22-11-28 04:58:38][INFO] ESTOY EN LIST
+[22-11-28 04:58:38][INFO] Esto es respuesta userListModel[]
+[22-11-28 04:58:38][INFO] esto es thisListconttroler[]
+[22-11-28 04:58:43][INFO] ESTOY EN LIST
+[22-11-28 04:58:43][INFO] Esto es respuesta userListModel[]
+[22-11-28 04:58:43][INFO] esto es thisListconttroler[]
