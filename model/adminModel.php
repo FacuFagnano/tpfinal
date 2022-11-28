@@ -12,11 +12,27 @@ class adminModel {
 
     public function getListAllSection(){
 
-        $sql = "SELECT * from section s left join edition e on e.editionId = s.idEditionTable INNER join sectiontype st on s.idSectionTypeTable = st.idSectionType ;";
+        $sql = "SELECT * from section s left join edition e on e.editionId = s.idEditionTable;";
 
             
         return $this->database->query($sql);
     
+    }
+
+    public function getListDaily(){
+        $sql = "SELECT * from daily";
+
+            
+        return $this->database->query($sql);
+
+    }
+
+    public function getListEdition(){
+        $sql = "SELECT * from edition";
+
+            
+        return $this->database->query($sql);
+
     }
 
     public function deleteSectionById($id) {
@@ -34,11 +50,6 @@ class adminModel {
 
     }
 
-    public function getModifySection($id){
-        $sql = "SELECT * FROM section WHERE sectionId = $id";
-        return $this->database->query($sql);
-    }
-
     public function updateSection($codigo,$id) {
         $sql1 = "UPDATE `user` SET `ROL` = $codigo WHERE ID = $id";
         $this->database->execute($sql1);
@@ -53,14 +64,19 @@ class adminModel {
     
     }
 
-    /*public function getListAllSection(){
+    public function sendEditionNew($precio, $descripcion, $imagen, $daily){
 
-        $sql = "SELECT d.dailyName as diario, ed.editionDescription as edicion, s.sectionDescription as seccion , a.articleTitle as articulo FROM articles a inner join section s on s.sectionId= a.idSectionTable
-        inner join edition ed on ed.editionId = a.idEditionTable
-        INNER JOIN daily d on d.dailyId = a.idDailyTable";
-        $this->logger->info("$sql");
-            
-        return $this->database->query($sql);
+        $this->logger->info(" MODEL VERIFY -  Precio= " . $precio . "Descripcion = " . $descripcion . "imagen =  " . $imagen . " Diario = " . $daily );
+        $sql = "INSERT INTO `edition` (`editionPrice`, `editionDescription`, `editionImageUrl`, `idDailyTable`) VALUES ('$precio','$descripcion','$imagen','$daily')";
+
+        $this->database->execute($sql);
+         
+    }
+
+    public function sendSectionNew($descripcion, $imagen, $idEdition){
+        $sql = "INSERT INTO `section` (`sectionDescription`, `sectionImageUrl`, `idEditionTable`) VALUES ('$descripcion','$imagen','$idEdition')";
+        $this->database->execute($sql);
+         
+    }
     
-    }*/
 }

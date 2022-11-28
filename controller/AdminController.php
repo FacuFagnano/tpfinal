@@ -33,13 +33,15 @@ class adminController {
     public function ManagementSection()
     {
         $data['sectionAll'] = $this->adminModel->getListAllSection();
-        $this->logger->info("Estos son los articulos pendientes: " . json_encode($data['sectionAll']));
+        $data['listEdition'] = $this->adminModel->getListEdition();
+        //$this->logger->info("Estos son los articulos pendientes: " . json_encode($data['sectionAll']));
         $this->view->render('controlManagementSectionView.mustache',$data);
     }
 
     public function ManagementEdition()
     {
         $data['editionAll'] = $this->adminModel->getListAllEdition();
+        $data['dailyEdition'] = $this->adminModel->getListDaily();
         //$this->logger->info("Estos son los articulos pendientes: " . json_encode($data['sectionAll']));
         $this->view->render('controlManagementEditionView.mustache',$data);
     }
@@ -60,13 +62,6 @@ class adminController {
         $this->view->render('controlValidateAdmin.mustache');
 
     }
-    public function modifySection()
-    {
-        $user = $_GET["sectionId"];
-        $data["sectionModify"] = $this->adminModel->getModifySection($user);
-        $this->view->render('controlModifySectionView.mustache', $data);
-
-    }
 
     public function updateDataSection()
     {
@@ -75,6 +70,53 @@ class adminController {
         $id = $_POST["userId"];
       
         $this->adminModel->updateRole($codigo,$id);
+
+    }
+
+    public function newEdition(){
+
+        $title = "nuevaIMAGEN";
+        $image = $_FILES["image"];
+        $precio = $_POST["precio"];
+        $daily = $_POST["dailyId"];
+        $descripcion = $_POST["descripcion"];
+
+        $this->logger->info(" Recibo diario = " . $daily . " Descripcion : " . $descripcion . " Precio = " . $precio );
+
+        $imageName = str_replace(" ", "_", $title);
+        $rutaArchivoTemporal = $_FILES["image"]["tmp_name"];
+        $rutaArchivoFinal = "public/w3images/" . $imageName . "photo.jpg";
+        move_uploaded_file($rutaArchivoTemporal, $rutaArchivoFinal);
+
+       $this->logger->info("Ruta de archivo final: " . $rutaArchivoFinal);
+
+        
+        $this->adminModel->sendEditionNew($precio,$descripcion, $rutaArchivoFinal, $daily);
+        Redirect::doIt("/admin/ManagementEdition");
+
+    }
+
+    public function newSection(){
+
+        $title = "nuevaIMAGEN";
+        $image = $_FILES["image"];
+       
+        $editionId = $_POST["editionID"];
+        $descripcion = $_POST["descripcion"];
+
+        $this->logger->info(" Recibo diario = " . $editionId . " Descripcion : " . $descripcion  );
+
+        $imageName = str_replace(" ", "_", $title);
+        $rutaArchivoTemporal = $_FILES["image"]["tmp_name"];
+        $rutaArchivoFinal = "public/w3images/" . $imageName . "photo.jpeg";
+        move_uploaded_file($rutaArchivoTemporal, $rutaArchivoFinal);
+
+        $this->logger->info("Ruta de archivo final: " . $rutaArchivoFinal);
+
+
+        
+        $this->adminModel->sendSectionNew($descripcion, $rutaArchivoFinal, $editionId);
+        Redirect::doIt("/admin/ManagementSection");
 
     }
 

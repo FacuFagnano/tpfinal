@@ -11,27 +11,20 @@
         <tr>
             <th>ID</th>
             <th>Seccion</th>
-            <th>Titulo</th>
             <th>Edicion</th>
             <th>Eliminar</th>
-            <th>Modificar</th>
         </tr>
 
         {{#sectionAll}}
            <tr>
            
                 <td>{{sectionId}}</td>
-                <td>{{sectionTypeDescription}}</td>
                 <td>{{sectionDescription}}</td>
                 <td>{{editionDescription}}</td>
               
                 
                 <div class="w3-justify">
-                <td><a href="/admin/deleteSection?sectionId={{sectionId}}"><button class="w3-button w3-round-xlarge">Eliminar</button></a></td>     
-                <div class="w3-justify">     
-                <td><a href="/admin/modifySection?sectionId={{sectionId}}&select=value" ><button class="w3-button w3-round-xlarge">Modificar</button></a></td>     
-                
-                </div> 
+                <td><a href="/admin/deleteSection?sectionId={{sectionId}}"><button class="w3-button w3-round-xlarge">Eliminar</button></a></td>
                 </div>
             </tr>
         {{/sectionAll}}
@@ -41,16 +34,32 @@
           </div>
              <hr>
           <hr>
-    <form class="w3-container w3-card-4" action="/suscripcion/altaSuscripcion" method="POST">
+    <form class="w3-container w3-card-4" action="/admin/newSection" method="POST" enctype="multipart/form-data">
   <h2>Nueva Seccion</h2>
-  
-  <div class="w3-section">      
-    <input class="w3-input" type="text" required>
-    <label>Name</label>
-  </div>
+                 
+                   <p class="w3-left-align">
+                  <label for="descripcion">Descripcion</label>
+                  <input class="w3-input w3-margin-top w3-animate-input" type="text" name="descripcion" id="descripcion" style="width:30%" required>
+                  </p>
+                                   
+                  <p class="w3-left-align">
+                  <label for="image">Imagen</label>
+                  <input class="w3-input w3-margin-top" type="file" id="image" name="image" style="width: 30%" required>
+                  </p>
+                  <p class="w3-left-align" style="width:30%">
+                      <select class="w3-select w3-border" name="editionID">
+                        <option value="" disabled selected>Edicion a publicar</option>
+                      {{#listEdition}}
+                        <option value="{{editionId}}">{{editionDescription}}</option>
+                      {{/listEdition}}
+                      </select>
+                  </p >
 
-  <p><button class="w3-button w3-light-grey w3-block" type="submit">Alta</button></p>
-  </div>
+
+
+                  <p>
+                  <button type="submit" class="w3-button  w3-black w3-padding-16 w3-section">Crear Seccion</button>
+                  </p>
 </form>
 
 </div>
