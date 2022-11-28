@@ -5,6 +5,7 @@ class ReEditionNoteController
     private $reEditionNoteModel;
     private $renderer;
     private $logger;
+    private $view;
     private $latitude;
     private $longitude;
 
@@ -30,6 +31,7 @@ class ReEditionNoteController
     }
 
     public function updateNote() {
+        $idArticles = $_POST["idArticles"];
         $title = $_POST["title"];
         $image = $_FILES["image"];
         $note = $_POST["note"];
@@ -46,12 +48,10 @@ class ReEditionNoteController
 
         $data['user'] = $this->reEditionNoteModel->getUser();
         $user = $this->reEditionNoteModel->getUser();
-        $this->longitude = $user[0]["LONGITUDE"];
-        $this->latitude = $user[0]["LATITUDE"];
+        $this->longitude = 0;
+        $this->latitude = 0;
 
-        $this->logger->info("Latitud: " . $this->latitude . ", longitud: " . $this->longitude . ", title: ". $title . ", image: " . $rutaArchivoFinal . ", note: ". $note . ", daily: " . $daily . ", section: " . $section . ", edition: " . $edition . "");
-
-        $sendCorrect = $this->reEditionNoteModel->sendNoteToVerify($title, $rutaArchivoFinal, $note, $this->longitude, $this->latitude, $daily, $section, $edition);
+        $sendCorrect = $this->reEditionNoteModel->sendNoteToVerify($title, $rutaArchivoFinal, $note, $this->longitude, $this->latitude, $daily, $section, $edition, $idArticles);
         if($sendCorrect)
         {
             $this->renderer->render("noteSendToVerifyView.mustache");
@@ -66,8 +66,11 @@ class ReEditionNoteController
 
     public function reEditionNoteById(){
         $idArticles = $_POST["idArticles"];
-        $data["article"] = $this->verifyNotesModel->finalArticle($idArticles);
-        $this->view->render('reEditionNoteView.mustache',$data);
+        $data['dailys'] = $this->reEditionNoteModel->getDailys();
+        $data['sections'] = $this->reEditionNoteModel->getSections();
+        $data['editions'] = $this->reEditionNoteModel->getEditions();
+        $data["article"] = $this->reEditionNoteModel->finalArticle($idArticles);
+        $this->renderer->render('reEditionNoteView.mustache',$data);
 
     }
 

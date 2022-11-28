@@ -40,8 +40,8 @@ class ReEditionNoteModel{
         return $this->database->query($sql);
     }
 
-    public function sendNoteToVerify($title, $image, $note, $longitude, $latitude, $daily, $section, $edition){
-        $sql = "INSERT INTO `articles`(`articleTitle`, `articleContent`, `articleImage`, `articleLongitude`, `articleLatitude`, `articleEditorComment`, `idDailyTable`, `idEditionTable`, `idSectionTable`, `idNoteStatusTable`) VALUES ('$title','$note','$image','$longitude','$latitude', ' ', '$daily', '$edition', '$section', 1)";
+    public function sendNoteToVerify($title, $image, $note, $longitude, $latitude, $daily, $section, $edition, $idArticles){      
+        $sql = "UPDATE `articles` SET `articleTitle`='$title', `articleContent`='$note', `articleImage`='$image', `articleLongitude`='$longitude', `articleLatitude`='$latitude', `articleEditorComment`=' ', `idDailyTable`='$daily', `idEditionTable`= '$edition', `idSectionTable` = '$section', `idNoteStatusTable`= 1 WHERE idArticles = '$idArticles'";
 
         if(!$this->alreadyExist($title, $daily, $edition)){
             $this->database->execute($sql);
