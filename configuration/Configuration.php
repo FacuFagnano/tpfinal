@@ -161,7 +161,7 @@ class Configuration {
         return new UserListModel($this->database,$this->logger);
     }
     private function getAdminModel(): AdminModel {
-        return new AdminModel($this->database);
+        return new AdminModel($this->database,$this->logger);
     }
 
     private function getSuscripcionModel(): SuscripcionModel {
