@@ -15,12 +15,16 @@
                   <ul class="w3-ul w3-card-4" style="width:40%">
 
                     <li class="w3-margin w3-center">
-                      <button name="button" type="submit" class="w3-button w3-margin-left" value="readNote" ><img src="/{{articleImage}}" width="100"><p>{{articleTitle}}</p></button>
+                     
+                      <input type="image"  id="saveform" class="" src="/{{articleImage}}" alt="Submit Form" style="width: 150px"/>
+                      <p>{{articleTitle}}</p>
+
                     </li>
+
                     <input id="idArticles" name="idArticles" type="hidden" value="{{idArticles}}">
                     <div class="w3-padding-small">
-                    <button name="button" type="submit" class="w3-button w3-round-xxlarge w3-red w3-hover-opacity w3-hover-red w3-margin-left" value="backToWriter">Mandar a revisión</button>
-                    <button name="button" type="submit" class="w3-button w3-round-xxlarge w3-green w3-hover-opacity w3-hover-green w3-margin-left" value="sendToPost">Publicar nota</button>
+                    <button name="button" type="submit" class="w3-button w3-round-xxlarge w3-red w3-hover-opacity w3-hover-red w3-margin" value="backToWriter">Mandar a revisión</button>
+                    <button name="button" type="submit" class="w3-button w3-round-xxlarge w3-green w3-hover-opacity w3-hover-green w3-margin" value="sendToPost">Publicar nota</button>
                     <div>
                   </ul>
                 </center>
