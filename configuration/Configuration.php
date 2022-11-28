@@ -20,6 +20,8 @@ include_once("model/ReportModel.php");
 include_once("model/SectionModel.php");
 include_once("model/VerifyNotesModel.php");
 include_once("model/ArticleModel.php");
+include_once("model/ReEditionNoteModel.php");
+
 
 
 include_once('controller/ReportController.php');
@@ -40,6 +42,8 @@ include_once("controller/EdicionController.php");
 include_once("controller/SectionController.php");
 include_once("controller/VerifyNotesController.php");
 include_once("controller/ArticleController.php");
+include_once("controller/ReEditionNoteController.php");
+
 
 include_once ('dependencies/mustache/src/Mustache/Autoloader.php');
 
@@ -53,6 +57,11 @@ class Configuration {
         $this->view = new MustacheRenderer("view/", 'view/partial/');
         $this->logger = new Logger();
     }
+
+    public function getReEditionNoteController() {
+        return new ReEditionNoteController($this->getReEditionNoteModel(), $this->view, $this->logger);
+    }
+
 
     public function getArticleController() {
         return new ArticleController($this->getArticleModel(), $this->view, $this->logger);
@@ -138,6 +147,10 @@ class Configuration {
         require_once("helpers/SMTP.php");
 
         return new MailController();
+    }
+
+    private function getReEditionNoteModel(): ReEditionNoteModel {
+        return new ReEditionNoteModel($this->database, $this->logger);
     }
 
     private function getArticleModel(): ArticleModel {

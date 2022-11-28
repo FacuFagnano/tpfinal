@@ -13,15 +13,19 @@ class VerifyNotesController
     }
 
     public function list() {
-        $data['notes'] = $this->verifyNotesModel->getNotesToVerify();
         $this->logger->info($_SESSION["RoleType"][0]["ROL"]);
         if ($_SESSION["RoleType"][0]["ROL"] == 1 || $_SESSION["RoleType"][0]["ROL"] == 2)
         {
+            $data['notes'] = $this->verifyNotesModel->getNotesToVerify();
             $this->view->render('verifyNotesView.mustache', $data);
-        } else
-        {
-            $this->view->render('errorAdminView.mustache');
-        }
+        } else if ($_SESSION["RoleType"][0]["ROL"] == 3)
+                {   
+                    $data['notes'] = $this->verifyNotesModel->getNotesBackToWriter();
+                     $this->view->render('backToWriterNotesView.mustache', $data);
+                }else
+                    {
+                        $this->view->render('errorAdminView.mustache');
+                    }
     }
 
     public function getArticleById() {
@@ -44,6 +48,13 @@ class VerifyNotesController
                 break;
         }
 
+
+    }
+
+    public function reEditionNoteById(){
+        $idArticles = $_POST["idArticles"];
+        $data["article"] = $this->verifyNotesModel->finalArticle($idArticles);
+        $this->view->render('reEditionNoteView.mustache',$data);
 
     }
 }

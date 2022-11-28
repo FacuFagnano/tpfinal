@@ -34,4 +34,10 @@ class VerifyNotesModel
         $this->database->execute($sql);
     }
 
+    public function getNotesBackToWriter(){
+        $sql = "SELECT * FROM articles WHERE idNoteStatusTable = 2";
+        $this->logger->info("esto tiene que devolver algo: " . json_encode($this->database->query($sql)));
+        return $this->database->query($sql);
+    }
+
 }
