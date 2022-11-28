@@ -187,3 +187,7 @@
 [22-11-28 07:27:12][INFO] Este es el contador de usuarios: {"0":"Ambito","1":"Pronto","2":"Infobae","3":"Clarin","4":"La Nacion"}
 [22-11-28 07:27:12][INFO] Este es el contador de usuarios: [{"CantidadUsuario":"1"}]
 [22-11-28 07:27:12][INFO] Este es el contador de suscripciones: [{"CantidadDeVentas":"2"}]
+[22-11-28 08:00:40][INFO] USUARIO CIERRA SESION
+[22-11-28 08:01:16][INFO] Este es el hash 22d0264f9a12428d29c9046cefbe00ac
+[22-11-28 08:01:16][INFO] El usuario: santiago.opera@gmail.com ha sido registrado exitosamente.
+[22-11-28 08:01:16][INFO] ESTOY EN EL TRUE
