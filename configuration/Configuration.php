@@ -96,10 +96,10 @@ class Configuration {
         return new SuscripcionController($this->getSuscripcionModel(),$this->view,$this->logger);
     }
     public function getNoteNotSendToVerifyController(){
-        return new NoteNotSendToVerifyController(this->view,$this->logger);
+        return new NoteNotSendToVerifyController($this->view,$this->logger);
     }
     public function getNoteSendToVerifyController(){
-        return new NoteSendToVerifyController(this->view,$this->logger);
+        return new NoteSendToVerifyController($this->view,$this->logger);
     }
     public function getAdminController(){
         return new AdminController($this->getAdminModel(),$this->view,$this->logger);
